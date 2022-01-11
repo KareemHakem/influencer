@@ -24,7 +24,7 @@ export const Button = ({
       }
       style={{ width, margin }}
     >
-      {loading ? <Loading width="20px" height="20px" color='#eaeaea' /> : title}
+      {loading ? <Loading type="spin" width="20px" height="20px" color='#eaeaea' /> : title}
 
       {Icon && <div className="button-right-icon"> {Icon}</div>}
     </button>

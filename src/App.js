@@ -3,6 +3,7 @@ import "./App.css";
 import { Button } from "./commons/Button";
 import { Loading } from "./commons/Loading";
 import Input from "./commons/Input";
+import Avatars from "./commons/Avatar";
 
 function App() {
   return (
@@ -15,8 +16,14 @@ function App() {
         variant="standard"
         label="Name"
         width={200}
-        hight={100}
+        hight={50}
         margin={"100px"}
+      />
+      <Avatars
+        image="https://www.logo.wine/a/logo/Facebook/Facebook-f_Logo-Blue-Logo.wine.svg"
+        name="Facebook"
+        width={50}
+        height={50}
       />
     </div>
   );

@@ -1,0 +1,9 @@
+.card_info_influencer {
+  height: auto;
+  width: 350px;
+  border-radius: 30px;
+  background: #dbeeff;
+  box-shadow: inset 38px 38px 46px #c5c5c5, inset -38px -38px 46px #fbfbfb;
+  cursor: pointer;
+  font-family: "Fira Sans", sans-serif;
+}

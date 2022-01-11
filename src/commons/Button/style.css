@@ -20,6 +20,7 @@
   color: #fff;
   background-color: #2168a6;
   color: #fff;
+  transition: 0.75s;
 }
 .button-right-icon {
   margin-left: 8px;

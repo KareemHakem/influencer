@@ -1,0 +1,7 @@
+.Avatar_common-style {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 50px;
+  align-items: center;
+}

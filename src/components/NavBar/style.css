@@ -1,0 +1,38 @@
+.influencer_navBar-container {
+  height: 70px;
+  width: 100%;
+  color: #fff;
+  background-color: #2168a6;
+  top: 0px;
+  position: fixed;
+  z-index: 1000;
+}
+
+.influencer_navBar-container-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 95%;
+  margin-left: 2%;
+}
+
+.influencer_navBar_link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.influencer_navBar_link-container-Link {
+  text-decoration: none !important;
+  font-family: "Fira Sans", sans-serif;
+  padding: 20px 50px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.influencer_navBar-user-menu {
+  border-radius: 20px;
+  background-color: #cecece;
+}

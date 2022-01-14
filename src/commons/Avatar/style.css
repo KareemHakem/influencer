@@ -1,7 +1,12 @@
+.Avatar_common-style-container {
+  padding: 0px 35px 35px;
+  margin-top: 40px;
+  
+}
+
 .Avatar_common-style {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-left: 50px;
-  align-items: center;
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 50% !important;
+  box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.551)
 }

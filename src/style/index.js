@@ -5,6 +5,7 @@ export const COLORS = {
   babyBlue: "#DBEEFF",
   yellow: " #F2A71B",
   orange: " #D96A29",
+  babyBlueLDark: "#C9E4FC",
 };
 //   /* font-family: 'Abril Fatface', cursive; */
 // font-family: 'Fira Sans', sans-serif;

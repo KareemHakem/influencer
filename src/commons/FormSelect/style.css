@@ -1,0 +1,6 @@
+.influencer_SelectorInput-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

@@ -1,5 +1,6 @@
 import React from "react";
-import { Loading } from "../Loading";
+import ReactLoading from "react-loading";
+import { COLORS } from "../../style";
 import "./style.css";
 
 export const Button = ({
@@ -24,7 +25,16 @@ export const Button = ({
       }
       style={{ width, margin }}
     >
-      {loading ? <Loading type="spin" width="20px" height="20px" color='#eaeaea' /> : title}
+      {loading ? (
+        <ReactLoading
+          type={"spin"}
+          color={COLORS.primary}
+          height={20}
+          width={20}
+        />
+      ) : (
+        title
+      )}
 
       {Icon && <div className="button-right-icon"> {Icon}</div>}
     </button>

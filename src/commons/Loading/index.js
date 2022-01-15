@@ -1,16 +1,13 @@
 import React from "react";
-import ReactLoading from "react-loading";
-import { COLORS } from "../../style";
+import Lottie from "react-lottie";
+import animation from "../../assets/json/loading.json";
 
-export const Loading = ({
-  color = COLORS.primary,
-  type = "cylon",
-  width = "20%",
-  height = "20%",
-}) => {
-  return (
-    <div style={{height:"100vh", width:"100%", backgroundColor:"#834765"}} >
-      <ReactLoading type={type} color={color} height={height} width={width} />
-    </div>
-  );
+export const Loading = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animation,
+  };
+
+  return <Lottie options={defaultOptions} height={200} width={200} />;
 };

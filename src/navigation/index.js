@@ -13,7 +13,7 @@ export default function Navigation() {
         <Route path="/" element={<HomePage />} />
         <Route path="favorite" element={<FavoritePage />} />
         <Route path="influencer" element={<InfluencerPage />} />
-        <Route path="influencerDetail" element={<InfluencerDetailPage />} />
+        <Route path="influencer/:id" element={<InfluencerDetailPage />} />
       </Routes>
     </>
   );

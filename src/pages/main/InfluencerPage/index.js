@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { getInfluencers } from "../../../api/requests/influencers";
 import { Error } from "../../../commons/Error";
 import { Loading } from "../../../commons/Loading";
+import InfluencerCard from "../../../components/InfluencerCard";
+import "./style.css";
 
 export default function InfluencerPage() {
   // finally for not repeating the functions/methods in the THEN & CATCH
@@ -26,15 +28,13 @@ export default function InfluencerPage() {
   };
 
   return (
-    <div>
+    <div className="influencer-card_container">
       {influencer.map((influencer) => (
-        <div
+        <InfluencerCard
           key={influencer._id}
-          style={{ marginTop: 100, backgroundColor: "#439234" }}
-          onClick={()=> handleNavigate(influencer._id)}
-        >
-          {influencer.name}
-        </div>
+          handleNavigate={handleNavigate}
+          influencer={influencer}
+        />
       ))}
     </div>
   );

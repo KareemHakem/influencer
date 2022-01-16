@@ -11,7 +11,9 @@ export const Button = ({
   disabled,
   loading,
   width,
+  height,
   margin,
+  ...props
 }) => {
   return (
     <button
@@ -23,7 +25,8 @@ export const Button = ({
           ? "basic-button custom-button-primary "
           : secondary && "basic-button custom-button-secondary"
       }
-      style={{ width, margin }}
+      style={{ width, height, margin }}
+      {...props}
     >
       {loading ? (
         <ReactLoading
@@ -33,10 +36,11 @@ export const Button = ({
           width={20}
         />
       ) : (
-        title
+        <div>
+          {title}
+          {Icon && <div className="button-right-icon"> {Icon}</div>}
+        </div>
       )}
-
-      {Icon && <div className="button-right-icon"> {Icon}</div>}
     </button>
   );
 };

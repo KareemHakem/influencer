@@ -4,13 +4,17 @@ import { Button } from "../../commons/Button";
 import { imageAvatar } from "../../assets/imageAvatar";
 import "./style.css";
 
-export default function InfluencerCard({ image, influencerName }) {
+export default function InfluencerCard({ influencer, handleNavigate }) {
   return (
     <div className="card_info_influencer">
-      <img className="image" alt="Influencer_image" src={image} />
-      <h3 className="influencer_card-name"> {influencerName} </h3>
+      <img className="image" alt="Influencer_image" src={influencer.image} />
+      <h3 className="influencer_card-name"> {influencer.name} </h3>
       <div className="influencer_card-button-container">
-        <Button width={150} title={"View Profile"} />
+        <Button
+          width={150}
+          title={"View Profile"}
+          onClick={() => handleNavigate(influencer._id)}
+        />
       </div>
 
       <div className="influencer_card-underLine" />

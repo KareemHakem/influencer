@@ -1,11 +1,11 @@
 import React from "react";
-import Avatar from "@mui/material/Avatar";
-import "./style.css";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
 
-export default function Avatars({ image }) {
+export default function IconButtons({ Icon }) {
   return (
-    <div className="Avatar_common-style-container">
-      <Avatar className="Avatar_common-style " alt="image" src={image} />
-    </div>
+    <Stack direction="row" spacing={1}>
+      <IconButton size="large"></IconButton>
+    </Stack>
   );
 }

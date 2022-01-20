@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { getInfluencers } from "../../../api/requests/influencers";
 import { Error } from "../../../commons/Error";
 import { Loading } from "../../../commons/Loading";
-import InfluencerCard from "../../../components/InfluencerCard";
+import InfluencerCard from "../../../components/ifluencerComponents/InfluencerCard";
 import "./style.css";
 
 export default function InfluencerPage() {

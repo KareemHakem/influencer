@@ -1,8 +1,8 @@
 import React from "react";
-import Avatars from "../../commons/Avatar";
-import { Button } from "../../commons/Button";
-import { imageAvatar } from "../../assets/imageAvatar";
+import { Button } from "../../../commons/Button";
+import { IconsChip } from "../../../assets/data/avatarIcons";
 import "./style.css";
+import { IconButton } from "@mui/material";
 
 export default function InfluencerCard({ influencer, handleNavigate }) {
   return (
@@ -18,14 +18,16 @@ export default function InfluencerCard({ influencer, handleNavigate }) {
       </div>
 
       <div className="influencer_card-underLine" />
-      <div className="influencer_card-Avatar-container">
-        {imageAvatar.map((Avatar) => {
+
+      <div className="influencer_card-Avatar">
+        {IconsChip.map((icon) => {
           return (
-            <Avatars
-              className="influencer_card-Avatar-container-Avatars"
-              key={Avatar.key}
-              image={Avatar.image}
-            />
+            <div className="influencer_card-Avatar-container">
+              <IconButton className="IconButton" size="large" key={icon.key}>
+                {icon.icons}
+              </IconButton>
+              <p className="name-chip"> {icon.name} </p>
+            </div>
           );
         })}
       </div>

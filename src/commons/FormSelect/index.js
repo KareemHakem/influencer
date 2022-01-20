@@ -10,6 +10,7 @@ export default function FromSelect({
   firstText,
   secondText,
   thirdText,
+  FourthText,
   selectYourPackage,
   handleChange,
   label,
@@ -31,6 +32,7 @@ export default function FromSelect({
           <MenuItem value={10}>{firstText}</MenuItem>
           <MenuItem value={20}>{secondText}</MenuItem>
           <MenuItem value={30}>{thirdText}</MenuItem>
+          <MenuItem value={30}>{FourthText}</MenuItem>
         </Select>
       </FormControl>
     </Box>

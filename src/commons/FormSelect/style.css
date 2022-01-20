@@ -3,4 +3,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  cursor: pointer;
+  min-width: 16px;
+  user-select: none;
+  border-radius: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }

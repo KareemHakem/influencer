@@ -53,8 +53,31 @@
   margin-top: 30px;
 }
 
+.influencer_card-Avatar {
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+}
+
 .influencer_card-Avatar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between !important;
+  margin-top: 15px;
   align-items: center;
+  padding: 5px 25px 10px;
+  flex-direction: column;
+}
+
+.IconButton {
+  box-shadow: 0px 5px 17px -7px rgb(0 0 0 / 40%);
+  height: 46px;
+  width: 46px;
+}
+
+.name-chip {
+  color: gray;
+  font-size: 12px;
+  padding-bottom: 1.5rem;
+  font-weight: 100;
+  margin-top: 5px;
 }

@@ -1,9 +1,10 @@
 import React from "react";
+import InfluencerFavoriteCard from "../../../components/ifluencerComponents/InfluencerFavoriteCard";
 
-export default function FavoritePage() {
+export default function FavoritePage({ influencer }) {
   return (
     <div>
-      <h1> FavoritePage </h1>
+      <InfluencerFavoriteCard influencer={influencer} />
     </div>
   );
 }

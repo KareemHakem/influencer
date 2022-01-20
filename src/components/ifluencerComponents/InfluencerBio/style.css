@@ -1,0 +1,17 @@
+.Influencer-bio-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.Influencer-bio-text p {
+  margin-top: 10px;
+  color: gray;
+}
+
+.Influencer-bio-interests {
+  margin-top: 20px;
+}

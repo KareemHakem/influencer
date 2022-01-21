@@ -8,7 +8,7 @@ import "./style.css";
 export default function NavBar({ image, userName }) {
   return (
     <div className="influencer_navBar-container">
-      <div className="influencer_navBar-container-flex" >
+      <div className="influencer_navBar-container-flex">
         <div className="influencer_navBar_link-container">
           <Link className="influencer_navBar_link-container-Link" to="/">
             LOGO

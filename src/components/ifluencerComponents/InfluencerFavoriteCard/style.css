@@ -1,3 +1,49 @@
-/* .influencer_favorite_card-container{
-                              height: ;
-} */
+.influencer_favorite_card-container {
+  height: 350px;
+  width: 530px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 4px 19px 10px rgba(0, 0, 0, 0.081);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.influencer_card-image img {
+  height: 250px;
+  width: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.influencer_favorite_card-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 20px;
+}
+
+.influencer-text-p {
+  margin-right: 50px;
+}
+
+.line-favorite-card {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10px;
+  border-bottom: 1px solid #aed9ff;
+}
+
+.influencer_favorite_card-btn {
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.influencer_favorite_card-btn Button {
+  margin-top: 8px;
+}

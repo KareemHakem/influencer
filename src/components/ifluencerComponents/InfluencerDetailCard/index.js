@@ -47,7 +47,7 @@ export default function InfluencerDetailCard({
             <Button
               className="influencer_Add-btn"
               title="ADD TO"
-              Icon={() => <Icons.FavoriteBorderIcon style={{ color: "red" }} />}
+              Icon={<Icons.FavoriteBorderIcon style={{ color: "red" }} />}
               onClick={handleAddFavorite}
             />
           </div>

@@ -1,3 +1,4 @@
+import { IcecreamOutlined } from "@mui/icons-material";
 import React from "react";
 import Typical from "react-typical";
 import { Icons } from "../../../assets/Icons";
@@ -27,7 +28,7 @@ export default function HomeText() {
           title="VIEW INFLUENCER"
           width="230px"
           height={60}
-          Icon={() => Icons.ArrowForwardIcon}
+          Icon={<Icons.ArrowForwardIcon/>}
         />
       </div>
     </div>

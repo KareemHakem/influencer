@@ -1,20 +1,17 @@
 import { combineReducers } from "redux";
-
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-const persistConfig = {
-  key: "cart",
-  storage,
-  //   whiteList: ["cart", "user"],
-};
+import favorites from "./Influencer/reducer";
 
-const user = () => {
-  return "user";
+const persistConfig = {
+  key: "Root",
+  storage,
+  whiteList: ["favorite"],
 };
 
 const rootReducer = combineReducers({
-  user,
+  favorites,
 });
 
 export default persistReducer(persistConfig, rootReducer);

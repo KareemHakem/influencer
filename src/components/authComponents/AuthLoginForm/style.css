@@ -5,4 +5,9 @@
 
 .form_Login_page {
   margin-top: 200px;
+  margin-left: 200px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 20px;
 }

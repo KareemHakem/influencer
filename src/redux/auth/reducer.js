@@ -53,7 +53,10 @@ const authUserReducer = (state = initialState, action) => {
 
     case type.AUTH_USER_LOGOUT:
       return {
-        currentUser: false,
+        currentUser: null,
+        isAuthenticated: false,
+        loading: false,
+        error: null,
       };
 
     default:

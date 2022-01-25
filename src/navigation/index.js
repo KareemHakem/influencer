@@ -4,6 +4,8 @@ import FavoritePage from "../pages/main/FavoritePage";
 import InfluencerPage from "../pages/main/InfluencerPage";
 import InfluencerDetailPage from "../pages/main/InfluencerDetailPage";
 import NavBar from "../components/NavBar";
+import LoginPage from "../pages/auth/LoginPage";
+import RegisterPage from "../pages/auth/RegisterPage";
 
 export default function Navigation() {
   return (
@@ -14,6 +16,8 @@ export default function Navigation() {
         <Route path="favorite" element={<FavoritePage />} />
         <Route path="influencer" element={<InfluencerPage />} />
         <Route path="influencer/:id" element={<InfluencerDetailPage />} />
+        <Route path="LoginPage" element={<LoginPage />} />
+        <Route path="RegisterPage" element={<RegisterPage />} />
       </Routes>
     </>
   );

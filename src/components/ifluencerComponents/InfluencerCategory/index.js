@@ -1,14 +1,15 @@
 import React from "react";
 import Chips from "../../../commons/Chip";
+import "./style.css";
 
 export default function InfluencerCategory({ influencer }) {
-  console.log(influencer.category, "kareemmmmmmmmmmm");
-
   return (
     <div>
-      <div className="product_Card_ingredient">
+      <div className="product_Card_ingredients">
         {influencer.category?.map((category) => (
-          <Chips key={category} label={category} />
+          <div className="product_Card_ingredient">
+            <Chips key={category} label={category} />
+          </div>
         ))}
       </div>
     </div>

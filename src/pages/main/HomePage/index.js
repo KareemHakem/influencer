@@ -6,7 +6,7 @@ import "./style.css";
 export default function HomePage() {
   return (
     <div className="home-page-Animation">
-      <div  className="home-page-Animation_container" >
+      <div className="home-page-Animation_container">
         <HomeText />
         <HomeAnimation />
       </div>

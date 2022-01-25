@@ -28,7 +28,7 @@ export default function InfluencerDetail({ handleNavigate }) {
       .catch((err) => setError(err))
       .finally(() => setLoading(false));
   }, [id]);
-  
+
   const handleAddFavorite = () => {
     dispatch(addInfluencerFavorites(influencer));
   };
@@ -36,34 +36,12 @@ export default function InfluencerDetail({ handleNavigate }) {
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-
-  const names = [
-    {
-      id: 1,
-    },
-    {
-      id: 1,
-    },
-  ];
-
-
   return (
     <div>
       <InfluencerDetailCard
         handleAddFavorite={handleAddFavorite}
         influencer={influencer}
       />
-     
     </div>
   );
 }
-
-// const Name = ({ names, handleAddName }) => {
-//   return (
-//     <div>
-//       {names.map((name) => (
-//         <div onClick={() => handleAddName(name.id)}>{name.id}</div>
-//       ))}
-//     </div>
-//   );
-// };

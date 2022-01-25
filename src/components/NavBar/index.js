@@ -22,6 +22,18 @@ export default function NavBar({ image, userName }) {
           <Link className="influencer_navBar_link-container-Link" to="favorite">
             FAVORITE
           </Link>
+          <Link
+            className="influencer_navBar_link-container-Link"
+            to="LoginPage"
+          >
+            Login
+          </Link>
+          <Link
+            className="influencer_navBar_link-container-Link"
+            to="RegisterPage"
+          >
+            Register
+          </Link>
         </div>
         <div className="influencer_navBar-user-menu">
           <Stack direction="row" spacing={1}>

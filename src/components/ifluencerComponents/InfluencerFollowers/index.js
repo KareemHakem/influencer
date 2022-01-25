@@ -1,7 +1,7 @@
 import React from "react";
 import { Icons } from "../../../assets/Icons";
 import IconButton from "@mui/material/IconButton";
-
+import CountUp from "react-countup";
 import "./style.css";
 
 export default function InfluencerFollowers({ influencer }) {
@@ -12,7 +12,13 @@ export default function InfluencerFollowers({ influencer }) {
           <IconButton size="small">
             <Icons.InstagramIcon style={{ color: "#707070" }} />
           </IconButton>
-          <p> {influencer.instFollowers} </p>
+          <p>
+            <CountUp
+              end={influencer.instFollowers}
+              duration={2.75}
+              separator=","
+            />
+          </p>
         </div>
         <div className="influencer_followers_text">
           <p> Followers </p>
@@ -24,7 +30,9 @@ export default function InfluencerFollowers({ influencer }) {
           <IconButton size="small">
             <Icons.FacebookIcon style={{ color: "#707070" }} />
           </IconButton>
-          <p> {influencer.fbFriends} </p>
+          <p>
+            <CountUp end={influencer.fbFriends} duration={2.75} separator="," />
+          </p>
         </div>
         <div className="influencer_followers_text">
           <p> Friends </p>
@@ -36,7 +44,13 @@ export default function InfluencerFollowers({ influencer }) {
           <IconButton size="small">
             <Icons.YouTubeIcon style={{ color: "#707070" }} />
           </IconButton>
-          <p> {influencer.youtubeSubscribers} </p>
+          <p>
+            <CountUp
+              end={influencer.youtubeSubscribers}
+              duration={2.75}
+              separator=","
+            />
+          </p>
         </div>
         <div className="influencer_followers_text">
           <p> subscriber </p>

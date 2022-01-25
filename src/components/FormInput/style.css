@@ -1,0 +1,10 @@
+.error_input_message {
+  color: rgb(255, 81, 81);
+  margin-top: -2px;
+  margin-left: 20px;
+  font-size: 13;
+  border: 1px solid rgb(255, 81, 81);
+  border-radius: 5px;
+  padding: 4px;
+  align-self: flex-start;
+}

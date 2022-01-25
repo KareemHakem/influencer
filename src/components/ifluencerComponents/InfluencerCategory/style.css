@@ -1,0 +1,9 @@
+.product_Card_ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.product_Card_ingredient {
+  margin-left: 5px !important;
+  padding: 5px;
+}

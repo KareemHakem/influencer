@@ -4,6 +4,7 @@
   align-items: center;
   margin-top: 70px !important ;
   background-color: #eaeaea;
+  min-height: 100vh;
   height: auto !important;
   flex-wrap: wrap;
 }

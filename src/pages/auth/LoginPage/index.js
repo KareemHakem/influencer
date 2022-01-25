@@ -12,7 +12,7 @@ export default function LoginPage() {
 
   UserNavigation();
 
-  const handleAuthLoginSubmit = (values) => {
+  const handleAuthLoginUserSubmit = (values) => {
     const { email, password } = values;
     const body = { email, password };
     dispatch(authLoginUserReducer(body));
@@ -20,7 +20,7 @@ export default function LoginPage() {
 
   return (
     <AuthLoginForm
-      handleAuthLoginSubmit={handleAuthLoginSubmit}
+      handleAuthLoginUserSubmit={handleAuthLoginUserSubmit}
       loading={loading}
     />
   );

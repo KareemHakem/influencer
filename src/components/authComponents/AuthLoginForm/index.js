@@ -5,17 +5,17 @@ import { FormInput } from "../../FormInput";
 import { Button } from "../../../commons/Button";
 import "./style.css";
 
-const LoginForm = ({ handleLoginSubmit, loading }) => {
+const LoginForm = ({ handleAuthLoginUserSubmit, loading }) => {
   return (
     <div className="full_page_register">
       <Formik
         initialValues={{ email: "", password: "" }}
         validationSchema={validationSchema}
-        onSubmit={handleLoginSubmit}
+        onSubmit={handleAuthLoginUserSubmit}
       >
         {({ dirty, isValid, isSubmitting }) => (
           <Form className="form_Login_page">
-            <FormInput label="Email" name="email" placeholder="email" />
+            <FormInput label="Email" name="email" placeholder="Email" />
             <FormInput
               label="Password"
               name="password"

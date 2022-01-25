@@ -21,7 +21,6 @@ export default function RegisterPage() {
       confirmPassword,
     };
     dispatch(authRegisterUserReducer(body));
-    console.log(body, "kareem body ........................");
   };
   return (
     <AuthRegisterForm

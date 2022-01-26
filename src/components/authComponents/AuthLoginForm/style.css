@@ -13,6 +13,7 @@
   object-fit: cover;
   transform: scaleX(-1);
   margin-right: 213px;
+  background-color: #d5eafd;
 }
 
 .login_form_container {
@@ -43,6 +44,7 @@
   border: 1px solid white;
   padding: 14px 24px;
   border-radius: 25px;
+  font-size: large;
 }
 
 .login_form_container h2 {
@@ -64,6 +66,7 @@
 
 .register_form_link {
   color: #f294c0;
+  margin-right: 30px;
   font-weight: bold;
   font-size: 17px;
   text-decoration: underline;

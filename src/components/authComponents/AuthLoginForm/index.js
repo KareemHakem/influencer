@@ -12,12 +12,7 @@ import "./style.css";
 const LoginForm = ({ handleAuthLoginUserSubmit, loading }) => {
   return (
     <div className="auth_login_form-container">
-      <img
-        className="login_form_image"
-        style={{ height: 600, width: "800", backgroundColor: "#D5EAFD" }}
-        src={image}
-        alt="login_image"
-      />
+      <img className="login_form_image" src={image} alt="login_image" />
 
       <div className="login_form_container">
         <Formik

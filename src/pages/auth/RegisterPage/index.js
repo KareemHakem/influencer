@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 import { authRegisterUserReducer } from "../../../redux/auth/action";
@@ -9,6 +10,7 @@ import AuthRegisterForm from "../../../components/authComponents/AuthRegisterFor
 export default function RegisterPage() {
   const { loading } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const Navigate = useNavigate();
 
   UserNavigation();
 
@@ -22,8 +24,13 @@ export default function RegisterPage() {
     };
     dispatch(authRegisterUserReducer(body));
   };
+  const handleNavigationLoginForm = () => {
+    Navigate("/LoginPage");
+  };
+
   return (
     <AuthRegisterForm
+      handleNavigationLoginForm={handleNavigationLoginForm}
       handleAuthRegisterUserSubmit={handleAuthRegisterUserSubmit}
       loading={loading}
     />

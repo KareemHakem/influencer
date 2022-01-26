@@ -5,13 +5,11 @@ import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import "./style.css";
 
-
 export default function NavBarRightSide({
   isAuthenticated,
   handleUserAuthLogout,
   handleUserClickMenu,
   currentUser,
-  
 }) {
   return (
     <div>
@@ -36,12 +34,6 @@ export default function NavBarRightSide({
             to="LoginPage"
           >
             LOGIN
-          </Link>
-          <Link
-            className="influencer_navBar_link-container-Link"
-            to="RegisterPage"
-          >
-            REGISTER
           </Link>
         </>
       )}

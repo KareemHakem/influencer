@@ -46,7 +46,6 @@ export default function NavBar() {
 
           <NavBarRightSide
             handleUserClickMenu={handleUserClickMenu}
-            handleUserAuthLogout={handleUserAuthLogout}
             isAuthenticated={isAuthenticated}
             currentUser={currentUser}
             displayMenu={displayMenu}

@@ -5,7 +5,6 @@ export default function InfluencerMenu() {
     <div style={{ backgroundColor: "gray", height: "auto", width: 150 }}>
       <div>Profile</div>
       <div>orders</div>
-
       <div>logout</div>
     </div>
   );

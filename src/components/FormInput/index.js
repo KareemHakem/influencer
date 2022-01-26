@@ -7,8 +7,8 @@ import "./style.css";
 export const FormInput = ({ ...props }) => {
   const [field, meta] = useField(props);
   return (
-    <FormControl error={meta.touched && !!meta.error}>
-      <Input {...field} {...props} variant="standard" />
+    <FormControl className="input_form " error={meta.touched && !!meta.error}>
+      <Input width={550} {...field} {...props} variant="standard" />
       {meta.touched && meta.error && (
         <p className="error_input_message"> {meta.error} </p>
       )}

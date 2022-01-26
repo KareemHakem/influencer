@@ -6,11 +6,13 @@ import HomeText from "../../../components/HomeComponents/HomeText";
 import "./style.css";
 
 export default function HomePage() {
-  const { currentUser } = useSelector((state) => state.auth);
+  const { currentUser, isAuthenticated } = useSelector((state) => state.auth);
 
-  axios.defaults.headers.common[
-    "Authorization"
-  ] = `Bearer ${currentUser.token}`;
+  if (isAuthenticated) {
+    axios.defaults.headers.common[
+      "Authorization"
+    ] = `Bearer ${currentUser.token}`;
+  }
 
   return (
     <div className="home-page-Animation">

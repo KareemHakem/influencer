@@ -5,15 +5,21 @@ import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import "./style.css";
 
+
 export default function NavBarRightSide({
   isAuthenticated,
   handleUserAuthLogout,
+  handleUserClickMenu,
   currentUser,
+  
 }) {
   return (
     <div>
       {isAuthenticated ? (
-        <div className="influencer_navBar-user-menu">
+        <div
+          className="influencer_navBar-user-menu"
+          onClick={handleUserClickMenu}
+        >
           <Stack direction="row" spacing={1}>
             <Chip
               className="influencer_navBar-Avatar"

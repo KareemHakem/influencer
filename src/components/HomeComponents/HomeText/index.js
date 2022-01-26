@@ -8,7 +8,7 @@ import "./style.css";
 export default function HomeText() {
   return (
     <div className="text-container">
-      <div class="ml12">
+      <div className="ml12">
         <Typical
           steps={[
             "Success is nothing more than a",

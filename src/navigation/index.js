@@ -16,7 +16,7 @@ export default function Navigation() {
         <Route path="favorite" element={<FavoritePage />} />
         <Route path="influencer" element={<InfluencerPage />} />
         <Route path="influencer/:id" element={<InfluencerDetailPage />} />
-        <Route path="LoginPage" element={<LoginPage />} />
+        <Route path="login" element={<LoginPage />} />
         <Route path="RegisterPage" element={<RegisterPage />} />
       </Routes>
     </>

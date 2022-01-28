@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { getInfluencer } from "../../../api/requests/influencers";
 import { Loading } from "../../../commons/Loading";
 import { Error } from "../../../commons/Error";
@@ -23,7 +23,6 @@ export default function InfluencerDetail({ handleNavigate }) {
       .then((res) => {
         setInfluencer(res.influencer);
         setOtherInfluencer(res.otherInfluencer);
-        console.log(res, "---");
       })
       .catch((err) => setError(err))
       .finally(() => setLoading(false));

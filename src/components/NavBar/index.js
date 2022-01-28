@@ -52,15 +52,13 @@ export default function NavBar() {
           />
         </div>
       </div>
-      <div
-        style={{
-          right: 20,
-          zIndex: 1000,
-          top: 55,
-          position: "fixed",
-        }}
-      >
-        {displayMenu && <NavbarMenus currentUser={currentUser} />}
+      <div className="menu_navbar_user">
+        {displayMenu && (
+          <NavbarMenus
+            handleUserAuthLogout={handleUserAuthLogout}
+            currentUser={currentUser}
+          />
+        )}
       </div>
     </>
   );

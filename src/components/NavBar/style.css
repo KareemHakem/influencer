@@ -36,3 +36,11 @@
   border-radius: 20px;
   background-color: #cecece;
 }
+
+.menu_navbar_user {
+  right: 20;
+  z-index: 1000;
+  top: 55;
+  position: fixed;
+  margin-left: 86%;
+}

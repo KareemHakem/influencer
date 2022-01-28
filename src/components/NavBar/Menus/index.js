@@ -6,14 +6,19 @@ import UserMenu from "./UserMenu";
 import InfluencerMenu from "./InfluencerMenu";
 import AdminMenu from "./AdminMenu";
 
-export default function NavbarMenus({ currentUser }) {
+export default function NavbarMenus({ currentUser, handleUserAuthLogout }) {
   switch (userTypes(currentUser)) {
     case types.Admin:
-      return <AdminMenu />;
+      return <AdminMenu handleUserAuthLogout={handleUserAuthLogout} />;
     case types.Influencer:
-      return <InfluencerMenu />;
+      return (
+        <InfluencerMenu
+          currentUser={currentUser}
+          handleUserAuthLogout={handleUserAuthLogout}
+        />
+      );
     case types.User:
-      return <UserMenu />;
+      return <UserMenu handleUserAuthLogout={handleUserAuthLogout} />;
     default:
       return <></>;
   }

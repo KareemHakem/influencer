@@ -1,6 +1,10 @@
+.influencer_profile_light_side {
+  width: 50%;
+}
+
 .influencer_profile_light_side-image img {
   height: 450px;
-  margin-top: 50px !important ;
+  margin-top: 90px !important ;
   width: 350px;
   object-fit: cover;
   margin: 0;

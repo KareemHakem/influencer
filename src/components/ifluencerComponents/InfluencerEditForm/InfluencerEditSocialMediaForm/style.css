@@ -1,0 +1,15 @@
+.influencer_edit_form-social_media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  flex-direction: column;
+}
+
+.influencer_edit_form-social_media-container h2 {
+  color: #2168a6;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-right: 500px;
+  margin-top: 10px;
+}

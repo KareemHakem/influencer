@@ -1,11 +1,16 @@
 .influencer_profile-container {
   height: auto;
   margin-top: 70px;
+  background-color: #dbeeff;
 }
 
 .influencer_profile-sides-container {
   margin-top: 70px;
-  background-color: #dbeeff;
-  min-height: 600px;
-}
 
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-left: 15%;
+}

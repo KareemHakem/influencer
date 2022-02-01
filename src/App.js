@@ -26,3 +26,10 @@ function App() {
 }
 
 export default App;
+//    GET ------------------------------------------- POST _ PUT _ DELETE
+//  Parameter: Nothing/ID ---------------------------- Values(and/or)ID
+//  Return:    DATA ----------------------------------- Success/Data(login/register)
+//  how?:      useEffect() ---------------------------- button submit/OnClick()
+//  handling1: <Loading /> ---------------------------- loading in Button
+// handling2:  <Error /> ------------------------------ toast/notifaction
+// handling3:  display DATA --------------------------- toast/notifaction

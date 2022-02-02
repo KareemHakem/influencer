@@ -26,6 +26,7 @@ function App() {
 }
 
 export default App;
+
 //    GET ------------------------------------------- POST _ PUT _ DELETE
 //  Parameter: Nothing/ID ---------------------------- Values(and/or)ID
 //  Return:    DATA ----------------------------------- Success/Data(login/register)
@@ -33,3 +34,15 @@ export default App;
 //  handling1: <Loading /> ---------------------------- loading in Button
 // handling2:  <Error /> ------------------------------ toast/notifaction
 // handling3:  display DATA --------------------------- toast/notifaction
+
+// ----> Branch FixInfluencerReq
+// 1- create influencer folder in the redux  (blackList)
+//  2- call it in the influencer page && influencer profile
+//  comment api/req/influencer  or delete
+// ----> Branch Formik
+//  1- Create FormInput
+//  2- Create FormSelect
+// ----> branch EditInfluencerProfile
+// 1- check the names of the input in the backend (models/InfluencerModel)
+// 2- add Formik && FromInput  FormSelect in the FromComponent
+// 3- Add validation schema

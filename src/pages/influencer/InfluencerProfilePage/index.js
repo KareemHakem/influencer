@@ -6,16 +6,16 @@ import Loading from "react-loading";
 import { Error } from "../../../commons/Error";
 
 const InfluencerProfilePage = () => {
-  const [influencer, setInfluencer] = useState([]);
+  const [influencers, setInfluencers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const { currentUser } = useSelector((state) => state.auth);
-
+  
   useEffect(() => {
     setLoading(true);
     getInfluencers()
       .then((res) => {
-        setInfluencer(res.influencer);
+        setInfluencers(res.influencers);
       })
       .catch((err) => setError(err))
       .finally(() => setLoading(false));
@@ -24,12 +24,14 @@ const InfluencerProfilePage = () => {
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-  const influencerProfile = influencer?.find((i) => i.user === currentUser._id);
+  const influencerProfile = influencers?.find( 
+    (id) => id.user === currentUser._id
+  );
 
   return (
     <div>
       {!influencerProfile ? (
-        <div> Create Profile </div>
+        <div style={{ marginTop: 100 }}> Create Profile </div>
       ) : (
         <InfluencerProfile influencerProfile={influencerProfile} />
       )}

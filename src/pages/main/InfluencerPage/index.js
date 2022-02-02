@@ -1,35 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { getInfluencers } from "../../../api/requests/influencers";
+
+import { useSelector, useDispatch } from "react-redux";
+import { getInfluencers } from "../../../redux/influencers/action";
+
 import { Error } from "../../../commons/Error";
 import { Loading } from "../../../commons/Loading";
 import InfluencerCard from "../../../components/ifluencerComponents/InfluencerCard";
 import "./style.css";
 
 export default function InfluencerPage() {
-  // finally for not repeating the functions/methods in the THEN & CATCH
-  const [loading, setLoading] = useState(false);
-  const [influencer, setInfluencer] = useState([]);
-  const [error, setError] = useState(null);
-  const navigate = useNavigate();
+  const { influencer, loading, error } = useSelector(
+    (state) => state.influencers
+  );
+
+  const Navigate = useNavigate();
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    setLoading(true);
-    getInfluencers()
-      .then((res) => setInfluencer(res.influencers))
-      .catch((err) => setError(err))
-      .finally(() => setLoading(false));
-  }, []);
+    dispatch(getInfluencers());
+  }, [dispatch]);
 
   if (loading) return <Loading />;
   if (error) return <Error />;
 
   const handleNavigate = (id) => {
-    navigate(`/influencer/${id}`);
+    Navigate(`/influencer/${id}`);
   };
 
   return (
     <div className="influencer-card_container">
-      {influencer.map((influencer) => (
+      {influencer.influencers.map((influencer) => (
         <InfluencerCard
           key={influencer._id}
           handleNavigate={handleNavigate}

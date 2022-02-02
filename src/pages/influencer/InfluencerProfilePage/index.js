@@ -1,40 +1,37 @@
-import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import { getInfluencers } from "../../../api/requests/influencers";
+import React, { useEffect } from "react";
+
+import { useSelector, useDispatch } from "react-redux";
+import { getInfluencers } from "../../../redux/influencers/action";
+
 import InfluencerProfile from "../../../components/ifluencerComponents/InfluencerProfile";
 import Loading from "react-loading";
 import { Error } from "../../../commons/Error";
 
 const InfluencerProfilePage = () => {
-  const [influencers, setInfluencers] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const { influencer, error, loading } = useSelector(
+    (state) => state.influencers
+  );
   const { currentUser } = useSelector((state) => state.auth);
-  
+  const dispatch = useDispatch();
+
+  console.log(influencer);
+
   useEffect(() => {
-    setLoading(true);
-    getInfluencers()
-      .then((res) => {
-        setInfluencers(res.influencers);
-      })
-      .catch((err) => setError(err))
-      .finally(() => setLoading(false));
-  }, []);
+    dispatch(getInfluencers());
+  }, [dispatch]);
+
+  const influencerDetail = influencer.influencers.find(
+    (id) => id.user === currentUser._id
+  );
+
+  console.log(influencerDetail," kareem mohamed");
 
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-  const influencerProfile = influencers?.find( 
-    (id) => id.user === currentUser._id
-  );
-
   return (
     <div>
-      {!influencerProfile ? (
-        <div style={{ marginTop: 100 }}> Create Profile </div>
-      ) : (
-        <InfluencerProfile influencerProfile={influencerProfile} />
-      )}
+      <InfluencerProfile influencerDetail={influencerDetail} />
     </div>
   );
 };

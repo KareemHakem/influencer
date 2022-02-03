@@ -1,9 +1,13 @@
 import React from "react";
+import { Button } from "../../../commons/Button";
 import InfluencerProfileLightSide from "../InfluencerProfile/InfluencerProfileLightSide";
 import InfluencerProfileRightSide from "../InfluencerProfile/InfluencerProfileRightSide";
 import "./style.css";
 
-export default function InfluencerProfile({ influencerDetail }) {
+export default function InfluencerProfile({
+  influencerDetail,
+  handleNavigate,
+}) {
   return (
     <div className="influencer_profile-container">
       <div className="influencer_profile-sides-container">
@@ -14,6 +18,7 @@ export default function InfluencerProfile({ influencerDetail }) {
           <InfluencerProfileRightSide influencerDetail={influencerDetail} />
         </div>
       </div>
+      <Button onClick={handleNavigate} />
     </div>
   );
 }

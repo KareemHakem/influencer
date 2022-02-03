@@ -6,10 +6,9 @@ import InfluencerDetailPage from "../pages/main/InfluencerDetailPage";
 import NavBar from "../components/NavBar";
 import LoginPage from "../pages/auth/LoginPage";
 import RegisterPage from "../pages/auth/RegisterPage";
-
 import InfluencerProfilePage from "../pages/influencer/InfluencerProfilePage";
-
 import InfluencerOrders from "../pages/influencer/InfluencerOrders";
+import InfluencerEditProfile from "../pages/influencer/InfluencerEditProfile";
 
 export default function Navigation() {
   return (
@@ -27,6 +26,7 @@ export default function Navigation() {
           element={<InfluencerProfilePage />}
         />
         <Route path="orders" element={<InfluencerOrders />} />
+        <Route path="/editprofile/:id" element={<InfluencerEditProfile />} />
       </Routes>
     </>
   );

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 import { getInfluencers } from "../../../redux/influencers/action";
@@ -13,8 +14,7 @@ const InfluencerProfilePage = () => {
   );
   const { currentUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-
-  console.log(influencer);
+  const Navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getInfluencers());
@@ -24,14 +24,21 @@ const InfluencerProfilePage = () => {
     (id) => id.user === currentUser._id
   );
 
-  console.log(influencerDetail," kareem mohamed");
+  console.log(influencerDetail, "kaufgjhdsgfjksdfgsdjkfgskdjhfg");
+
+  const handleNavigate = () => {
+    Navigate(`/editprofile/${influencerDetail?._id}`);
+  };
 
   if (loading) return <Loading />;
   if (error) return <Error />;
 
   return (
     <div>
-      <InfluencerProfile influencerDetail={influencerDetail} />
+      <InfluencerProfile
+        handleNavigate={handleNavigate}
+        influencerDetail={influencerDetail}
+      />
     </div>
   );
 };

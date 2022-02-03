@@ -14,6 +14,7 @@ export default function InfluencerDetail({ handleNavigate }) {
   const [otherInfluencer, setOtherInfluencer] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [select, setSelect] = useState("");
   const { id } = useParams();
   const dispatch = useDispatch();
 
@@ -40,6 +41,8 @@ export default function InfluencerDetail({ handleNavigate }) {
       <InfluencerDetailCard
         handleAddFavorite={handleAddFavorite}
         influencer={influencer}
+        select={select}
+        setSelect={setSelect}
       />
     </div>
   );

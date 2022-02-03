@@ -5,11 +5,14 @@ import InfluencerRating from "../InfluencerRating";
 import FormSelect from "../../../commons/FormSelect";
 import { Icons } from "../../../assets/Icons";
 import { Button } from "../../../commons/Button";
+import { PackagesOptions } from "../../../assets/data/packagesOptions";
 import "./style.css";
 
 export default function InfluencerDetailCard({
   influencer,
   handleAddFavorite,
+  select,
+  setSelect,
 }) {
   return (
     <div className="influencer_card_detail-container">
@@ -32,17 +35,17 @@ export default function InfluencerDetailCard({
 
         <div className="influencer_card_detail-btn-container">
           <FormSelect
+            options={PackagesOptions}
+            label="Select Your Package"
+            value={select}
             holderName="Select Your Package"
-            width={270}
-            firstText="Post"
-            secondText="3 Stories"
-            thirdText="Post - 3  Stories"
-            FourthText="Package"
+            width={250}
+            onChange={(e) => setSelect(e.target.value)}
           />
           <div className="influencer_card_detail-btn">
             <Button
               className="influencer_request-btn"
-              title="REQUEST ORDER FOR $"
+              title={`REQUEST ORDER FOR $ ${select}`}
             />
             <Button
               className="influencer_Add-btn"

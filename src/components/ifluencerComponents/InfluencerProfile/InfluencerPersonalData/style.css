@@ -1,0 +1,24 @@
+.influencer_profile_detail-personal-data-container {
+  width: 300px;
+  height: auto;
+  margin-top: 100px;
+}
+
+.influencer_profile_detail-personal-data h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Fira Sans", sans-serif !important;
+  color: #000 !important;
+}
+
+.influencer_profile_detail-personal-data {
+  display: flex;
+  justify-content: space-between !important ;
+  align-items: flex-end !important;
+  padding-top: 20px;
+}
+
+.influencer_profile_detail-personal-category {
+  color: #2168a6;
+  font-family: "Fira Sans", sans-serif !important;
+}

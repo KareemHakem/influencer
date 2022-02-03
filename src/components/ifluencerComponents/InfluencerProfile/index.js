@@ -7,12 +7,11 @@ export default function InfluencerProfile({ influencerDetail }) {
   return (
     <div className="influencer_profile-container">
       <div className="influencer_profile-sides-container">
-        <div className="influencer_profile-sides">
-          <InfluencerProfileLightSide />
-          <div style={{ marginTop: 200 }}> {influencerDetail.name} </div>
+        <div className="influencer_profile-light-sides">
+          <InfluencerProfileLightSide influencerDetail={influencerDetail} />
         </div>
-        <div>
-          <InfluencerProfileRightSide />
+        <div className="influencer_profile-right-side">
+          <InfluencerProfileRightSide influencerDetail={influencerDetail} />
         </div>
       </div>
     </div>

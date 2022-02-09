@@ -18,13 +18,12 @@ const InfluencerProfilePage = () => {
 
   useEffect(() => {
     dispatch(getInfluencers());
-  }, [dispatch]);
+    console.log("use Ef");
+  }, []);
 
-  const influencerDetail = influencer.influencers.find(
+  const influencerDetail = influencer?.influencers?.find(
     (id) => id.user === currentUser._id
   );
-
-  console.log(influencer, "------");
 
   const handleNavigate = () => {
     Navigate(`/editprofile/${influencerDetail?._id}`);
@@ -41,7 +40,7 @@ const InfluencerProfilePage = () => {
           influencerDetail={influencerDetail}
         />
       ) : (
-        <div></div>
+        <div> </div>
       )}
     </div>
   );

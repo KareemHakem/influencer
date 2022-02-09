@@ -7,14 +7,11 @@ import { errorHandlers } from "../../utils/errorHandler";
 export const editInfluencer = (values, id) => async (dispatch) => {
   dispatch({ type: type.EDIT_INFLUENCER_REQUEST });
   try {
-    const { data } = await axios.put(
-      `influencers/profile/${id}`,
-      values
-    );
+    const { data } = await axios.put(`influencers/profile/${id}`, values);
     dispatch({ type: type.EDIT_INFLUENCER_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: type.EDIT_INFLUENCER_ERROR, payload: error });
-    //     errorHandlers(error);
+    errorHandlers(error);
     console.log(error);
   }
 };

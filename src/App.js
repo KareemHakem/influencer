@@ -35,14 +35,19 @@ export default App;
 // handling2:  <Error /> ------------------------------ toast/notifaction
 // handling3:  display DATA --------------------------- toast/notifaction
 
-// ----> Branch FixInfluencerReq
-// 1- create influencer folder in the redux  (blackList)
-//  2- call it in the influencer page && influencer profile
-//  comment api/req/influencer  or delete
-// ----> Branch Formik
-//  1- Create FormInput
-//  2- Create FormSelect
+
 // ----> branch EditInfluencerProfile
-// 1- check the names of the input in the backend (models/InfluencerModel)
-// 2- add Formik && FromInput  FormSelect in the FromComponent
-// 3- Add validation schema
+// 1- Add validation schema
+// 2- to improve the design in the page
+
+// -----> Create Profile
+// 1- add the page
+// 2- create request in the request folder
+
+// ----> FixingStyles
+//  1- menu in navbar setDisplay to false after clicks
+//  2- redesgin the menu navbar
+// 3- improve login and register page
+//  4- the Delete Button in the favorite cart
+
+// ---->

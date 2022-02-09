@@ -1,24 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form } from "formik";
 // import { validationEditProfile as validationSchema } from "../../../utils/validationSchema";
 import { InfluencerEditPersonalForm } from "./InfluencerEditPersonalForm";
 import InfluencerEditFeeForm from "./InfluencerEditFeeForm";
 import InfluencerEditSocialMediaForm from "./InfluencerEditSocialMediaForm";
 import { FormInput } from "../../FormInput";
+import Checkbox from "@mui/material/Checkbox";
 import { Button } from "../../../commons/Button";
 import "./style.css";
 
 export default function InfluencerEditForm({
   handleEditInfluencerProfile,
   loading,
+  influencer,
 }) {
+  const [checked, setChecked] = useState(true);
+
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+  };
   return (
     <div>
       <Formik
         initialValues={{
-          name: "",
-          phoneNumber: "",
-          city: "",
+          name: influencer?.name || "",
+          phoneNumber: influencer?.phoneNumber || "",
+          city: influencer?.city || "",
           category: [],
           bio: "",
           price: "",
@@ -28,7 +35,7 @@ export default function InfluencerEditForm({
           instFollowers: "",
           image: "",
         }}
-//         validationSchema={validationSchema}
+        //         validationSchema={validationSchema}
         onSubmit={handleEditInfluencerProfile}
       >
         {({ isValid, dirty, isSubmitting }) => (
@@ -47,6 +54,13 @@ export default function InfluencerEditForm({
                   width={330}
                 />
               </div>
+              <Checkbox
+                checked={checked}
+                onChange={handleChange}
+                inputProps={{ "aria-label": "controlled" }}
+              />
+              {checked && <div>Inputs</div>}
+
               <Button
                 className="influencer_edit_form_btn"
                 title="create"

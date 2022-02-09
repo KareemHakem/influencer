@@ -14,7 +14,7 @@ export default function InfluencerMenu({ handleUserAuthLogout, currentUser }) {
             <Link to="/orders">Orders</Link>
           </li>
           <li onClick={handleUserAuthLogout} className="dropdown_item-1">
-            <Link to="/"> Logout </Link>
+            Logout
           </li>
         </ul>
       </div>

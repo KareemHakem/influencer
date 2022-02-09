@@ -13,9 +13,7 @@ export default function AdminMenu() {
           <li className="dropdown_item-1">
             <Link to="/orders">Orders</Link>
           </li>
-          <li className="dropdown_item-1">
-            <Link to="/Logout"> Logout </Link>
-          </li>
+          <li className="dropdown_item-1">Logout</li>
         </ul>
       </div>
     </div>

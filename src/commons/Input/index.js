@@ -7,13 +7,14 @@ export default function Input({
   label,
   width,
   margin,
+  padding,
   ...otherProps
 }) {
   return (
     <Box
       component="form"
       sx={{
-        "& > :not(style)": { margin, width },
+        "& > :not(style)": { margin, width, padding },
       }}
       noValidate
       autoComplete="off"

@@ -21,12 +21,12 @@ export default function InfluencerPage() {
     dispatch(getInfluencers());
   }, [dispatch]);
 
-  if (loading) return <Loading />;
-  if (error) return <Error />;
-
   const handleNavigate = (id) => {
     Navigate(`/influencer/${id}`);
   };
+
+  if (loading) return <Loading />;
+  if (error) return <Error />;
 
   return (
     <div className="influencer-card_container">

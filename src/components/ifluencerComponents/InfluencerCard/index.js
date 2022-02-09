@@ -20,9 +20,9 @@ export default function InfluencerCard({ influencer, handleNavigate }) {
       <div className="influencer_card-underLine" />
 
       <div className="influencer_card-Avatar">
-        {IconsChip.map((icon) => {
+        {IconsChip.map((icon, i) => {
           return (
-            <div className="influencer_card-Avatar-container">
+            <div key={i} className="influencer_card-Avatar-container">
               <IconButton className="IconButton" size="large" key={icon.key}>
                 {icon.icons}
               </IconButton>

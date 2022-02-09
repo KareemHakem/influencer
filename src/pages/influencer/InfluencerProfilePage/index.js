@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getInfluencers } from "../../../redux/influencers/action";
 
 import InfluencerProfile from "../../../components/ifluencerComponents/InfluencerProfile";
-import Loading from "react-loading";
+import { Loading } from "../../../commons/Loading";
 import { Error } from "../../../commons/Error";
 
 const InfluencerProfilePage = () => {
@@ -24,7 +24,7 @@ const InfluencerProfilePage = () => {
     (id) => id.user === currentUser._id
   );
 
-  console.log(influencerDetail, "kaufgjhdsgfjksdfgsdjkfgskdjhfg");
+  console.log(influencer, "------");
 
   const handleNavigate = () => {
     Navigate(`/editprofile/${influencerDetail?._id}`);
@@ -35,10 +35,14 @@ const InfluencerProfilePage = () => {
 
   return (
     <div>
-      <InfluencerProfile
-        handleNavigate={handleNavigate}
-        influencerDetail={influencerDetail}
-      />
+      {influencerDetail ? (
+        <InfluencerProfile
+          handleNavigate={handleNavigate}
+          influencerDetail={influencerDetail}
+        />
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 };

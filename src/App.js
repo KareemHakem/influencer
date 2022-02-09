@@ -27,7 +27,7 @@ function App() {
 
 export default App;
 
-//    GET ------------------------------------------- POST _ PUT _ DELETE
+//    GET ------------------------------------------- POST _ PUT _ DELETE   PUT => edit  POST => creat new
 //  Parameter: Nothing/ID ---------------------------- Values(and/or)ID
 //  Return:    DATA ----------------------------------- Success/Data(login/register)
 //  how?:      useEffect() ---------------------------- button submit/OnClick()

@@ -14,7 +14,7 @@ export default function UserMenu() {
             <Link to="/orders">Orders</Link>
           </li>
           <li className="dropdown_item-1">
-            <Link to="/Logout"> Logout </Link>
+            Logout
           </li>
         </ul>
       </div>

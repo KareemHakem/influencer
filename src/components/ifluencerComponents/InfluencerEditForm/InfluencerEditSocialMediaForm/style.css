@@ -4,6 +4,7 @@
   align-items: center;
   text-align: start;
   flex-direction: column;
+  margin-top: 50px;
 }
 
 .influencer_edit_form-social_media-container h2 {

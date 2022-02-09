@@ -4,8 +4,8 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import "./style.css";
 import { useField } from "formik";
+import "./style.css";
 
 export default function FromSelect({
   value,
@@ -20,8 +20,11 @@ export default function FromSelect({
 }) {
   const [field, meta] = useField(props);
   return (
-    <Box className="influencer_SelectorInput-container" sx={{ margin, width }}>
-      <FormControl error={meta.touched && !!meta.error}>
+    <Box className="influencer_SelectorInput-container">
+      <FormControl
+        style={{ width, margin }}
+        error={meta.touched && !!meta.error}
+      >
         <InputLabel id="demo-simple-select-label">{holderName}</InputLabel>
         <Select
           labelId="demo-simple-select-label"

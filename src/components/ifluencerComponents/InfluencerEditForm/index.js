@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Formik, Form } from "formik";
-// import { validationEditProfile as validationSchema } from "../../../utils/validationSchema";
+import { validationEditProfile as validationSchema } from "../../../utils/validationSchema";
 import { InfluencerEditPersonalForm } from "./InfluencerEditPersonalForm";
 import InfluencerEditFeeForm from "./InfluencerEditFeeForm";
 import InfluencerEditSocialMediaForm from "./InfluencerEditSocialMediaForm";
+import InfluencerEditYoutubeForm from "./InfluencerEditYoutubeForm";
 import { FormInput } from "../../FormInput";
 import Checkbox from "@mui/material/Checkbox";
 import { Button } from "../../../commons/Button";
@@ -26,16 +27,16 @@ export default function InfluencerEditForm({
           name: influencer?.name || "",
           phoneNumber: influencer?.phoneNumber || "",
           city: influencer?.city || "",
-          category: [],
-          bio: "",
-          price: "",
-          fbAccount: "",
-          fbFriends: "",
-          instAccount: "",
-          instFollowers: "",
-          image: "",
+          category: influencer?.category || [],
+          bio: influencer?.bio || "",
+          price: influencer?.price || "",
+          fbAccount: influencer?.fbAccount || "",
+          fbFriends: influencer?.fbFriends || "",
+          instAccount: influencer?.instAccount || "",
+          instFollowers: influencer?.instFollowers || "",
+          image: influencer?.image || "",
         }}
-        //         validationSchema={validationSchema}
+        validationSchema={validationSchema}
         onSubmit={handleEditInfluencerProfile}
       >
         {({ isValid, dirty, isSubmitting }) => (
@@ -54,12 +55,23 @@ export default function InfluencerEditForm({
                   width={330}
                 />
               </div>
-              <Checkbox
-                checked={checked}
-                onChange={handleChange}
-                inputProps={{ "aria-label": "controlled" }}
-              />
-              {checked && <div>Inputs</div>}
+
+              <div className="checkBoxForm">
+                <div className="checkBoxForm-p">
+                  <p> Are You Youtuber? </p>
+                  <Checkbox
+                    checked={checked}
+                    onChange={handleChange}
+                    inputProps={{ "aria-label": "controlled" }}
+                  />
+                </div>
+
+                {checked && (
+                  <div>
+                    <InfluencerEditYoutubeForm />
+                  </div>
+                )}
+              </div>
 
               <Button
                 className="influencer_edit_form_btn"

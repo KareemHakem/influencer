@@ -15,11 +15,12 @@ const InfluencerProfilePage = () => {
   const { currentUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const Navigate = useNavigate();
+  const { id } = useParams();
 
   useEffect(() => {
     dispatch(getInfluencers());
     console.log("use Ef");
-  }, []);
+  }, [dispatch]);
 
   const influencerDetail = influencer?.influencers?.find(
     (id) => id.user === currentUser._id
@@ -27,6 +28,10 @@ const InfluencerProfilePage = () => {
 
   const handleNavigate = () => {
     Navigate(`/editprofile/${influencerDetail?._id}`);
+  };
+
+  const handleProfileNavigate = () => {
+    Navigate(`/influencer/${id}`);
   };
 
   if (loading) return <Loading />;
@@ -38,6 +43,7 @@ const InfluencerProfilePage = () => {
         <InfluencerProfile
           handleNavigate={handleNavigate}
           influencerDetail={influencerDetail}
+          handleProfileNavigate={handleProfileNavigate}
         />
       ) : (
         <div> </div>

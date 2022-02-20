@@ -7,6 +7,7 @@ import { Icons } from "../../../assets/Icons";
 import { Button } from "../../../commons/Button";
 import { PackagesOptions } from "../../../assets/data/packagesOptions";
 import "./style.css";
+import { useSelector } from "react-redux";
 
 export default function InfluencerDetailCard({
   influencer,
@@ -14,6 +15,8 @@ export default function InfluencerDetailCard({
   select,
   setSelect,
 }) {
+  const { rates } = useSelector((state) => state.rates);
+
   return (
     <div className="influencer_card_detail-container">
       <div className="influencer_card_detail_image-container">
@@ -26,12 +29,12 @@ export default function InfluencerDetailCard({
 
         <div className="influencer_card_detail-rating">
           <InfluencerRating number={4} />
-          <p> (4 reviews) </p>
+          <p> ({rates} reviews) </p>
         </div>
 
-        <div>
-          <InfluencerBio influencer={influencer} />
-        </div>
+        {/* <div> */}
+        <InfluencerBio influencer={influencer} />
+        {/* </div> */}
 
         <div className="influencer_card_detail-btn-container">
           <FormSelect

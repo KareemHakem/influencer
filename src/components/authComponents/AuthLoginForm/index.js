@@ -23,11 +23,19 @@ const LoginForm = ({ handleAuthLoginUserSubmit, loading }) => {
           {({ dirty, isValid, isSubmitting }) => (
             <Form className="form_Login_page">
               <h2> Welcome to Website Name</h2>
-              <FormInput label="Email" name="email" placeholder="Email" />
+              <FormInput
+                label="Email"
+                name="email"
+                placeholder="Email"
+                variant="standard"
+                width={500}
+              />
               <FormInput
                 label="Password"
                 name="password"
                 placeholder="Password"
+                variant="standard"
+                width={500}
               />
               <Button
                 className="btn_login_form"

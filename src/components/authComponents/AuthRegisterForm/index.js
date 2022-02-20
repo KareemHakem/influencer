@@ -40,30 +40,40 @@ const AuthRegisterForm = ({
                 name="firstName"
                 placeholder="First Name"
                 label="Fist Name"
+                variant="standard"
+                width={600}
               />
               <FormInput
                 style={RegisterFormInput}
                 name="secondName"
                 placeholder="Second Name"
                 label="Second Name"
+                variant="standard"
+                width={600}
               />
               <FormInput
                 style={RegisterFormInput}
                 name="email"
                 placeholder="Email"
                 label="Email"
+                variant="standard"
+                width={600}
               />
               <FormInput
                 style={RegisterFormInput}
                 name="password"
                 placeholder="Password"
                 label="Password"
+                variant="standard"
+                width={600}
               />
               <FormInput
                 name="confirmPassword"
                 style={RegisterFormInput}
                 placeholder="Confirm Password"
                 label="Confirm Password"
+                variant="standard"
+                width={600}
               />
 
               <Button

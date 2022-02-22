@@ -1,19 +1,21 @@
 import React, { useState } from "react";
+
 import { Formik, Form } from "formik";
 import { validationEditProfile as validationSchema } from "../../../utils/validationSchema";
-import { InfluencerEditPersonalForm } from "./InfluencerEditPersonalForm";
-import InfluencerEditFeeForm from "./InfluencerEditFeeForm";
-import InfluencerEditSocialMediaForm from "./InfluencerEditSocialMediaForm";
-import InfluencerEditYoutubeForm from "./InfluencerEditYoutubeForm";
+
 import { FormInput } from "../../FormInput";
-import Checkbox from "@mui/material/Checkbox";
 import { Button } from "../../../commons/Button";
+
+import Checkbox from "@mui/material/Checkbox";
+import InfluencerCreatePersonalForm from "./InfluencerCreatePersonalForm";
+import InfluencerCreateFeeForm from "./InfluencerCreateFeeForm";
+import InfluencerCreateSocialMediaForm from "./InfluencerCreateSocialMediaForm";
+import InfluencerCreateYoutubeForm from "./InfluencerCreateYoutubeForm";
 import "./style.css";
 
-export default function InfluencerEditForm({
-  handleEditInfluencerProfile,
+export default function InfluencerCreateProfile({
+  handleCreateProfile,
   loading,
-  influencer,
 }) {
   const [checked, setChecked] = useState(true);
 
@@ -24,30 +26,30 @@ export default function InfluencerEditForm({
     <div>
       <Formik
         initialValues={{
-          name: influencer?.name || "",
-          phoneNumber: influencer?.phoneNumber || "",
-          city: influencer?.city || "",
-          category: influencer?.category || [],
-          bio: influencer?.bio || "",
-          price: influencer?.price || "",
-          fbAccount: influencer?.fbAccount || "",
-          fbFriends: influencer?.fbFriends || "",
-          instAccount: influencer?.instAccount || "",
-          instFollowers: influencer?.instFollowers || "",
-          image: influencer?.image || "",
-          youtubeAccount: influencer.youtubeAccount || "",
-          youtubeSubscribers: influencer.youtubeSubscribers || "",
+          name: "",
+          phoneNumber: "",
+          city: "",
+          category: [],
+          bio: "",
+          price: "",
+          fbAccount: "",
+          fbFriends: "",
+          instAccount: "",
+          instFollowers: "",
+          image: "",
+          youtubeAccount: "",
+          youtubeSubscribers: "",
         }}
         validationSchema={validationSchema}
-        onSubmit={handleEditInfluencerProfile}
+        onSubmit={handleCreateProfile}
       >
-        {({ isValid, dirty, isSubmitting }) => (
+        {({ isValid, isSubmitting, dirty }) => (
           <div className="influencer_edit_hed_page">
             <h1>Edit influenceur profile </h1>
             <Form className="influencer_edit_form_card-container">
-              <InfluencerEditPersonalForm />
-              <InfluencerEditFeeForm />
-              <InfluencerEditSocialMediaForm />
+              <InfluencerCreatePersonalForm />
+              <InfluencerCreateFeeForm />
+              <InfluencerCreateSocialMediaForm />
               <div className="influencer_edit_image_profile">
                 <h2> Update Image </h2>
                 <FormInput
@@ -70,7 +72,7 @@ export default function InfluencerEditForm({
 
                 {checked && (
                   <div>
-                    <InfluencerEditYoutubeForm />
+                    <InfluencerCreateYoutubeForm />
                   </div>
                 )}
               </div>

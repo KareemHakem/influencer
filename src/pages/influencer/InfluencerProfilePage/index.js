@@ -7,6 +7,9 @@ import { getInfluencers } from "../../../redux/influencers/action";
 import InfluencerProfile from "../../../components/ifluencerComponents/InfluencerProfile";
 import { Loading } from "../../../commons/Loading";
 import { Error } from "../../../commons/Error";
+import { Button } from "@mui/material";
+
+import "./style.css";
 
 const InfluencerProfilePage = () => {
   const { influencer, error, loading } = useSelector(
@@ -34,6 +37,10 @@ const InfluencerProfilePage = () => {
     Navigate(`/influencer/${id}`);
   };
 
+  const handleCreatProfileNavigation = () => {
+    Navigate("/create-profile");
+  };
+
   if (loading) return <Loading />;
   if (error) return <Error />;
 
@@ -46,7 +53,14 @@ const InfluencerProfilePage = () => {
           handleProfileNavigate={handleProfileNavigate}
         />
       ) : (
-        <div> </div>
+        <div>
+          <Button
+            className="influencerCreateProfile"
+            onClick={handleCreatProfileNavigation}
+          >
+            Create Profile
+          </Button>
+        </div>
       )}
     </div>
   );

@@ -9,6 +9,7 @@ import RegisterPage from "../pages/auth/RegisterPage";
 import InfluencerProfilePage from "../pages/influencer/InfluencerProfilePage";
 import InfluencerOrders from "../pages/influencer/InfluencerOrders";
 import InfluencerEditProfile from "../pages/influencer/InfluencerEditProfile";
+import InfluencerCreateProfile from "../components/ifluencerComponents/InfluencerCreateProfile";
 
 export default function Navigation() {
   return (
@@ -27,6 +28,7 @@ export default function Navigation() {
         />
         <Route path="orders" element={<InfluencerOrders />} />
         <Route path="/editprofile/:id" element={<InfluencerEditProfile />} />
+        <Route path="/create-profile" element={<InfluencerCreateProfile />} />
       </Routes>
     </>
   );

@@ -37,8 +37,8 @@ export default App;
 // handling3:  display DATA --------------------------- toast/notifaction
 
 // ----> branch EditInfluencerProfile
-// 1- Add validation schema
-// 2- to improve the design in the page
+// 1- Add validation schema //
+// 2- to improve the design in the page //
 
 // -----> Create Profile
 // 1- add the page
@@ -47,5 +47,5 @@ export default App;
 // ----> FixingStyles
 //  1- menu in navbar setDisplay to false after clicks
 //  2- redesgin the menu navbar
-//  3- improve login and register page
+//  3- improve login and register page //
 //  4- the Delete Button in the favorite cart

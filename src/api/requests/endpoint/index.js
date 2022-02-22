@@ -5,4 +5,5 @@ export const endpoint = {
   users: "users",
   login: "login",
   Register: "Register",
+  create: "create",
 };

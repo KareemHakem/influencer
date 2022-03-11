@@ -6,12 +6,13 @@ import FormSelect from "../../../commons/FormSelect";
 import { Icons } from "../../../assets/Icons";
 import { Button } from "../../../commons/Button";
 import { PackagesOptions } from "../../../assets/data/packagesOptions";
-import "./style.css";
 import { useSelector } from "react-redux";
+import "./style.css";
 
 export default function InfluencerDetailCard({
   influencer,
   handleAddFavorite,
+  handlePayNavigation,
   select,
   setSelect,
 }) {
@@ -32,10 +33,8 @@ export default function InfluencerDetailCard({
           <p> ({rates} reviews) </p>
         </div>
 
-        {/* <div> */}
         <InfluencerBio influencer={influencer} />
-        {/* </div> */}
-
+        
         <div className="influencer_card_detail-btn-container">
           <FormSelect
             options={PackagesOptions}
@@ -49,6 +48,7 @@ export default function InfluencerDetailCard({
             <Button
               className="influencer_request-btn"
               title={`REQUEST ORDER FOR $ ${select}`}
+              onClick={handlePayNavigation}
             />
             <Button
               className="influencer_Add-btn"

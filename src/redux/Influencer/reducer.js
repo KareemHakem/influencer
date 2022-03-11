@@ -14,7 +14,7 @@ const addFavoriteReducer = (state = initialState, action) => {
     case type.REMOVE_FAVORITE_INFLUENCER:
       return {
         favorite: state.favorite.filter(
-          (favorite) => favorite.id !== action.payload.id
+          (favorite) => favorite._id !== action.payload._id
         ),
       };
 

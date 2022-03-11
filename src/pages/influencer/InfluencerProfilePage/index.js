@@ -18,7 +18,7 @@ const InfluencerProfilePage = () => {
   const { currentUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const Navigate = useNavigate();
-  const { id } = useParams();
+ 
 
   useEffect(() => {
     dispatch(getInfluencers());
@@ -34,7 +34,7 @@ const InfluencerProfilePage = () => {
   };
 
   const handleProfileNavigate = () => {
-    Navigate(`/influencer/${id}`);
+    Navigate(`/influencer/${influencerDetail._id}`);
   };
 
   const handleCreatProfileNavigation = () => {

@@ -16,7 +16,7 @@ const creatProfileReducer = (state = initialState, action) => {
     case type.CREATE_INFLUENCER_SUCCESS:
       return {
         loading: false,
-        success: action.payload,
+        success: true,
         error: null,
       };
     case type.CREATE_INFLUENCER_ERROR:

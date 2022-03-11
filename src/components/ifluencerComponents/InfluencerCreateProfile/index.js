@@ -11,16 +11,25 @@ import InfluencerCreatePersonalForm from "./InfluencerCreatePersonalForm";
 import InfluencerCreateFeeForm from "./InfluencerCreateFeeForm";
 import InfluencerCreateSocialMediaForm from "./InfluencerCreateSocialMediaForm";
 import InfluencerCreateYoutubeForm from "./InfluencerCreateYoutubeForm";
+import { createProfileInfluencer } from "../../../redux/createProfileInfluencer/action";
+import { useDispatch } from "react-redux";
 import "./style.css";
 
 export default function InfluencerCreateProfile({
-  handleCreateProfile,
+  handleSubmit,
   loading,
+  handleNavigateInfluencerPage,
 }) {
   const [checked, setChecked] = useState(true);
 
+  const dispatch = useDispatch();
+
   const handleChange = (event) => {
     setChecked(event.target.checked);
+  };
+  const onSubmit = (values) => {
+    console.log(values);
+    dispatch(createProfileInfluencer(values));
   };
   return (
     <div>
@@ -41,12 +50,12 @@ export default function InfluencerCreateProfile({
           youtubeSubscribers: "",
         }}
         validationSchema={validationSchema}
-        onSubmit={handleCreateProfile}
+        onSubmit={onSubmit}
       >
         {({ isValid, isSubmitting, dirty }) => (
-          <div className="influencer_edit_hed_page">
+          <Form className="influencer_edit_hed_page">
             <h1>Edit influenceur profile </h1>
-            <Form className="influencer_edit_form_card-container">
+            <div className="influencer_edit_form_card-container">
               <InfluencerCreatePersonalForm />
               <InfluencerCreateFeeForm />
               <InfluencerCreateSocialMediaForm />
@@ -83,10 +92,11 @@ export default function InfluencerCreateProfile({
                 type="submit"
                 disabled={!dirty || !isValid}
                 loading={loading}
+                onClick={handleNavigateInfluencerPage}
                 width={100}
               />
-            </Form>
-          </div>
+            </div>
+          </Form>
         )}
       </Formik>
     </div>

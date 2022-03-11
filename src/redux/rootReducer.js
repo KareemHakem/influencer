@@ -6,6 +6,7 @@ import influencers from "./influencers/reducer";
 import editInfluencer from "./editInfluencer/reducer";
 import favorites from "./Influencer/reducer";
 import rates from "./rating/reducer";
+import createProfile from "./createProfileInfluencer/reducer"
 
 
 const persistConfig = {
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
   favorites,
   influencers,
   editInfluencer,
+  createProfile,
   rates,
 });
 

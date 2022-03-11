@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getInfluencer } from "../../../api/requests/influencers";
 import { Loading } from "../../../commons/Loading";
 import { Error } from "../../../commons/Error";
 import InfluencerDetailCard from "../../../components/ifluencerComponents/InfluencerDetailCard";
 import { addInfluencerFavorites } from "../../../redux/Influencer/action";
-
 // import InfluencerCard from "../../../components/ifluencerComponents/InfluencerCard";
 
 export default function InfluencerDetail({ handleNavigate }) {
@@ -15,8 +15,10 @@ export default function InfluencerDetail({ handleNavigate }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [select, setSelect] = useState("");
+
   const { id } = useParams();
   const dispatch = useDispatch();
+  const Navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
@@ -31,6 +33,11 @@ export default function InfluencerDetail({ handleNavigate }) {
 
   const handleAddFavorite = () => {
     dispatch(addInfluencerFavorites(influencer));
+    Navigate("/favorite");
+  };
+
+  const handlePayNavigation = () => {
+    Navigate(`/order/${influencer.name}/${id}`);
   };
 
   if (loading) return <Loading />;
@@ -40,6 +47,7 @@ export default function InfluencerDetail({ handleNavigate }) {
     <div>
       <InfluencerDetailCard
         handleAddFavorite={handleAddFavorite}
+        handlePayNavigation={handlePayNavigation}
         influencer={influencer}
         select={select}
         setSelect={setSelect}

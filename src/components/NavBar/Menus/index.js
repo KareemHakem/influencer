@@ -12,7 +12,6 @@ export default function NavbarMenus({ currentUser, handleUserAuthLogout }) {
     case types.Admin:
       return <AdminMenu handleUserAuthLogout={handleUserAuthLogout} />;
     case types.Influencer:
-      console.log("YESSS");
       return (
         <InfluencerMenu
           currentUser={currentUser}
@@ -20,12 +19,10 @@ export default function NavbarMenus({ currentUser, handleUserAuthLogout }) {
         />
       );
     case types.AdminAndInfluencer:
-      console.log("WOWOWOW");
       return <div></div>;
     case types.User:
       return <UserMenu handleUserAuthLogout={handleUserAuthLogout} />;
     default:
-                                  console.log('WTF')
       return <></>;
   }
 }

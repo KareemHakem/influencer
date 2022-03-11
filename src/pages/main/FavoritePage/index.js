@@ -6,11 +6,16 @@ import "./style.css";
 
 export default function FavoritePage() {
   const { favorite } = useSelector((state) => state.favorites);
+
   console.log(favorite);
   return (
     <div className="favoritePage_container">
       {favorite.map((influencer) => (
-        <InfluencerFavoriteCard key={influencer} influencer={influencer} />
+        <InfluencerFavoriteCard
+          key={influencer}
+          influencer={influencer}
+         // removeFavoritesInfluencer={removeFavoritesInfluencer}
+        />
       ))}
     </div>
   );

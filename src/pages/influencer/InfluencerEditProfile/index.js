@@ -7,9 +7,10 @@ import InfluencerEditForm from "../../../components/ifluencerComponents/Influenc
 
 import { errorHandlers } from "../../../utils/errorHandler";
 
-import "./style.css";
 import { toast } from "react-toastify";
 import { useParams } from "react-router-dom";
+
+import "./style.css";
 
 export default function InfluencerEditProfile() {
   const { loading } = useSelector((state) => state.editInfluencer);
@@ -21,8 +22,9 @@ export default function InfluencerEditProfile() {
 
   const influencerDetail = influencer.influencers.find((i) => i._id === id);
 
-  const handleEditInfluencerProfile = (values) =>
+  const handleEditInfluencerProfile = (values) => {
     dispatch(editInfluencer(values, id));
+  };
 
   return (
     <div>

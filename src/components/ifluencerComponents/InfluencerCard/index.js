@@ -1,8 +1,8 @@
 import React from "react";
 import { Button } from "../../../commons/Button";
 import { IconsChip } from "../../../assets/data/avatarIcons";
-import "./style.css";
 import { IconButton } from "@mui/material";
+import "./style.css";
 
 export default function InfluencerCard({ influencer, handleNavigate }) {
   return (

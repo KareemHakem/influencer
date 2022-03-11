@@ -22,7 +22,6 @@ export default function NavBar() {
 
   const handleUserClickMenu = () => {
     setDisplayMenu(!displayMenu);
-    console.log("hiiii");
   };
 
   return (

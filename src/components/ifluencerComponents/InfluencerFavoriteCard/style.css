@@ -53,3 +53,42 @@
 .influencer_favorite_card-btn Button {
   margin-top: 8px;
 }
+
+.deleteButton {
+  height: 45px;
+  background-color: #ffffff;
+  outline: none;
+  border: 1px solid #ed2939;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ed2939;
+  font-size: 17px;
+}
+
+.deleteButton:hover {
+  height: 45px;
+  background-color: #ed2939;
+  outline: none;
+  border: 1px solid #ed2939;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.MassageButton {
+  height: 45px;
+  background-color: #2168a6;
+  outline: none;
+  border: 1px solid #2168a6;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 17px;
+}

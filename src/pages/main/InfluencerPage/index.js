@@ -30,7 +30,7 @@ export default function InfluencerPage() {
 
   return (
     <div className="influencer-card_container">
-      {influencer.influencers.map((influencer) => (
+      {influencer?.influencers?.map((influencer) => (
         <InfluencerCard
           key={influencer._id}
           handleNavigate={handleNavigate}
@@ -40,3 +40,4 @@ export default function InfluencerPage() {
     </div>
   );
 }
+

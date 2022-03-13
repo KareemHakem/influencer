@@ -29,15 +29,16 @@ export default function InfluencerPage() {
   if (error) return <Error />;
 
   return (
-    <div className="influencer-card_container">
-      {influencer?.influencers?.map((influencer) => (
-        <InfluencerCard
-          key={influencer._id}
-          handleNavigate={handleNavigate}
-          influencer={influencer}
-        />
-      ))}
+    <div className="influencerPageContainer">
+      <div className="influencer-card_container">
+        {influencer?.influencers?.map((influencer) => (
+          <InfluencerCard
+            key={influencer._id}
+            handleNavigate={handleNavigate}
+            influencer={influencer}
+          />
+        ))}
+      </div>
     </div>
   );
 }
-

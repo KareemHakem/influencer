@@ -14,6 +14,7 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SearchIcon from "@mui/icons-material/Search";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 export const Icons = {
   EditIcon: ({ ...props }) => <EditIcon {...props} />,
@@ -34,4 +35,5 @@ export const Icons = {
   FavoriteBorderIcon: ({ ...props }) => <FavoriteBorderIcon {...props} />,
   ArrowForwardIcon: ({ ...props }) => <ArrowForwardIcon {...props} />,
   SearchIcon: ({ ...props }) => <SearchIcon {...props} />,
+  AccountCircleIcon: ({ ...props }) => <AccountCircleIcon {...props} />,
 };

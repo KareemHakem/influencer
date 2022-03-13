@@ -2,18 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-export default function UserMenu() {
+export default function UserMenu({ handleUserAuthLogout }) {
   return (
     <div className=" menu_container">
       <div className=" menu_container scale-up-center">
         <ul className="dropdown_menu">
           <li className="dropdown_item-1">
-            <Link to="/profile">Profile </Link>
+            <Link className="UserMenuLink" to={`/user-profile/user.id`}>
+              Account
+            </Link>
           </li>
           <li className="dropdown_item-1">
-            <Link to="/orders">Orders</Link>
+            <Link className="UserMenuLink" to="/user-order">
+              Orders
+            </Link>
           </li>
-          <li className="dropdown_item-1">
+          <li onClick={handleUserAuthLogout} className="dropdown_item-2">
             Logout
           </li>
         </ul>

@@ -12,6 +12,10 @@ import InfluencerEditProfile from "../pages/influencer/InfluencerEditProfile";
 import InfluencerCreateProfile from "../components/ifluencerComponents/InfluencerCreateProfile";
 import InfluencerPayPage from "../pages/influencer/InfluencerPayPage";
 import InfluencerSelectPayPage from "../pages/influencer/InfluencerSelectPayPage";
+import InfluencerPayPalPage from "../pages/influencer/InfluencerPayPalPage";
+import InfluencerFawryPage from "../pages/influencer/InfluencerFawryPage";
+import UserProfilePage from "../pages/user/UserProfilePage";
+import UserOrdersPage from "../pages/orders/UserOrdersPage";
 
 export default function Navigation() {
   return (
@@ -36,6 +40,10 @@ export default function Navigation() {
           path="/user/selectPayment"
           element={<InfluencerSelectPayPage />}
         />
+        <Route path="/placeOrder/PayPal" element={<InfluencerPayPalPage />} />
+        <Route path="/placeOrder/Fawry" element={<InfluencerFawryPage />} />
+        <Route path="/user-profile/:id" element={<UserProfilePage />} />
+        <Route path="/user-orders" element={<UserOrdersPage />} />
       </Routes>
     </>
   );

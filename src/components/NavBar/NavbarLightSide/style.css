@@ -18,3 +18,13 @@
   margin-top: 15px;
   color: white;
 }
+
+.icon_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  box-shadow: rgba(0, 0, 0, 0.197) 0px 5px 15px;
+  border-radius: 50px;
+}

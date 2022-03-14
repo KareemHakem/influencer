@@ -8,3 +8,8 @@
   height: auto !important;
   flex-wrap: wrap;
 }
+
+.emptyFavoritePage_container {
+  background-color: #eaeaea;
+  height: 100%;
+}

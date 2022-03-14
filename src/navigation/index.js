@@ -16,6 +16,9 @@ import InfluencerPayPalPage from "../pages/influencer/InfluencerPayPalPage";
 import InfluencerFawryPage from "../pages/influencer/InfluencerFawryPage";
 import UserProfilePage from "../pages/user/UserProfilePage";
 import UserOrdersPage from "../pages/orders/UserOrdersPage";
+import AdminPanelPage from "../pages/admin/AdminPanelPage";
+import AdminInfinfluencerPage from "../pages/admin/AdminInfinfluencerPage";
+import AdminReportInfluencerPage from "../pages/admin/AdminReportInfluencerPage";
 
 export default function Navigation() {
   return (
@@ -44,6 +47,15 @@ export default function Navigation() {
         <Route path="/placeOrder/Fawry" element={<InfluencerFawryPage />} />
         <Route path="/user-profile/:id" element={<UserProfilePage />} />
         <Route path="/user-orders" element={<UserOrdersPage />} />
+        <Route path="/manage-admin-panel" element={<AdminPanelPage />} />
+        <Route
+          path="/admin-manage-influencer"
+          element={<AdminInfinfluencerPage />}
+        />
+        <Route
+          path="/admin-manage-reports"
+          element={<AdminReportInfluencerPage />}
+        />
       </Routes>
     </>
   );

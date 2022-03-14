@@ -9,7 +9,7 @@ import AdminMenu from "./AdminMenu";
 export default function NavbarMenus({ currentUser, handleUserAuthLogout }) {
   console.log(userTypes(currentUser));
   switch (userTypes(currentUser)) {
-    case types.Admin:
+    case types.isAdmin:
       return <AdminMenu handleUserAuthLogout={handleUserAuthLogout} />;
     case types.Influencer:
       return (

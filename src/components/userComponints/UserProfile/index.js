@@ -17,7 +17,7 @@ export default function UserProfile({
   return (
     <div>
       <div>
-        <div >
+        <div>
           <UserInputInfo />
         </div>
       </div>

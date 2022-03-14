@@ -1,0 +1,25 @@
+.AdminsReportInfluencerTableContainer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  font-family: "Fira Sans", sans-serif !important;
+  height: auto !important;
+}
+
+.AdminsReportInfluencerTable {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 70%;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.095),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.333), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+  height: auto;
+  width: 1150px;
+  border-radius: 5px;
+  margin-top: 50px;
+}

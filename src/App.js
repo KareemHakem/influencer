@@ -2,11 +2,14 @@ import React from "react";
 import { ToastContainer } from "react-toastify";
 import Navigation from "./navigation";
 import "./App.css";
+import { useSelector } from "react-redux";
 
 // from top to button use rebase
 // after : from button to top use merge
 
 function App() {
+  const { initialOrder} = useSelector(state => state.order)
+  console.log(initialOrder, 'idiididi')
   return (
     <div>
       <ToastContainer

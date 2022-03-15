@@ -7,12 +7,13 @@ import editInfluencer from "./editInfluencer/reducer";
 import favorites from "./Influencer/reducer";
 import rates from "./rating/reducer";
 import createProfile from "./createProfileInfluencer/reducer"
+import order from './order/reducer'
 
 
 const persistConfig = {
   key: "KEY",
   storage,
-  whiteList: ["favorite", "auth"],
+  whiteList: ["favorite", "auth", 'order'],
   blackList: ["imfluencers, editInfluencer"],
 };
 
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   editInfluencer,
   createProfile,
   rates,
+  order,
 });
 
 export default persistReducer(persistConfig, rootReducer);

@@ -1,0 +1,5 @@
+export const types ={
+    INITIATE_ORDER: 'INITIATE_ORDER',
+    CANCEL_ORDER:"CANCEL_ORDER",
+    // SOME TYPES
+}

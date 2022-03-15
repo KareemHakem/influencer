@@ -19,6 +19,7 @@ import UserOrdersPage from "../pages/orders/UserOrdersPage";
 import AdminPanelPage from "../pages/admin/AdminPanelPage";
 import AdminInfinfluencerPage from "../pages/admin/AdminInfinfluencerPage";
 import AdminReportInfluencerPage from "../pages/admin/AdminReportInfluencerPage";
+import AdminEditInputUsersPage from "../pages/admin/AdminEditInputUsersPage";
 
 export default function Navigation() {
   return (
@@ -56,6 +57,7 @@ export default function Navigation() {
           path="/admin-manage-reports"
           element={<AdminReportInfluencerPage />}
         />
+        <Route path="/admin/users/:id" element={<AdminEditInputUsersPage />} />
       </Routes>
     </>
   );

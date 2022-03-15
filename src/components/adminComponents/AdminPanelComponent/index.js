@@ -17,12 +17,17 @@ export default function AdminPanelComponent({
   handleAdminOrderNavigate,
   handleAdminInfluencersNavigate,
   handleAdminReportNavigate,
+  handleDeleteUsersNavigate,
+  handleEditInputUsersNavigate,
 }) {
   return (
     <>
       <div>
         <div>
-          <AdminPanelEditUsers />
+          <AdminPanelEditUsers
+            handleEditInputUsersNavigate={handleEditInputUsersNavigate}
+            handleDeleteUsersNavigate={handleDeleteUsersNavigate}
+          />
         </div>
       </div>
 

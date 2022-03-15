@@ -15,7 +15,10 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./style.css";
 
-export default function AdminPanelEditUsers({ handleEdit, handleDelete }) {
+export default function AdminPanelEditUsers({
+  handleEditInputUsersNavigate,
+  handleDeleteUsersNavigate,
+}) {
   const { influencer } = useSelector((state) => state.influencers);
   console.log("influencer =>", influencer);
   return (
@@ -70,10 +73,16 @@ export default function AdminPanelEditUsers({ handleEdit, handleDelete }) {
                         style={{ backgroundColor: "gray" }}
                         variant="contained"
                       >
-                        <Button onClick={handleEdit} style={{ color: "black" }}>
+                        <Button
+                          onClick={handleEditInputUsersNavigate}
+                          style={{ color: "black" }}
+                        >
                           <EditIcon />
                         </Button>
-                        <Button style={{ color: "red" }} onClick={handleDelete}>
+                        <Button
+                          style={{ color: "red" }}
+                          onClick={handleDeleteUsersNavigate}
+                        >
                           <DeleteIcon />
                         </Button>
                       </ButtonGroup>

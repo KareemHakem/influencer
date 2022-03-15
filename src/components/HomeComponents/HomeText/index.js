@@ -5,7 +5,7 @@ import { Icons } from "../../../assets/Icons";
 import { Button } from "../../../commons/Button";
 import "./style.css";
 
-export default function HomeText() {
+export default function HomeText({handleUserInfluencerNavigate}) {
   return (
     <div className="text-container">
       <div className="ml12">
@@ -27,6 +27,7 @@ export default function HomeText() {
         <Button
           title="VIEW INFLUENCER"
           width="230px"
+          onClick={handleUserInfluencerNavigate}
           height={60}
           Icon={<Icons.ArrowForwardIcon/>}
         />

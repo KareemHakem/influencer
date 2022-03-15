@@ -7,6 +7,7 @@ import { getInfluencers } from "../../../redux/influencers/action";
 import { Error } from "../../../commons/Error";
 import { Loading } from "../../../commons/Loading";
 import InfluencerCard from "../../../components/ifluencerComponents/InfluencerCard";
+import Input from "../../../commons/Input";
 import "./style.css";
 
 export default function InfluencerPage() {
@@ -29,15 +30,22 @@ export default function InfluencerPage() {
   if (error) return <Error />;
 
   return (
-    <div className="influencerPageContainer">
-      <div className="influencer-card_container">
-        {influencer?.influencers?.map((influencer) => (
-          <InfluencerCard
-            key={influencer._id}
-            handleNavigate={handleNavigate}
-            influencer={influencer}
-          />
-        ))}
+    <div className="influencerPage">
+      <input
+        className="inputInfluencerSearch"
+        placeholder="Search For Influencer Name"
+        style={{ marginTop: 150 }}
+      />
+      <div className="influencerPageContainer">
+        <div className="influencer-card_container">
+          {influencer?.influencers?.map((influencer) => (
+            <InfluencerCard
+              key={influencer._id}
+              handleNavigate={handleNavigate}
+              influencer={influencer}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

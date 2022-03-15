@@ -7,11 +7,15 @@ export default function AdminPanelPage() {
   const Navigate = useNavigate();
   const handleAdminUserNavigate = () => {};
   const handleAdminOrderNavigate = () => {};
+  const handleDeleteUsersNavigate = () => {};
   const handleAdminInfluencersNavigate = () => {
     Navigate("/admin-manage-influencer");
   };
   const handleAdminReportNavigate = () => {
     Navigate("/admin-manage-reports");
+  };
+  const handleEditInputUsersNavigate = () => {
+    Navigate("/admin/users/:id");
   };
   return (
     <div>
@@ -20,6 +24,8 @@ export default function AdminPanelPage() {
         handleAdminOrderNavigate={handleAdminOrderNavigate}
         handleAdminInfluencersNavigate={handleAdminInfluencersNavigate}
         handleAdminReportNavigate={handleAdminReportNavigate}
+        handleDeleteUsersNavigate={handleDeleteUsersNavigate}
+        handleEditInputUsersNavigate={handleEditInputUsersNavigate}
       />
     </div>
   );

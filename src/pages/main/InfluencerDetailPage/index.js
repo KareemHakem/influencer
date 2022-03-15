@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getInfluencer } from "../../../api/requests/influencers";
 import { Loading } from "../../../commons/Loading";
 import { Error } from "../../../commons/Error";
 import InfluencerDetailCard from "../../../components/ifluencerComponents/InfluencerDetailCard";
 import { addInfluencerFavorites } from "../../../redux/Influencer/action";
+import AuthModal from "../../../commons/AuthModal";
 // import InfluencerCard from "../../../components/ifluencerComponents/InfluencerCard";
 
 export default function InfluencerDetail({ handleNavigate }) {
@@ -15,6 +16,8 @@ export default function InfluencerDetail({ handleNavigate }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [select, setSelect] = useState("");
+  const {isAuthenticated} = useSelector(state => state.auth)
+  const [openModal, setOpenModal]= useState(false)
 
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -37,8 +40,14 @@ export default function InfluencerDetail({ handleNavigate }) {
   };
 
   const handlePayNavigation = () => {
-    Navigate(`/order/${influencer.name}/${id}`);
+    if(isAuthenticated){
+      Navigate(`/order/${influencer.name}/${id}`);
+    }else{
+      setOpenModal(true)
+    }
   };
+
+  const handleCloseModal = () => setOpenModal(!openModal);
 
   if (loading) return <Loading />;
   if (error) return <Error />;
@@ -52,6 +61,7 @@ export default function InfluencerDetail({ handleNavigate }) {
         select={select}
         setSelect={setSelect}
       />
+      <AuthModal handleCloseModal={handleCloseModal}openModal={openModal}/>
     </div>
   );
 }

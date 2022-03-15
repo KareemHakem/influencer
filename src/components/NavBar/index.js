@@ -18,9 +18,10 @@ export default function NavBar() {
   const handleUserAuthLogout = () => {
     dispatch(authLogoutUserReducer());
     navigate("/");
+    handleToggle()
   };
 
-  const handleUserClickMenu = () => {
+  const handleToggle = () => {
     setDisplayMenu(!displayMenu);
   };
 
@@ -47,7 +48,7 @@ export default function NavBar() {
           </div>
 
           <NavBarRightSide
-            handleUserClickMenu={handleUserClickMenu}
+            handleUserClickMenu={handleToggle}
             isAuthenticated={isAuthenticated}
             currentUser={currentUser}
             displayMenu={displayMenu}
@@ -59,6 +60,7 @@ export default function NavBar() {
           <NavbarMenus
             handleUserAuthLogout={handleUserAuthLogout}
             currentUser={currentUser}
+            handleToggle={handleToggle}
           />
         )}
       </div>

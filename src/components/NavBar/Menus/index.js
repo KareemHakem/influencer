@@ -6,11 +6,19 @@ import UserMenu from "./UserMenu";
 import InfluencerMenu from "./InfluencerMenu";
 import AdminMenu from "./AdminMenu";
 
-export default function NavbarMenus({ currentUser, handleUserAuthLogout }) {
-  console.log(userTypes(currentUser));
+
+export default function NavbarMenus({ currentUser, handleUserAuthLogout, handleToggle }) {
+
+
+  // const handleAllMenuFunctionality = (url) =>{
+  //   handleToggle()
+  //   Navigate(url)
+  // }
+ 
+
   switch (userTypes(currentUser)) {
     case types.isAdmin:
-      return <AdminMenu handleUserAuthLogout={handleUserAuthLogout} />;
+      return <AdminMenu  handleUserAuthLogout={handleUserAuthLogout} />;
     case types.Influencer:
       return (
         <InfluencerMenu
@@ -21,7 +29,7 @@ export default function NavbarMenus({ currentUser, handleUserAuthLogout }) {
     case types.AdminAndInfluencer:
       return <div></div>;
     case types.User:
-      return <UserMenu handleUserAuthLogout={handleUserAuthLogout} />;
+      return <UserMenu  handleUserAuthLogout={handleUserAuthLogout} />;
     default:
       return <></>;
   }

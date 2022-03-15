@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
+import NavBar from "../components/NavBar";
 import HomePage from "../pages/main/HomePage";
 import FavoritePage from "../pages/main/FavoritePage";
 import InfluencerPage from "../pages/main/InfluencerPage";
 import InfluencerDetailPage from "../pages/main/InfluencerDetailPage";
-import NavBar from "../components/NavBar";
 import LoginPage from "../pages/auth/LoginPage";
 import RegisterPage from "../pages/auth/RegisterPage";
 import InfluencerProfilePage from "../pages/influencer/InfluencerProfilePage";
@@ -24,6 +24,7 @@ import AdminEditInputUsersPage from "../pages/admin/AdminEditInputUsersPage";
 export default function Navigation() {
   return (
     <>
+    
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />

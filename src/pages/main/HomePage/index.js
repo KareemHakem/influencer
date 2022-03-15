@@ -6,6 +6,7 @@ import { HomeAnimation } from "../../../components/HomeComponents/HomeAnimation"
 import HomeText from "../../../components/HomeComponents/HomeText";
 import InfluencerRating from "../../../components/ifluencerComponents/InfluencerRating";
 import "./style.css";
+import AuthModal from "../../../commons/AuthModal";
 
 export default function HomePage() {
   const { currentUser } = useSelector((state) => state.auth);
@@ -32,7 +33,7 @@ export default function HomePage() {
         <HomeText handleUserInfluencerNavigate={handleUserInfluencerNavigate} />
         <HomeAnimation />
       </div>
-      {/* <InfluencerRating /> */}
+      <AuthModal />
     </div>
   );
 }

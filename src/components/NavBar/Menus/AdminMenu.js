@@ -7,8 +7,8 @@ export default function AdminMenu({ handleUserAuthLogout }) {
     <div className=" menu_container">
       <div className=" menu_container scale-up-center">
         <ul className="dropdown_menu">
-          <li className="dropdown_item-1">
-            <Link to="/manage-admin-panel">Admin Panel </Link>
+          <li className="dropdown_item-1" > 
+            <Link to="">Admin Panel </Link>
           </li>
           <li onClick={handleUserAuthLogout} className="dropdown_item-1">
             Logout

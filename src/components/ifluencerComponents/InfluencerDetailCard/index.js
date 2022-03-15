@@ -34,7 +34,7 @@ export default function InfluencerDetailCard({
         </div>
 
         <InfluencerBio influencer={influencer} />
-        
+
         <div className="influencer_card_detail-btn-container">
           <FormSelect
             options={PackagesOptions}
@@ -46,9 +46,11 @@ export default function InfluencerDetailCard({
           />
           <div className="influencer_card_detail-btn">
             <Button
-              className="influencer_request-btn"
+              width={200}
+              // className="influencer_request-btn"
               title={`REQUEST ORDER FOR $ ${select}`}
               onClick={handlePayNavigation}
+              disabled={!select}
             />
             <Button
               className="influencer_Add-btn"

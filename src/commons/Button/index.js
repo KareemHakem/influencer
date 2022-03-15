@@ -58,7 +58,7 @@ export const Button = ({
       disabled={disabled || loading}
       className={
         disabled || loading
-          ? "disabled-button basic-button "
+          ? "disabled-button basic-button"
           : primary
           ? "basic-button custom-button-primary "
           : secondary && "basic-button custom-button-secondary"

@@ -6,30 +6,36 @@ import UserMenu from "./UserMenu";
 import InfluencerMenu from "./InfluencerMenu";
 import AdminMenu from "./AdminMenu";
 
-
-export default function NavbarMenus({ currentUser, handleUserAuthLogout, handleToggle }) {
-
-
-  // const handleAllMenuFunctionality = (url) =>{
-  //   handleToggle()
-  //   Navigate(url)
-  // }
- 
-
+export default function NavbarMenus({
+  currentUser,
+  handleUserAuthLogout,
+  handleClickToggle,
+}) {
   switch (userTypes(currentUser)) {
     case types.isAdmin:
-      return <AdminMenu  handleUserAuthLogout={handleUserAuthLogout} />;
+      return (
+        <AdminMenu
+          handleClickAdmin={handleClickToggle}
+          handleUserAuthLogout={handleUserAuthLogout}
+        />
+      );
     case types.Influencer:
       return (
         <InfluencerMenu
           currentUser={currentUser}
           handleUserAuthLogout={handleUserAuthLogout}
+          handleClickInfluencer={handleClickToggle}
         />
       );
     case types.AdminAndInfluencer:
       return <div></div>;
     case types.User:
-      return <UserMenu  handleUserAuthLogout={handleUserAuthLogout} />;
+      return (
+        <UserMenu
+          handleClickUser={handleClickToggle}
+          handleUserAuthLogout={handleUserAuthLogout}
+        />
+      );
     default:
       return <></>;
   }

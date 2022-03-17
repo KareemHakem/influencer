@@ -1,9 +1,12 @@
 import React from "react";
-import { Modal } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import Lottie from "react-lottie";
+import animation from "../../assets/json/modelAnimation.json";
+import { Modal } from "@mui/material";
 import { Button } from "../Button";
+import "./style.css";
 
-function AuthModal({openModal, handleCloseModal}) {
+function AuthModal({ openModal, handleCloseModal }) {
   const navigate = useNavigate();
 
   const handleNavigate = (url) => {
@@ -13,6 +16,12 @@ function AuthModal({openModal, handleCloseModal}) {
       navigate("/");
     }
     handleCloseModal();
+  };
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animation,
   };
 
   return (
@@ -29,14 +38,36 @@ function AuthModal({openModal, handleCloseModal}) {
           justifyContent: "center",
         }}
       >
-        <div style={{ backgroundColor: "white", height: 400 }}>
-          <h1>Please, Login or Register if you don't have an account</h1>
-          <Button title="Login" onClick={() => handleNavigate("/LoginPage")} />
-          <Button
-            title="Register"
-            onClick={() => handleNavigate("/loginPage/RegisterPage")}
-          />
-          <Button title="Cancel" onClick={() => handleNavigate()} />
+        <div className="ModelCardStyleContainer">
+          <h2>Please, Login or Register if you don't have an account</h2>
+
+          <div>
+            <Lottie options={defaultOptions} height={240} width={240} />
+          </div>
+
+          <div className="modelCardBtnContainer">
+            <Button
+              title="Login"
+              onClick={() => handleNavigate("/LoginPage")}
+              width={100}
+              height={40}
+              margin={5}
+            />
+            <Button
+              title="Register"
+              onClick={() => handleNavigate("/loginPage/RegisterPage")}
+              width={100}
+              height={40}
+              margin={5}
+            />
+            <Button
+              title="Cancel"
+              onClick={() => handleNavigate()}
+              width={100}
+              height={40}
+              margin={5}
+            />
+          </div>
         </div>
       </Modal>
     </div>

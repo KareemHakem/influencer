@@ -1,4 +1,3 @@
-import { IcecreamOutlined } from "@mui/icons-material";
 import React from "react";
 import Typical from "react-typical";
 import { Icons } from "../../../assets/Icons";

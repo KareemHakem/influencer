@@ -33,6 +33,7 @@ const LoginForm = ({ handleAuthLoginUserSubmit, loading }) => {
               <FormInput
                 label="Password"
                 name="password"
+                type="password"
                 placeholder="Password"
                 variant="standard"
                 width={500}

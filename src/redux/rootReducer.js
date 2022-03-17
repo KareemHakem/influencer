@@ -6,14 +6,14 @@ import influencers from "./influencers/reducer";
 import editInfluencer from "./editInfluencer/reducer";
 import favorites from "./Influencer/reducer";
 import rates from "./rating/reducer";
-import createProfile from "./createProfileInfluencer/reducer"
-import order from './order/reducer'
-
+import createProfile from "./createProfileInfluencer/reducer";
+import order from "./order/reducer";
+import users from "./users/reducer";
 
 const persistConfig = {
   key: "KEY",
   storage,
-  whiteList: ["favorite", "auth", 'order'],
+  whiteList: ["favorite", "auth"],
   blackList: ["imfluencers, editInfluencer"],
 };
 
@@ -25,6 +25,7 @@ const rootReducer = combineReducers({
   createProfile,
   rates,
   order,
+  users,
 });
 
 export default persistReducer(persistConfig, rootReducer);

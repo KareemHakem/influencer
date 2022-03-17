@@ -1,6 +1,4 @@
 import React from "react";
-import { useSelector } from "react-redux";
-
 import { Button, ButtonGroup } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -18,9 +16,8 @@ import "./style.css";
 export default function AdminPanelEditUsers({
   handleEditInputUsersNavigate,
   handleDeleteUsersNavigate,
+  users,
 }) {
-  const { influencer } = useSelector((state) => state.influencers);
-  console.log("influencer =>", influencer);
   return (
     <div>
       <div className="AdminsUsersEditInfoTableContainer">
@@ -38,7 +35,7 @@ export default function AdminPanelEditUsers({
                 </TableRow>
               </TableHead>
               <TableBody>
-                {influencer?.influencers?.map((influencer) => (
+                {users?.map((influencer) => (
                   <TableRow
                     key={influencer._id}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -47,7 +44,7 @@ export default function AdminPanelEditUsers({
                       {influencer._id}
                     </TableCell>
                     <TableCell align="right">{influencer.name}</TableCell>
-                    <TableCell align="right">{influencer._email}</TableCell>
+                    <TableCell align="right">{influencer.email}</TableCell>
                     <TableCell align="right">
                       {influencer.isAdmin ? (
                         <CheckCircleIcon

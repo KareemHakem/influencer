@@ -7,8 +7,8 @@ export default function InfluencerCategory({ influencer }) {
     <div>
       <div className="product_Card_ingredients">
         {influencer.category?.map((category) => (
-          <div className="product_Card_ingredient">
-            <Chips key={category} label={category} />
+          <div key={category} className="product_Card_ingredient">
+            <Chips label={category} />
           </div>
         ))}
       </div>

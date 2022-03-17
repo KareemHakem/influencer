@@ -50,6 +50,7 @@ export const Button = ({
   disabled,
   loading,
   width,
+  height,
   margin,
   ...props
 }) => {
@@ -63,7 +64,7 @@ export const Button = ({
           ? "basic-button custom-button-primary "
           : secondary && "basic-button custom-button-secondary"
       }
-      style={{ width, margin }}
+      style={{ width, margin, height }}
       {...props}
     >
       {loading ? (

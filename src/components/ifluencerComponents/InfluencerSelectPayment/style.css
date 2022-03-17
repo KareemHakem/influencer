@@ -2,7 +2,7 @@
   font-weight: bold;
   font-family: "Fira Sans", sans-serif !important;
   height: auto !important;
-  min-height: 135vh;
+  min-height: 137vh;
 }
 
 .influencerSelectPayContainer {
@@ -24,7 +24,7 @@
     0px 1px 1px 0px rgba(0, 0, 0, 0.333), 0px 1px 3px 0px rgb(0 0 0 / 12%);
   margin-top: 60px;
   margin-left: 100px;
-  min-height: 80vh;
+  min-height: 85vh;
 }
 
 .influencerPayCardContainer {
@@ -40,18 +40,48 @@
   font-weight: 500;
 }
 
-.imagePayCard {
+.Fawry {
   height: 210px;
   width: 210px;
   margin-top: 30px;
   object-fit: contain;
   border-radius: 20px;
   margin-left: 50px;
-  box-shadow: rgba(0, 0, 0, 0.197) 0px 1px 4px;
   cursor: pointer;
 }
 
-.imagePayCard:hover {
-  box-shadow: rgba(0, 0, 0, 0.197) 0px 5px 15px;
+.imagePayCardFawry {
+  height: 210px;
+  width: 210px;
+  margin-top: 30px;
+  object-fit: contain;
+  border-radius: 20px;
+  margin-left: 50px;
+  box-shadow: rgba(0, 0, 0, 0.415) 0px 1px 4px;
   cursor: pointer;
+  border: 1.8px solid #216ab2;
+}
+
+.Paypal {
+  height: 210px;
+  width: 210px;
+  margin-top: 30px;
+  object-fit: contain;
+  border-radius: 20px;
+  margin-left: 50px;
+  cursor: pointer;
+  margin-left: 60px;
+}
+
+.imagePayCardPaypal {
+  height: 210px;
+  width: 210px;
+  margin-top: 30px;
+  object-fit: contain;
+  border-radius: 20px;
+  margin-left: 50px;
+  box-shadow: rgba(0, 0, 0, 0.415) 0px 1px 4px;
+  cursor: pointer;
+  border: 1.8px solid #216ab2;
+  margin-left: 60px;
 }

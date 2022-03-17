@@ -1,0 +1,21 @@
+.ModelCardStyleContainer {
+  background-color: #ffffff;
+  height: 350px;
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.ModelCardStyleContainer h2 {
+  font-family: "Fira Sans", sans-serif;
+  color: #2168a6;
+}
+
+.modelCardBtnContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

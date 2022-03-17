@@ -8,6 +8,7 @@ import { Error } from "../../../commons/Error";
 import InfluencerDetailCard from "../../../components/ifluencerComponents/InfluencerDetailCard";
 import { addInfluencerFavorites } from "../../../redux/Influencer/action";
 import AuthModal from "../../../commons/AuthModal";
+import { toast } from "react-toastify";
 // import InfluencerCard from "../../../components/ifluencerComponents/InfluencerCard";
 
 export default function InfluencerDetail({ handleNavigate }) {
@@ -16,8 +17,8 @@ export default function InfluencerDetail({ handleNavigate }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [select, setSelect] = useState("");
-  const {isAuthenticated} = useSelector(state => state.auth)
-  const [openModal, setOpenModal]= useState(false)
+  const { isAuthenticated } = useSelector((state) => state.auth);
+  const [openModal, setOpenModal] = useState(false);
 
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -40,10 +41,11 @@ export default function InfluencerDetail({ handleNavigate }) {
   };
 
   const handlePayNavigation = () => {
-    if(isAuthenticated){
+    if (isAuthenticated) {
       Navigate(`/order/${influencer.name}/${id}`);
-    }else{
-      setOpenModal(true)
+      toast.warn("Payment must be completed in 5 minutes");
+    } else {
+      setOpenModal(true);
     }
   };
 
@@ -61,7 +63,7 @@ export default function InfluencerDetail({ handleNavigate }) {
         select={select}
         setSelect={setSelect}
       />
-      <AuthModal handleCloseModal={handleCloseModal}openModal={openModal}/>
+      <AuthModal handleCloseModal={handleCloseModal} openModal={openModal} />
     </div>
   );
 }

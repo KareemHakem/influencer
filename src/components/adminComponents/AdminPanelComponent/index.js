@@ -19,12 +19,14 @@ export default function AdminPanelComponent({
   handleAdminReportNavigate,
   handleDeleteUsersNavigate,
   handleEditInputUsersNavigate,
+  users,
 }) {
   return (
     <>
       <div>
         <div>
           <AdminPanelEditUsers
+            users={users}
             handleEditInputUsersNavigate={handleEditInputUsersNavigate}
             handleDeleteUsersNavigate={handleDeleteUsersNavigate}
           />

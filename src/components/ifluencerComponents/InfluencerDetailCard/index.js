@@ -47,6 +47,7 @@ export default function InfluencerDetailCard({
           <div className="influencer_card_detail-btn">
             <Button
               width={200}
+              height={50}
               // className="influencer_request-btn"
               title={`REQUEST ORDER FOR $ ${select}`}
               onClick={handlePayNavigation}

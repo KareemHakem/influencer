@@ -64,6 +64,7 @@ const AuthRegisterForm = ({
                 name="password"
                 placeholder="Password"
                 label="Password"
+                type="Password"
                 variant="standard"
                 width={600}
               />
@@ -72,6 +73,7 @@ const AuthRegisterForm = ({
                 style={RegisterFormInput}
                 placeholder="Confirm Password"
                 label="Confirm Password"
+                type="Password"
                 variant="standard"
                 width={600}
               />

@@ -7,6 +7,7 @@ import { validationLoginSchema as validationSchema } from "../../../utils/valida
 import { FormInput } from "../../FormInput";
 import { Button } from "../../../commons/Button";
 import image from "../../../assets/images/login_img.png";
+
 import "./style.css";
 
 const LoginForm = ({ handleAuthLoginUserSubmit, loading }) => {

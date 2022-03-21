@@ -1,18 +1,24 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import AdminPanelComponent from "../../../components/adminComponents/AdminPanelComponent";
+import { deleteInfluencer } from "../../../redux/deletInfluencer/action";
+
 import "./style.css";
-import { getUsers } from "../../../redux/users/action";
 
 export default function AdminPanelPage() {
   const { users } = useSelector((state) => state.users);
-  const dispatch = useDispatch();
+
   const Navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleAdminUserNavigate = () => {};
   const handleAdminOrderNavigate = () => {};
-  const handleDeleteUsersNavigate = () => {};
+
+  const handleAdminDeleteUsers = (id) => {
+    dispatch(deleteInfluencer(id));
+  };
+
   const handleAdminInfluencersNavigate = () => {
     Navigate("/admin-manage-influencer");
   };
@@ -31,8 +37,8 @@ export default function AdminPanelPage() {
         handleAdminOrderNavigate={handleAdminOrderNavigate}
         handleAdminInfluencersNavigate={handleAdminInfluencersNavigate}
         handleAdminReportNavigate={handleAdminReportNavigate}
-        handleDeleteUsersNavigate={handleDeleteUsersNavigate}
         handleEditInputUsersNavigate={handleEditInputUsersNavigate}
+        handleAdminDeleteUsers={handleAdminDeleteUsers}
       />
     </div>
   );

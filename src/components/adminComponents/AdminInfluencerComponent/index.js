@@ -1,8 +1,5 @@
 import React from "react";
 
-import { useSelector } from "react-redux";
-
-import { Button } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -11,10 +8,11 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { Button } from "@mui/material";
+
 import "./style.css";
 
-export default function AdminInfluencerComponent({ handleDelete }) {
-  const { influencer } = useSelector((state) => state.influencers);
+export default function AdminInfluencerComponent({ handleDeleteInfluencer, influencer }) {
   return (
     <div>
       <div className="AdminUsersInfluencerInfoTableContainer">
@@ -49,7 +47,7 @@ export default function AdminInfluencerComponent({ handleDelete }) {
                     </TableCell>
                     <TableCell align="right">{influencer.rating}</TableCell>
                     <TableCell align="right">
-                      <Button style={{ color: "red" }} onClick={handleDelete}>
+                      <Button style={{ color: "red" }} onClick={handleDeleteInfluencer}>
                         <DeleteIcon />
                       </Button>
                     </TableCell>

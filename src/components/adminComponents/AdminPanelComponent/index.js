@@ -9,16 +9,16 @@ import ChatIcon from "@mui/icons-material/Chat";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FormatListNumberedIcon from "@mui/icons-material/FormatListNumbered";
+
 import "./style.css";
-import { useSelector } from "react-redux";
 
 export default function AdminPanelComponent({
   handleAdminUserNavigate,
   handleAdminOrderNavigate,
   handleAdminInfluencersNavigate,
   handleAdminReportNavigate,
-  handleDeleteUsersNavigate,
   handleEditInputUsersNavigate,
+  handleAdminDeleteUsers,
   users,
 }) {
   return (
@@ -28,7 +28,7 @@ export default function AdminPanelComponent({
           <AdminPanelEditUsers
             users={users}
             handleEditInputUsersNavigate={handleEditInputUsersNavigate}
-            handleDeleteUsersNavigate={handleDeleteUsersNavigate}
+            handleAdminDeleteUsers={handleAdminDeleteUsers}
           />
         </div>
       </div>

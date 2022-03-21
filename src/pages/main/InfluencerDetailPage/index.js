@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
+
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+
 import { getInfluencer } from "../../../api/requests/influencers";
 import { Loading } from "../../../commons/Loading";
 import { Error } from "../../../commons/Error";
 import InfluencerDetailCard from "../../../components/ifluencerComponents/InfluencerDetailCard";
 import { addInfluencerFavorites } from "../../../redux/Influencer/action";
 import AuthModal from "../../../commons/AuthModal";
-import { toast } from "react-toastify";
-// import InfluencerCard from "../../../components/ifluencerComponents/InfluencerCard";
+
 
 export default function InfluencerDetail({ handleNavigate }) {
   const [influencer, setInfluencer] = useState({});

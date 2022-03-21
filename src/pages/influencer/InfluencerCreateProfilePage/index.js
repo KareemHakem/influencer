@@ -1,21 +1,16 @@
 import React from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
-import { useSelector, useDispatch } from "react-redux";
-import { createProfileInfluencer } from "../../../redux/createProfileInfluencer/action";
+import { useSelector } from "react-redux";
 
-import { errorHandlers } from "../../../utils/errorHandler";
-import { toast } from "react-toastify";
 import InfluencerCreateProfile from "../../../components/ifluencerComponents/InfluencerCreateProfile/index";
-import { useNavigate } from "react-router-dom";
 
 export default function InfluencerCreateProfilePage() {
   const { loading } = useSelector((state) => state.createProfile);
-  const Navigate = useNavigate();
 
-  const handleCreateProfile = (values) => {
-    Navigate("/influencer");
-    console.log(values);
-  };
+  const { id } = useParams();
+
+  const handleCreateProfile = (values) => {};
 
   return (
     <div>

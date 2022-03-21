@@ -1,4 +1,7 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteInfluencer } from "../../../redux/deletInfluencer/action";
+
 import { Button, ButtonGroup } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -11,13 +14,16 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+
 import "./style.css";
 
 export default function AdminPanelEditUsers({
   handleEditInputUsersNavigate,
   handleDeleteUsersNavigate,
+  handleAdminDeleteUsers,
   users,
 }) {
+  const dispatch = useDispatch();
   return (
     <div>
       <div className="AdminsUsersEditInfoTableContainer">
@@ -35,18 +41,18 @@ export default function AdminPanelEditUsers({
                 </TableRow>
               </TableHead>
               <TableBody>
-                {users?.map((influencer) => (
+                {users?.map((user) => (
                   <TableRow
-                    key={influencer._id}
+                    key={user._id}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
                     <TableCell component="th" scope="row">
-                      {influencer._id}
+                      {user._id}
                     </TableCell>
-                    <TableCell align="right">{influencer.name}</TableCell>
-                    <TableCell align="right">{influencer.email}</TableCell>
+                    <TableCell align="right">{user.name}</TableCell>
+                    <TableCell align="right">{user.email}</TableCell>
                     <TableCell align="right">
-                      {influencer.isAdmin ? (
+                      {user.isAdmin ? (
                         <CheckCircleIcon
                           fontSize="large"
                           style={{ color: "green" }}
@@ -56,7 +62,7 @@ export default function AdminPanelEditUsers({
                       )}
                     </TableCell>
                     <TableCell align="right">
-                      {influencer.isInfluencer ? (
+                      {user.isInfluencer ? (
                         <CheckCircleIcon
                           fontSize="large"
                           style={{ color: "green" }}
@@ -78,7 +84,7 @@ export default function AdminPanelEditUsers({
                         </Button>
                         <Button
                           style={{ color: "red" }}
-                          onClick={handleDeleteUsersNavigate}
+                          onClick={() => dispatch(deleteInfluencer(user._id))}
                         >
                           <DeleteIcon />
                         </Button>

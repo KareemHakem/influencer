@@ -1,7 +1,11 @@
+.influencerCardDetailPage {
+  min-height: 130vh;
+}
+
 .influencer_card_detail-container {
   height: 600px;
-  width: 90%;
-  margin-left: 5%;
+  width: 92.5%;
+  margin-left: 3.75%;
   margin-top: 120px;
   box-shadow: 5px 5px 40px 5px rgb(112 111 111 / 21%);
   border-radius: 20px;

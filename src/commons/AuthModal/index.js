@@ -47,6 +47,7 @@ function AuthModal({ openModal, handleCloseModal }) {
 
           <div className="modelCardBtnContainer">
             <Button
+              className="ModalBtn"
               title="Login"
               onClick={() => handleNavigate("/LoginPage")}
               width={100}
@@ -54,6 +55,7 @@ function AuthModal({ openModal, handleCloseModal }) {
               margin={5}
             />
             <Button
+              className="ModalBtn"
               title="Register"
               onClick={() => handleNavigate("/loginPage/RegisterPage")}
               width={100}
@@ -61,9 +63,10 @@ function AuthModal({ openModal, handleCloseModal }) {
               margin={5}
             />
             <Button
+              className="cancelModalBtn"
               title="Cancel"
               onClick={() => handleNavigate()}
-              width={100}
+              width={180}
               height={40}
               margin={5}
             />

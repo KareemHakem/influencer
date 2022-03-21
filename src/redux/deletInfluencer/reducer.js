@@ -6,24 +6,23 @@ const initialState = {
   error: null,
 };
 
-const editProfileReducer = (state = initialState, action) => {
+const deleteInfluencerReducer = (state = initialState, action) => {
   switch (action.type) {
-    case type.EDIT_INFLUENCER_REQUEST:
+    case type.DELETE_INFLUENCER_REQUEST:
       return {
         loading: true,
         ...state,
       };
-    case type.EDIT_INFLUENCER_SUCCESS:
+    case type.DELETE_INFLUENCER_SUCCESS:
       return {
-        loading: false,
         success: action.payload,
+        loading: false,
         error: null,
       };
-    case type.EDIT_INFLUENCER_ERROR:
+    case type.DELETE_INFLUENCER_ERROR:
       return {
-        loading: false,
-        success: false,
         error: action.payload,
+        ...state,
       };
 
     default:
@@ -31,6 +30,4 @@ const editProfileReducer = (state = initialState, action) => {
   }
 };
 
-export default editProfileReducer;
-
-
+export default deleteInfluencerReducer;

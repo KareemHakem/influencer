@@ -45,6 +45,10 @@
   padding: 14px 24px;
   border-radius: 25px;
   font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .login_form_container h2 {

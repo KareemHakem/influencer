@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Formik, Form } from "formik";
 import { validationEditProfile as validationSchema } from "../../../utils/validationSchema";
@@ -22,6 +23,7 @@ export default function InfluencerCreateProfile({
 }) {
   const [checked, setChecked] = useState(true);
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleChange = (event) => {
@@ -30,6 +32,7 @@ export default function InfluencerCreateProfile({
   const onSubmit = (values) => {
     console.log(values);
     dispatch(createProfileInfluencer(values));
+    navigate(`/influencer`);
   };
   return (
     <div>

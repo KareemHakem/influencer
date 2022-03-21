@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+
 import NavBar from "../components/NavBar";
 import HomePage from "../pages/main/HomePage";
 import FavoritePage from "../pages/main/FavoritePage";
@@ -24,7 +25,6 @@ import AdminEditInputUsersPage from "../pages/admin/AdminEditInputUsersPage";
 export default function Navigation() {
   return (
     <>
-    
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />

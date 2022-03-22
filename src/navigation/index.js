@@ -1,3 +1,6 @@
+import { axios } from "../api/axios";
+import { useSelector } from "react-redux";
+
 import { Routes, Route } from "react-router-dom";
 
 import NavBar from "../components/NavBar";
@@ -23,15 +26,24 @@ import AdminReportInfluencerPage from "../pages/admin/AdminReportInfluencerPage"
 import AdminEditInputUsersPage from "../pages/admin/AdminEditInputUsersPage";
 
 export default function Navigation() {
+  const { currentUser } = useSelector((state) => state.auth);
+
+  axios.defaults.headers.common[
+    "Authorization"
+  ] = `Bearer ${currentUser?.token}`;
+
   return (
     <>
       <NavBar />
       <Routes>
+        {/* MAIN */}
         <Route path="/" element={<HomePage />} />
         <Route path="favorite" element={<FavoritePage />} />
         <Route path="influencer" element={<InfluencerPage />} />
         <Route path="influencer/:id" element={<InfluencerDetailPage />} />
         <Route path="loginPage" element={<LoginPage />} />
+
+        {/* Influncer */}
         <Route path="loginPage/RegisterPage" element={<RegisterPage />} />
         <Route
           path="profile-influencer/:id"
@@ -45,6 +57,7 @@ export default function Navigation() {
           path="/user/selectPayment"
           element={<InfluencerSelectPayPage />}
         />
+        {/* Admin */}
         <Route path="/placeOrder/PayPal" element={<InfluencerPayPalPage />} />
         <Route path="/placeOrder/Fawry" element={<InfluencerFawryPage />} />
         <Route path="/user-profile/:id" element={<UserProfilePage />} />
@@ -54,6 +67,7 @@ export default function Navigation() {
           path="/admin-manage-influencer"
           element={<AdminInfinfluencerPage />}
         />
+        {/* Users */}
         <Route
           path="/admin-manage-reports"
           element={<AdminReportInfluencerPage />}

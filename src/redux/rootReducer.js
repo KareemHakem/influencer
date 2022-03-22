@@ -11,10 +11,10 @@ import order from "./order/reducer";
 import users from "./users/reducer";
 
 const persistConfig = {
-  key: "KEY",
+  key: "KEY-1",
   storage,
   whiteList: ["favorite", "auth"],
-  blackList: ["imfluencers, editInfluencer"],
+  blackList: ["influencers, editInfluencer"],
 };
 
 const rootReducer = combineReducers({

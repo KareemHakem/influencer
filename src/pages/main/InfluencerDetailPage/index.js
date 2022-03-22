@@ -30,8 +30,9 @@ export default function InfluencerDetail({ handleNavigate }) {
     setLoading(true);
     getInfluencer(id)
       .then((res) => {
+        console.log(res)
         setInfluencer(res.influencer);
-        setOtherInfluencer(res.otherInfluencer);
+        setOtherInfluencer(res.otherInfluencers);
       })
       .catch((err) => setError(err))
       .finally(() => setLoading(false));
@@ -51,9 +52,12 @@ export default function InfluencerDetail({ handleNavigate }) {
     }
   };
 
-  const handleOpenImageFrame = () => setOpenImage(!openImage);
-  const handleCloseImage = () => setOpenImage(openImage);
-  const handleCloseModal = () => setOpenModal(!openModal);
+  console.log(otherInfluencer, 'otherInfluencer')
+
+  
+  const handToggleImage = () =>setOpenImage(!openImage)
+
+  const handToggleModal = () => setOpenModal(!openModal);
 
   if (loading) return <Loading />;
   if (error) return <Error />;
@@ -66,11 +70,11 @@ export default function InfluencerDetail({ handleNavigate }) {
         influencer={influencer}
         select={select}
         setSelect={setSelect}
-        handleOpenImageFrame={handleOpenImageFrame}
+        handleOpenImageFrame={handToggleImage}
         openImage={openImage}
-        handleCloseImage={handleCloseImage}
+        handleCloseImage={handToggleImage}
       />
-      <AuthModal handleCloseModal={handleCloseModal} openModal={openModal} />
+      <AuthModal handleCloseModal={handToggleModal} openModal={openModal} />
     </div>
   );
 }

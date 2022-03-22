@@ -2,14 +2,20 @@ import React from "react";
 import { ToastContainer } from "react-toastify";
 import Navigation from "./navigation";
 import "./App.css";
-import { useSelector } from "react-redux";
+
 
 // from top to button use rebase
 // after : from button to top use merge
 
+// TODO: Display Influncers in the Detail Screen
+// TODO: User Edit info PUT: users/profile
+// TODO: Admin EDit User PUT: users/:id
+// TODO: get Reports reports
+// TODO: STYLE 
+
+
 function App() {
-  const { initialOrder} = useSelector(state => state.order)
-  console.log(initialOrder, 'idiididi')
+
   return (
     <div>
       <ToastContainer
@@ -38,17 +44,3 @@ export default App;
 //  handling1: <Loading /> ---------------------------- loading in Button
 // handling2:  <Error /> ------------------------------ toast/notifaction
 // handling3:  display DATA --------------------------- toast/notifaction
-
-// ----> branch EditInfluencerProfile
-// 1- Add validation schema //
-// 2- to improve the design in the page //
-
-// -----> Create Profile
-// 1- add the page
-// 2- create request in the request folder
-
-// ----> FixingStyles
-//  1- menu in navbar setDisplay to false after clicks
-//  2- redesgin the menu navbar
-//  3- improve login and register page //
-//  4- the Delete Button in the favorite cart

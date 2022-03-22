@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { deleteInfluencer } from "../../../redux/deletInfluencer/action";
+
 
 import { Button, ButtonGroup } from "@mui/material";
 import Table from "@mui/material/Table";
@@ -84,7 +84,7 @@ export default function AdminPanelEditUsers({
                         </Button>
                         <Button
                           style={{ color: "red" }}
-                          onClick={() => dispatch(deleteInfluencer(user._id))}
+                          onClick={() => handleAdminDeleteUsers(user._id)}
                         >
                           <DeleteIcon />
                         </Button>

@@ -13,27 +13,15 @@ export default function InfluencerPayPage() {
   const dispatch = useDispatch();
   const { id } = useParams();
 
-  const date = Date.now(); // 151
-  const dateAfterFiveMins = date + 5 * 60; // 150
-
-  // 151 < 150
-  if (date < dateAfterFiveMins) {
-    console.log("Selected date is in the past");
-  } else {
-    console.log("Selected date is NOT in the past");
-  }
   const handlePaySubmit = (values) => {
     navigate("/user/selectPayment");
 
-    dispatch(
-      initiateOrder({ ...values, date: Date.now() }),
-      setTimeout(() => {
-        cancelOrder();
-        navigate(`/influencer/${id}`);
-        toast.error("please make sure to completed the order faster ");
-      }, 10000)
-    );
-    console.log(values);
+    dispatch(initiateOrder({ ...values, date: Date.now() }));
+    setTimeout(() => {
+      dispatch(cancelOrder());
+      navigate(`/influencer/${id}`);
+      toast.error("please make sure to completed the order faster ");
+    }, 50000);
   };
 
   return (

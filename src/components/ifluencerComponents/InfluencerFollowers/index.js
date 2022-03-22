@@ -5,6 +5,13 @@ import CountUp from "react-countup";
 import "./style.css";
 
 export default function InfluencerFollowers({ influencer }) {
+  const countUp = (number) => {
+    if (number < 1000000) {
+      return 2.75;
+    } else {
+      return 1;
+    }
+  };
   return (
     <div className="influencer_followers-container">
       <div className="influencer_followers-container-inst">
@@ -15,7 +22,7 @@ export default function InfluencerFollowers({ influencer }) {
           <p>
             <CountUp
               end={influencer.instFollowers}
-              duration={2.75}
+              duration={countUp(influencer?.instFollowers)}
               separator=","
             />
           </p>
@@ -31,7 +38,11 @@ export default function InfluencerFollowers({ influencer }) {
             <Icons.FacebookIcon style={{ color: "#707070" }} />
           </IconButton>
           <p>
-            <CountUp end={influencer.fbFriends} duration={2.75} separator="," />
+            <CountUp
+              end={influencer.fbFriends}
+              duration={countUp(influencer?.instFollowers)}
+              separator=","
+            />
           </p>
         </div>
         <div className="influencer_followers_text">
@@ -47,7 +58,7 @@ export default function InfluencerFollowers({ influencer }) {
           <p>
             <CountUp
               end={influencer.youtubeSubscribers}
-              duration={2.75}
+              duration={countUp(influencer?.instFollowers)}
               separator=","
             />
           </p>

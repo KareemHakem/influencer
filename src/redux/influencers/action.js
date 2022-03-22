@@ -1,17 +1,17 @@
 import { type } from "./type";
 import { axios } from "../../api/axios";
-import { endpoint } from "../../api/requests/endpoint";
-import { errorHandlers } from "../../utils/errorHandler";
 
-export const getInfluencers = () => async (dispatch) => {
+
+
+export const getInfluencers = (keyword ='', pageNumber= '') => async (dispatch) => {
   dispatch({ type: type.GET_INFLUENCERS_REQUEST });
-  console.log("mmmmmmmmmmmmmmmmmmmmmmmmmmmm")
+  console.log(keyword, 'keyword')
   try {
-    const { data } = await axios.get(endpoint.influencers);
+    const { data } = await axios.get(`influencers?keyword=${keyword}&pageNumber=${pageNumber}`);
     dispatch({ type: type.GET_INFLUENCERS_SUCCESS, payload: data });
     console.log(data, "data")
   } catch (error) {
     dispatch({ type: type.GET_INFLUENCERS_ERROR, payload: error });
-    errorHandlers(error);
+
   }
 };

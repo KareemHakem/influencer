@@ -12,9 +12,7 @@ function AuthModal({ openModal, handleCloseModal }) {
   const handleNavigate = (url) => {
     if (url) {
       navigate(url);
-    } else {
-      navigate("/");
-    }
+    } 
     handleCloseModal();
   };
 

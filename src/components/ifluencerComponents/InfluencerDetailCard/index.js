@@ -24,6 +24,7 @@ export default function InfluencerDetailCard({
   handleCloseImage,
 }) {
   const { rates } = useSelector((state) => state.rates);
+  console.log('openImage', openImage)
 
   return (
     <div className="influencerCardDetailPage">
@@ -75,8 +76,9 @@ export default function InfluencerDetailCard({
         </div>
       </div>
       {openImage && (
-        <Lightbox mainSrc={influencer.image} onClick={handleCloseImage} />
+        <Lightbox mainSrc={influencer.image} onCloseRequest={handleCloseImage} />
       )}
     </div>
   );
+
 }

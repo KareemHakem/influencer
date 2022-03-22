@@ -16,13 +16,19 @@ export default function InfluencerPage() {
     (state) => state.influencers
   );
   const [clickToSearch, setClickToSearch] = useState(true);
+  const [search, setSearch] = useState("");
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
 
   const Navigate = useNavigate();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getInfluencers());
-  }, [dispatch]);
+    dispatch(getInfluencers(search.trim()));
+  }, [dispatch, search]);
 
   const handleNavigate = (id) => {
     Navigate(`/influencer/${id}`);
@@ -39,6 +45,8 @@ export default function InfluencerPage() {
     <div className="influencerPage">
       <div className="influencerPageContainer">
         <SearchForInfluencer
+          value={search}
+          handleChange={handleChange}
           clickToSearch={clickToSearch}
           handleToSearchClick={handleToSearchClick}
         />

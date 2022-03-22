@@ -12,15 +12,15 @@ import InfluencerDetailCard from "../../../components/ifluencerComponents/Influe
 import { addInfluencerFavorites } from "../../../redux/Influencer/action";
 import AuthModal from "../../../commons/AuthModal";
 
-
 export default function InfluencerDetail({ handleNavigate }) {
   const [influencer, setInfluencer] = useState({});
   const [otherInfluencer, setOtherInfluencer] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [openModal, setOpenModal] = useState(false);
+  const [openImage, setOpenImage] = useState(false);
   const [select, setSelect] = useState("");
   const { isAuthenticated } = useSelector((state) => state.auth);
-  const [openModal, setOpenModal] = useState(false);
 
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -51,6 +51,8 @@ export default function InfluencerDetail({ handleNavigate }) {
     }
   };
 
+  const handleOpenImageFrame = () => setOpenImage(!openImage);
+  const handleCloseImage = () => setOpenImage(openImage);
   const handleCloseModal = () => setOpenModal(!openModal);
 
   if (loading) return <Loading />;
@@ -64,6 +66,9 @@ export default function InfluencerDetail({ handleNavigate }) {
         influencer={influencer}
         select={select}
         setSelect={setSelect}
+        handleOpenImageFrame={handleOpenImageFrame}
+        openImage={openImage}
+        handleCloseImage={handleCloseImage}
       />
       <AuthModal handleCloseModal={handleCloseModal} openModal={openModal} />
     </div>

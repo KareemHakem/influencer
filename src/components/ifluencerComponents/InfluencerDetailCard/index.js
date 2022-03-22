@@ -1,12 +1,16 @@
 import React from "react";
+import Lightbox from "react-image-lightbox";
+import { useSelector } from "react-redux";
+
 import InfluencerFollowers from "../../ifluencerComponents/InfluencerFollowers";
 import InfluencerBio from "../InfluencerBio";
 import InfluencerRating from "../InfluencerRating";
 import FormSelect from "../../../commons/FormSelect";
+import { PackagesOptions } from "../../../assets/data/packagesOptions";
 import { Icons } from "../../../assets/Icons";
 import { Button } from "../../../commons/Button";
-import { PackagesOptions } from "../../../assets/data/packagesOptions";
-import { useSelector } from "react-redux";
+
+import "react-image-lightbox/style.css";
 import "./style.css";
 
 export default function InfluencerDetailCard({
@@ -15,14 +19,21 @@ export default function InfluencerDetailCard({
   handlePayNavigation,
   select,
   setSelect,
+  handleOpenImageFrame,
+  openImage,
+  handleCloseImage,
 }) {
   const { rates } = useSelector((state) => state.rates);
 
   return (
-    <div className="influencerCardDetailPage" >
+    <div className="influencerCardDetailPage">
       <div className="influencer_card_detail-container">
         <div className="influencer_card_detail_image-container">
-          <img src={influencer.image} alt="images" />
+          <img
+            onClick={handleOpenImageFrame}
+            src={influencer.image}
+            alt="images"
+          />
         </div>
         <div className="influencer_card_detail">
           <h2 className="influencer_card_detail-name"> {influencer.name} </h2>
@@ -49,7 +60,6 @@ export default function InfluencerDetailCard({
               <Button
                 width={200}
                 height={50}
-                // className="influencer_request-btn"
                 title={`REQUEST ORDER FOR $ ${select}`}
                 onClick={handlePayNavigation}
                 disabled={!select}
@@ -64,6 +74,9 @@ export default function InfluencerDetailCard({
           </div>
         </div>
       </div>
+      {openImage && (
+        <Lightbox mainSrc={influencer.image} onClick={handleCloseImage} />
+      )}
     </div>
   );
 }

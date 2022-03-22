@@ -2,6 +2,7 @@ import { Form, Formik } from "formik";
 import React from "react";
 import { Button } from "../../../commons/Button";
 import { FormInput } from "../../FormInput";
+import CheckBox from "../../../commons/CheckBox";
 import "./style.css";
 
 export default function AdminEditInputUsers({
@@ -35,6 +36,8 @@ export default function AdminEditInputUsers({
               variant="outlined"
               width={850}
             />
+            <CheckBox label="Admin ?" />
+            <CheckBox label="influencer ?" />
             <Button
               title="UPDATE"
               type="submit"

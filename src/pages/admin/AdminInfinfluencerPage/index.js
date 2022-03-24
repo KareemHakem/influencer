@@ -1,11 +1,29 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteInfluencer } from "../../../redux/deleteInfluencer/action";
 import AdminInfluencerComponent from "../../../components/adminComponents/AdminInfluencerComponent";
+import { getInfluencers } from "../../../redux/influencers/action";
+import { Loading } from "../../../commons/Loading";
+import { Error } from "../../../commons/Error";
 
 export default function AdminInfinfluencerPage() {
-  const { influencer } = useSelector((state) => state.influencers);
-  console.log(influencer);
-  const handleDeleteInfluencer = () => {};
+  const { influencer, loading, error } = useSelector(
+    (state) => state.influencers
+  );
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getInfluencers());
+  }, [dispatch]);
+
+  const handleDeleteInfluencer = (id) => {
+    dispatch(deleteInfluencer(id));
+    console.log("id influencer =>", id);
+    console.log("data influencer =>", deleteInfluencer());
+  };
+
+  if (loading) return <Loading />;
+  if (error) return <Error />;
+
   return (
     <div>
       <AdminInfluencerComponent

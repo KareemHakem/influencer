@@ -1,22 +1,26 @@
-import { Form, Formik } from "formik";
 import React from "react";
+import { Form, Formik, Field } from "formik";
+
 import { Button } from "../../../commons/Button";
 import { FormInput } from "../../FormInput";
-import CheckBox from "../../../commons/CheckBox";
+
 import "./style.css";
 
 export default function AdminEditInputUsers({
   handleEditAdminUserInfo,
+  currentUser,
   loading,
 }) {
   return (
     <Formik
       initialValues={{
-        name: "",
-        email: "",
+        name: currentUser?.name || "",
+        email: currentUser?.email || "",
+        isAdmin: currentUser?.isAdmin || false,
+        isInfluencer: currentUser?.isInfluencer || false,
       }}
       // validateOnChange={validateOnChange}
-      onSubmit={handleEditAdminUserInfo}
+      onSubmit={() => handleEditAdminUserInfo(currentUser._id)}
     >
       {({ isSubmitting, isValid, dirty }) => (
         <Form className="AdminEditInputUsersComponents">
@@ -36,8 +40,15 @@ export default function AdminEditInputUsers({
               variant="outlined"
               width={850}
             />
-            <CheckBox label="Admin ?" />
-            <CheckBox label="influencer ?" />
+            <div className="checkboxAdminFlex">
+              <p> is Admin </p>
+              <Field type="checkbox" name="isAdmin" />
+            </div>
+
+            <div className="checkboxAdminFlex">
+              <p> Is Influencer </p>
+              <Field type="checkbox" name="isInfluencer" />
+            </div>
             <Button
               title="UPDATE"
               type="submit"

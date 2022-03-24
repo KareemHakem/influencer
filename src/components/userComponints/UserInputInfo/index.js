@@ -7,11 +7,12 @@ import "./style.css";
 export default function UserInputInfo({
   handleNavigationUserFormInput,
   loading,
+  currentUser,
 }) {
   return (
     <Formik
       initialValues={{
-        name: "",
+        name: currentUser?.name || "",
         password: "",
         confirmPassword: "",
       }}
@@ -21,7 +22,7 @@ export default function UserInputInfo({
       {({ isValid, isSubmitting, dirty }) => (
         <Form className="inputCardUserInfoContainer">
           <div className="inputCardUserInfo">
-            <h2 className="cardTitleInfoUser" > Update your information </h2>
+            <h2 className="cardTitleInfoUser"> Update your information </h2>
             <FormInput
               name="name"
               label="Name"

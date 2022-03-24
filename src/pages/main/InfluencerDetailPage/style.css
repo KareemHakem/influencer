@@ -1,0 +1,8 @@
+.influencerDetailPage {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}

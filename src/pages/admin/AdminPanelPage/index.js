@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { deleteUser } from "../../../redux/deleteUsers/action";
+
 import AdminPanelComponent from "../../../components/adminComponents/AdminPanelComponent";
-import { deleteInfluencer } from "../../../redux/deletInfluencer/action";
+
 import { getUsers } from "../../../redux/users/action";
 import { Error } from "../../../commons/Error";
 import { Loading } from "../../../commons/Loading";
@@ -10,10 +12,17 @@ import "./style.css";
 
 export default function AdminPanelPage() {
   const { users, loading, error } = useSelector((state) => state.users);
-  console.log(users, "users");
+  const { influencer } = useSelector((state) => state.influencers);
+  console.log("influencer =>>>>>>", influencer);
+  console.log(
+    "users =>>>>",
+    users.map((user) => <div>{user._id}</div>)
+  );
 
   const Navigate = useNavigate();
   const dispatch = useDispatch();
+
+  //   const usersDetail = users.users.find((i) => i._id === id);
 
   useEffect(() => {
     dispatch(getUsers());
@@ -23,8 +32,7 @@ export default function AdminPanelPage() {
   const handleAdminOrderNavigate = () => {};
 
   const handleAdminDeleteUsers = (id) => {
-    console.log(id, 'sss')
-    dispatch(deleteInfluencer(id));
+    dispatch(deleteUser(id));
   };
 
   const handleAdminInfluencersNavigate = () => {
@@ -33,8 +41,8 @@ export default function AdminPanelPage() {
   const handleAdminReportNavigate = () => {
     Navigate("/admin-manage-reports");
   };
-  const handleEditInputUsersNavigate = () => {
-    Navigate("/admin/users/:id");
+  const handleEditInputUsersNavigate = (id) => {
+    Navigate(`/admin/users/${id}`);
   };
 
   if (loading) return <Loading />;

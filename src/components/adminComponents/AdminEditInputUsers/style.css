@@ -12,7 +12,7 @@
 
 .AdminEditInputUsers {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
@@ -28,4 +28,18 @@
   color: #2168a6;
   font-family: "Fira Sans", sans-serif;
   margin-top: 50px;
+  margin-left: 100px !important;
+}
+
+.checkboxAdminFlex {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  margin-right: 700px;
+  padding: 10px;
+  margin-top: 3px;
+}
+
+.checkboxAdminFlex p {
+  margin-right: 10px;
 }

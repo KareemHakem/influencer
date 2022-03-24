@@ -6,17 +6,17 @@
 }
 
 .influencer-card_container {
-  height: auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 100px;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
 }
 
 .influencerPageContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }

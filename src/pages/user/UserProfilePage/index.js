@@ -1,15 +1,33 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
+import { editUser } from "../../../redux/editUserInformation/action";
+
 import UserProfile from "../../../components/userComponints/UserProfile";
 
 export default function UserProfilePage() {
-  const Navigate = useNavigate();
+  const { loading } = useSelector((state) => state.editUser);
+  const { currentUser } = useSelector((state) => state.auth);
+
+  console.log("currentUser => ", currentUser);
+
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleNavigationUserFormInput = (values) => {
+    dispatch(editUser(values, id));
+    navigate(`/user-profile/${id}`);
+    console.log("values and id =>>>>", id, values);
+  };
+
   const handleProfileNavigate = () => {};
   const handleOrdersProfileNavigate = () => {
-    Navigate("/user-orders");
+    navigate("/user-orders");
   };
   const handleFavoriteProfileNavigate = () => {
-    Navigate("/favorite");
+    navigate("/favorite");
   };
   return (
     <div>
@@ -17,6 +35,9 @@ export default function UserProfilePage() {
         handleProfileNavigate={handleProfileNavigate}
         handleOrdersProfileNavigate={handleOrdersProfileNavigate}
         handleFavoriteProfileNavigate={handleFavoriteProfileNavigate}
+        handleNavigationUserFormInput={handleNavigationUserFormInput}
+        loading={loading}
+        currentUser={currentUser}
       />
     </div>
   );

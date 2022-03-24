@@ -7,8 +7,8 @@ import "./App.css";
 // from top to button use rebase
 // after : from button to top use merge
 
-// TODO: Display Influncers in the Detail Screen
-// TODO: User Edit info PUT: users/profile
+// TODO: Display Influncers in the Detail Screen ///
+// TODO: User Edit info PUT: users/profile /// =>
 // TODO: Admin EDit User PUT: users/:id
 // TODO: get Reports reports
 // TODO: STYLE 

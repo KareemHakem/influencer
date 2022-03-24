@@ -12,7 +12,10 @@ import { Button } from "@mui/material";
 
 import "./style.css";
 
-export default function AdminInfluencerComponent({ handleDeleteInfluencer, influencer }) {
+export default function AdminInfluencerComponent({
+  handleDeleteInfluencer,
+  influencer,
+}) {
   return (
     <div>
       <div className="AdminUsersInfluencerInfoTableContainer">
@@ -47,7 +50,10 @@ export default function AdminInfluencerComponent({ handleDeleteInfluencer, influ
                     </TableCell>
                     <TableCell align="right">{influencer.rating}</TableCell>
                     <TableCell align="right">
-                      <Button style={{ color: "red" }} onClick={handleDeleteInfluencer}>
+                      <Button
+                        style={{ color: "red" }}
+                        onClick={() => handleDeleteInfluencer(influencer._id)}
+                      >
                         <DeleteIcon />
                       </Button>
                     </TableCell>

@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 
-
 import { Button, ButtonGroup } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -23,7 +22,6 @@ export default function AdminPanelEditUsers({
   handleAdminDeleteUsers,
   users,
 }) {
-  const dispatch = useDispatch();
   return (
     <div>
       <div className="AdminsUsersEditInfoTableContainer">
@@ -77,7 +75,7 @@ export default function AdminPanelEditUsers({
                         variant="contained"
                       >
                         <Button
-                          onClick={handleEditInputUsersNavigate}
+                          onClick={() => handleEditInputUsersNavigate(user._id)}
                           style={{ color: "black" }}
                         >
                           <EditIcon />

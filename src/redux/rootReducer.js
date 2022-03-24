@@ -9,6 +9,8 @@ import rates from "./rating/reducer";
 import createProfile from "./createProfileInfluencer/reducer";
 import order from "./order/reducer";
 import users from "./users/reducer";
+import editUser from "./editUserInformation/reducer";
+import adminEditUser from "./adminEditUserInformation/reducer";
 
 const persistConfig = {
   key: "KEY-1",
@@ -26,6 +28,8 @@ const rootReducer = combineReducers({
   rates,
   order,
   users,
+  editUser,
+  adminEditUser,
 });
 
 export default persistReducer(persistConfig, rootReducer);

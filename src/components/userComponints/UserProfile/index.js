@@ -13,12 +13,19 @@ export default function UserProfile({
   handleProfileNavigate,
   handleOrdersProfileNavigate,
   handleFavoriteProfileNavigate,
+  handleNavigationUserFormInput,
+  loading,
+  currentUser,
 }) {
   return (
     <div>
       <div>
         <div>
-          <UserInputInfo />
+          <UserInputInfo
+            loading={loading}
+            handleNavigationUserFormInput={handleNavigationUserFormInput}
+            currentUser={currentUser}
+          />
         </div>
       </div>
 

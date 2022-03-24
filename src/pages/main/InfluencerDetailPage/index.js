@@ -3,16 +3,19 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { addInfluencerFavorites } from "../../../redux/Influencer/action";
 import { toast } from "react-toastify";
 
 import { getInfluencer } from "../../../api/requests/influencers";
 import { Loading } from "../../../commons/Loading";
 import { Error } from "../../../commons/Error";
+import InfluencerCard from "../../../components/ifluencerComponents/InfluencerCard";
 import InfluencerDetailCard from "../../../components/ifluencerComponents/InfluencerDetailCard";
-import { addInfluencerFavorites } from "../../../redux/Influencer/action";
 import AuthModal from "../../../commons/AuthModal";
 
-export default function InfluencerDetail({ handleNavigate }) {
+import "./style.css";
+
+export default function InfluencerDetail() {
   const [influencer, setInfluencer] = useState({});
   const [otherInfluencer, setOtherInfluencer] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -30,7 +33,7 @@ export default function InfluencerDetail({ handleNavigate }) {
     setLoading(true);
     getInfluencer(id)
       .then((res) => {
-        console.log(res)
+        console.log(res);
         setInfluencer(res.influencer);
         setOtherInfluencer(res.otherInfluencers);
       })
@@ -43,6 +46,8 @@ export default function InfluencerDetail({ handleNavigate }) {
     Navigate("/favorite");
   };
 
+  console.log(otherInfluencer, "otherInfluencer");
+
   const handlePayNavigation = () => {
     if (isAuthenticated) {
       Navigate(`/order/${influencer.name}/${id}`);
@@ -52,12 +57,13 @@ export default function InfluencerDetail({ handleNavigate }) {
     }
   };
 
-  console.log(otherInfluencer, 'otherInfluencer')
-
-  
-  const handToggleImage = () =>setOpenImage(!openImage)
+  const handToggleImage = () => setOpenImage(!openImage);
 
   const handToggleModal = () => setOpenModal(!openModal);
+
+  const handleNavigate = (id) => {
+    Navigate(`/influencer/${id}`);
+  };
 
   if (loading) return <Loading />;
   if (error) return <Error />;
@@ -74,6 +80,16 @@ export default function InfluencerDetail({ handleNavigate }) {
         openImage={openImage}
         handleCloseImage={handToggleImage}
       />
+      <div className="influencerDetailPage">
+        {otherInfluencer.map((influencer) => (
+          <InfluencerCard
+            key={influencer._id}
+            influencer={influencer}
+            handleNavigate={handleNavigate}
+          />
+        ))}
+      </div>
+
       <AuthModal handleCloseModal={handToggleModal} openModal={openModal} />
     </div>
   );

@@ -15,7 +15,7 @@ const editUserReducer = (state = initialState, action) => {
       };
     case type.EDIT_USER_SUCCESS:
       return {
-        success: action.payload,
+        success: true,
         loading: false,
         error: null,
       };

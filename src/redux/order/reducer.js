@@ -10,6 +10,10 @@ const orderReducer = (state = initialState, action) => {
       return {
         initialOrder: action.payload, // values
       };
+    case types.ORDER_SELECTED_PAYMENT:
+      return{
+        initialOrder: action.payload
+      }
 
     case types.CANCEL_ORDER:
       return {

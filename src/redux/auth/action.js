@@ -32,8 +32,23 @@ const authRegisterUserReducer = (values) => async (dispatch) => {
   }
 };
 
+const authUserUpdated = (values) => {
+  return { type: type.AUTH_USER_UPDATED, payload: values };
+};
+
 const authLogoutUserReducer = () => {
   return { type: type.AUTH_USER_LOGOUT };
 };
 
-export { authLoginUserReducer, authRegisterUserReducer, authLogoutUserReducer };
+
+
+export {
+  authLoginUserReducer,
+  authRegisterUserReducer,
+  authLogoutUserReducer,
+  authUserUpdated,
+};
+
+
+
+

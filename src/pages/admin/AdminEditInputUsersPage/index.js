@@ -16,11 +16,14 @@ export default function AdminEditInputUsersPage() {
 
   const usersDetail = users.find((i) => i._id === id);
 
-  console.log(usersDetail);
 
-  const handleEditAdminUserInfo = (values, id) => {
-    dispatch(adminEditUser(values, id));
+ 
+
+  const handleEditAdminUserInfo = (values) => {
+    const endpoint = 'users'
+    dispatch(adminEditUser(values, id, endpoint));
     navigation("/manage-admin-panel");
+  console.log(values)
   };
 
   return (

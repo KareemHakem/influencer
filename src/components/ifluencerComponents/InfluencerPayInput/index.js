@@ -18,13 +18,13 @@ export default function InfluencerPayInput({ handlePaySubmit, loading }) {
       <div>
         <Formik
           initialValues={{
-            name: "",
             email: "",
             phone: "",
             businessName: "",
             website: "",
             instagram: "",
             package: "",
+            businessDetails: "",
           }}
           validationSchema={validationSchema}
           onSubmit={handlePaySubmit}
@@ -33,13 +33,6 @@ export default function InfluencerPayInput({ handlePaySubmit, loading }) {
             <Form className="inputCardPayInfo">
               <div className="inputCardPayInfoContainer">
                 <div className="inputCardPayInfoContainerValues">
-                  <FormInput
-                    name="name"
-                    label="Name"
-                    placeholder="Name"
-                    variant="outlined"
-                    width={800}
-                  />
                   <FormInput
                     name="email"
                     label="Email"
@@ -87,7 +80,7 @@ export default function InfluencerPayInput({ handlePaySubmit, loading }) {
                     />
                   </div>
                   <FormInput
-                    name="Details"
+                    name="businessDetails"
                     label="Details"
                     placeholder="Details"
                     variant="outlined"

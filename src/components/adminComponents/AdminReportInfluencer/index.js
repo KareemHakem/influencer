@@ -12,9 +12,9 @@ import "./style.css";
 export default function AdminReportInfluencer() {
   return (
     <div>
-      <div className="AdminsReportInfluencerTableContainer">
-        <div className="AdminsReportInfluencerTable">
-          <TableContainer component={Paper}>
+      <div className="adminsReportInfluencerTableContainer">
+        <div className="adminsReportInfluencerTable">
+          <TableContainer component={Paper} >
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead>
                 <TableRow>

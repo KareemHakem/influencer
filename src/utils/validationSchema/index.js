@@ -29,7 +29,7 @@ export const validationEditProfile = Yup.object().shape({
 });
 
 export const validationSchemaUserMakeOrder = Yup.object().shape({
-  name: Yup.string().required().min(4).label("Name"),
+
   email: Yup.string().required().email().label("Email"),
   phone: Yup.number().required().min(11).label("Phone Number"),
   businessName: Yup.string().required().min(4).label("Business Name"),

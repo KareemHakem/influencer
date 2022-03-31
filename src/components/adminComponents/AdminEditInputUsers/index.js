@@ -20,7 +20,7 @@ export default function AdminEditInputUsers({
         isInfluencer: currentUser?.isInfluencer || false,
       }}
       // validateOnChange={validateOnChange}
-      onSubmit={() => handleEditAdminUserInfo(currentUser._id)}
+      onSubmit={handleEditAdminUserInfo}
     >
       {({ isSubmitting, isValid, dirty }) => (
         <Form className="AdminEditInputUsersComponents">

@@ -1,7 +1,7 @@
 import { type } from "./type";
 
 const initialState = {
-  success: false,
+  reports: [],
   loading: false,
   error: null,
 };
@@ -16,14 +16,14 @@ const getReportsReducer = (state = initialState, action) => {
     case type.GET_REPORTS_SUCCESS:
       return {
         loading: false,
-        success: action.payload,
+        reports: action.payload,
         error: null,
       };
     case type.GET_REPORTS_ERROR:
       return {
         loading: false,
-        success: false,
         error: action.payload,
+        ...state,
       };
 
     default:

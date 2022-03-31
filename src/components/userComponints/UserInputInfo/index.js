@@ -48,7 +48,7 @@ export default function UserInputInfo({
             <Button
               title="UPDATE"
               type="submit"
-              disabled={!dirty || !isValid || isSubmitting}
+              disabled={!dirty || !isValid}
               loading={loading}
               width={160}
               margin={50}

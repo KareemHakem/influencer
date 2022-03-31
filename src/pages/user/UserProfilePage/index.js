@@ -5,7 +5,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { editUser } from "../../../redux/editUserInformation/action";
 
 import UserProfile from "../../../components/userComponints/UserProfile";
-import { toast } from "react-toastify";
 
 export default function UserProfilePage() {
   const { loading } = useSelector((state) => state.editUser);
@@ -18,7 +17,6 @@ export default function UserProfilePage() {
   const handleNavigationUserFormInput = (values) => {
     dispatch(editUser(values, id));
     navigate(`/user-profile/${id}`);
-    toast.success("Success To Update Your Information");
   };
 
   const handleProfileNavigate = () => {};

@@ -1,22 +1,26 @@
 export const PackagesOptions = [
   {
     key: 1,
-    value: "100",
+    price: "100",
     label: "Post",
+    value: "Post",
   },
   {
     key: 2,
-    value: "150",
+    price: "150",
     label: "3 Stores",
+    value: "3 Stores",
   },
   {
     key: 3,
-    value: "250",
+    price: "250",
     label: " 3 Stores post",
+    value: " 3 Stores post",
   },
   {
     key: 4,
-    value: "300",
+    price: "300",
     label: "Package",
+    value: "Package",
   },
 ];

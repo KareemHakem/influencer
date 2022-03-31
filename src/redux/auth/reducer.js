@@ -51,6 +51,12 @@ const authUserReducer = (state = initialState, action) => {
         error: action.payload,
       };
 
+    case type.AUTH_USER_UPDATED:
+      return {
+        ...state,
+        currentUser: action.payload,
+      };
+
     case type.AUTH_USER_LOGOUT:
       return {
         currentUser: null,

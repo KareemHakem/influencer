@@ -11,6 +11,7 @@ import order from "./order/reducer";
 import users from "./users/reducer";
 import editUser from "./editUserInformation/reducer";
 import adminEditUser from "./adminEditUserInformation/reducer";
+import reports from './getReports/reducer'
 
 const persistConfig = {
   key: "KEY-1",
@@ -30,6 +31,7 @@ const rootReducer = combineReducers({
   users,
   editUser,
   adminEditUser,
+  reports
 });
 
 export default persistReducer(persistConfig, rootReducer);

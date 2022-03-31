@@ -3,18 +3,24 @@ import { ToastContainer } from "react-toastify";
 import Navigation from "./navigation";
 import "./App.css";
 
-
 // from top to button use rebase
 // after : from button to top use merge
 
-// TODO: Display Influncers in the Detail Screen /// =>
-// TODO: User Edit info PUT: users/profile /// =>
-// TODO: Admin EDit User PUT: users/:id //// =>
-// TODO: get Reports reports
-// TODO: STYLE 
+// const obj = {
+//   name: "Mohamed",
+//   age: 20,
 
+// };
 
+// const obj2 = {...obj, job:'developer'}
+// console.log(obj2)
 function App() {
+  // TODO: Create order => orders/create
+  // TODO: Create report => reports/create
+  // TODO: get orders for (admin/influncer/user) => orders/
+  // TODO: Reviews
+
+  // TODO: pagination
 
   return (
     <div>
@@ -35,7 +41,6 @@ function App() {
   );
 }
 export default App;
-
 
 //  GET ------------------------------------------- POST _ PUT _ DELETE   PUT => edit  POST => creat new
 //  Parameter: Nothing/ID ---------------------------- Values(and/or)ID

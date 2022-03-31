@@ -3,25 +3,7 @@ import { ToastContainer } from "react-toastify";
 import Navigation from "./navigation";
 import "./App.css";
 
-// from top to button use rebase
-// after : from button to top use merge
-
-// const obj = {
-//   name: "Mohamed",
-//   age: 20,
-
-// };
-
-// const obj2 = {...obj, job:'developer'}
-// console.log(obj2)
 function App() {
-  // TODO: Create order => orders/create
-  // TODO: Create report => reports/create
-  // TODO: get orders for (admin/influncer/user) => orders/
-  // TODO: Reviews
-
-  // TODO: pagination
-
   return (
     <div>
       <ToastContainer
@@ -42,6 +24,14 @@ function App() {
 }
 export default App;
 
+// TODO: Create order => orders/create
+// TODO: Create report => reports/create
+// TODO: get orders for (admin/influncer/user) => orders/
+// TODO: Reviews
+// TODO: pagination
+
+
+
 //  GET ------------------------------------------- POST _ PUT _ DELETE   PUT => edit  POST => creat new
 //  Parameter: Nothing/ID ---------------------------- Values(and/or)ID
 //  Return:    DATA ----------------------------------- Success/Data(login/register)
@@ -49,3 +39,17 @@ export default App;
 //  handling1: <Loading /> ---------------------------- loading in Button
 // handling2:  <Error /> ------------------------------ toast/notifaction
 // handling3:  display DATA --------------------------- toast/notifaction
+
+
+
+// from top to button use rebase
+// after : from button to top use merge
+
+// const obj = {
+//   name: "Mohamed",
+//   age: 20,
+
+// };
+
+// const obj2 = {...obj, job:'developer'}
+// console.log(obj2)

@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Formik } from "formik";
+import { validationSchemaUserEditProfile as validationSchema } from "../../../utils/validationSchema";
 import { Button } from "../../../commons/Button";
 import { FormInput } from "../../FormInput";
 import "./style.css";
@@ -16,7 +17,7 @@ export default function UserInputInfo({
         password: "",
         confirmPassword: "",
       }}
-      // validationSchema={validationSchema}
+      validationSchema={validationSchema}
       onSubmit={handleNavigationUserFormInput}
     >
       {({ isValid, isSubmitting, dirty }) => (
@@ -47,7 +48,7 @@ export default function UserInputInfo({
             <Button
               title="UPDATE"
               type="submit"
-              disabled={!dirty || !isValid}
+              disabled={!dirty || !isValid || isSubmitting}
               loading={loading}
               width={160}
               margin={50}

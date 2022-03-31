@@ -12,17 +12,9 @@ import "./style.css";
 
 export default function AdminPanelPage() {
   const { users, loading, error } = useSelector((state) => state.users);
-  const { influencer } = useSelector((state) => state.influencers);
-  console.log("influencer =>>>>>>", influencer);
-  console.log(
-    "users =>>>>",
-    users.map((user) => <div>{user._id}</div>)
-  );
 
   const Navigate = useNavigate();
   const dispatch = useDispatch();
-
-  //   const usersDetail = users.users.find((i) => i._id === id);
 
   useEffect(() => {
     dispatch(getUsers());
@@ -30,20 +22,12 @@ export default function AdminPanelPage() {
 
   const handleAdminUserNavigate = () => {};
   const handleAdminOrderNavigate = () => {};
+  const handleAdminDeleteUsers = (id) => dispatch(deleteUser(id));
+  const handleEditInputUsersNavigate = (id) => Navigate(`/admin/users/${id}`);
+  const handleAdminReportNavigate = () => Navigate("/admin-manage-reports");
 
-  const handleAdminDeleteUsers = (id) => {
-    dispatch(deleteUser(id));
-  };
-
-  const handleAdminInfluencersNavigate = () => {
+  const handleAdminInfluencersNavigate = () =>
     Navigate("/admin-manage-influencer");
-  };
-  const handleAdminReportNavigate = () => {
-    Navigate("/admin-manage-reports");
-  };
-  const handleEditInputUsersNavigate = (id) => {
-    Navigate(`/admin/users/${id}`);
-  };
 
   if (loading) return <Loading />;
   if (error) return <Error />;

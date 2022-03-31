@@ -7,4 +7,5 @@ export const endpoint = {
   login: "login",
   Register: "Register",
   create: "create",
+  reports: "reports",
 };

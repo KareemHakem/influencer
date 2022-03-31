@@ -2,9 +2,13 @@ import React from "react";
 
 import { Form, Formik } from "formik";
 
+import { validationSchemaUserMakeOrder as validationSchema } from "../../../utils/validationSchema";
+
+import FromSelect from "../../FormFormikSelect";
 import { FormInput } from "../../FormInput";
 import { Button } from "../../../commons/Button";
 import SteppersMui from "../../StepersMui";
+import { PackagesOptions } from "../../../assets/data/packagesOptions";
 import "./style.css";
 
 export default function InfluencerPayInput({ handlePaySubmit, loading }) {
@@ -22,10 +26,10 @@ export default function InfluencerPayInput({ handlePaySubmit, loading }) {
             instagram: "",
             package: "",
           }}
-          // validateOnChange={validateOnChange}
+          validationSchema={validationSchema}
           onSubmit={handlePaySubmit}
         >
-          {({ isValid, isSubmitting, dirty }) => (
+          {({ isValid, dirty }) => (
             <Form className="inputCardPayInfo">
               <div className="inputCardPayInfoContainer">
                 <div className="inputCardPayInfoContainerValues">
@@ -71,13 +75,17 @@ export default function InfluencerPayInput({ handlePaySubmit, loading }) {
                     variant="outlined"
                     width={800}
                   />
-                  <FormInput
-                    name="package"
-                    label="Package"
-                    placeholder="Package"
-                    variant="outlined"
-                    width={800}
-                  />
+                  <div className="formSelectPackage">
+                    <FromSelect
+                      name="package"
+                      label="Package"
+                      holderName="package"
+                      options={PackagesOptions}
+                      multiple={false}
+                      width={800}
+                      variant="outlined"
+                    />
+                  </div>
                   <FormInput
                     name="Details"
                     label="Details"

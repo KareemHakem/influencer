@@ -30,5 +30,3 @@ export default function InfluencerPayPage() {
     </div>
   );
 }
-
-// unix Format

@@ -8,7 +8,9 @@ import { getReports } from "../../../redux/getReports/action";
 export default function AdminReportInfluencerPage() {
   const { reports, loading, error } = useSelector((state) => state.reports);
   const dispatch = useDispatch();
-  console.log(reports, "reports");
+
+  console.log(reports);
+
   useEffect(() => {
     dispatch(getReports());
   }, [dispatch]);

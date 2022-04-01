@@ -3,10 +3,12 @@ import { useSelector } from "react-redux";
 import PayPal from "../../../components/PayPal";
 
 export default function InfluencerPayPalPage() {
-  const {initialOrder} = useSelector(state => state.order)
-  console.log(initialOrder?.totalPrice)
+  const { initialOrder } = useSelector((state) => state.order);
+  
+
+  
   return (
-    <div className="InfluencerPayPalPage"  >
+    <div className="InfluencerPayPalPage">
       <PayPal price={initialOrder?.totalPrice} />
     </div>
   );

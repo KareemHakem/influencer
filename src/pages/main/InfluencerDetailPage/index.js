@@ -33,7 +33,6 @@ export default function InfluencerDetail() {
     setLoading(true);
     getInfluencer(id)
       .then((res) => {
-        console.log(res);
         setInfluencer(res.influencer);
         setOtherInfluencer(res.otherInfluencers);
       })
@@ -45,8 +44,6 @@ export default function InfluencerDetail() {
     dispatch(addInfluencerFavorites(influencer));
     Navigate("/favorite");
   };
-
-  console.log(otherInfluencer, "otherInfluencer");
 
   const handlePayNavigation = () => {
     if (isAuthenticated) {

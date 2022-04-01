@@ -21,6 +21,7 @@ export default function AdminReportInfluencer({ reports }) {
                 <TableRow>
                   <TableCell align="right">USER_NAME</TableCell>
                   <TableCell align="right">USER_ID</TableCell>
+                  <TableCell align="right">INFLUENCER_NAME</TableCell>
                   <TableCell align="right">INFLUENCER_ID</TableCell>
                   <TableCell align="right">DESCRIPTION(REPORT)</TableCell>
                 </TableRow>
@@ -35,6 +36,7 @@ export default function AdminReportInfluencer({ reports }) {
                       {report.name}
                     </TableCell>
                     <TableCell align="right">{report._id}</TableCell>
+                    <TableCell align="right">{report.infName}</TableCell>
                     <TableCell align="right">{report.influencer}</TableCell>
                     <TableCell align="right">{report.description}</TableCell>
                   </TableRow>

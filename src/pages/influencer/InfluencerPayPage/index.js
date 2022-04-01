@@ -9,9 +9,9 @@ import { cancelOrder } from "../../../redux/order/action";
 import InfluencerPayInput from "../../../components/ifluencerComponents/InfluencerPayInput";
 import { PackagesOptions } from "../../../assets/data/packagesOptions";
 
-
 export default function InfluencerPayPage() {
   const { currentUser } = useSelector((state) => state.auth);
+  const { data } = useSelector((state) => state.createOrder);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -23,10 +23,9 @@ export default function InfluencerPayPage() {
       (item) => item.value === values.package
     )?.price;
 
-    const fee = (Number(price) * 10 )/100
+    const fee = (Number(price) * 10) / 100;
 
-    const totalPrice = fee + Number(price)
-
+    const totalPrice = fee + Number(price);
 
     dispatch(
       initiateOrder({
@@ -34,8 +33,9 @@ export default function InfluencerPayPage() {
         influencer: id,
         user: currentUser._id,
         price: Number(price),
+        paymentResult: data,
         totalPrice,
-        fee
+        fee,
       })
     );
 
@@ -43,7 +43,7 @@ export default function InfluencerPayPage() {
       dispatch(cancelOrder());
       navigate(`/influencer/${id}`);
       toast.error("Order has been canceled");
-    }, 100000);
+    }, 10000);
   };
 
   return (

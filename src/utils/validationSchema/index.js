@@ -29,7 +29,6 @@ export const validationEditProfile = Yup.object().shape({
 });
 
 export const validationSchemaUserMakeOrder = Yup.object().shape({
-
   email: Yup.string().required().email().label("Email"),
   phone: Yup.number().required().min(11).label("Phone Number"),
   businessName: Yup.string().required().min(4).label("Business Name"),
@@ -44,4 +43,9 @@ export const validationSchemaUserEditProfile = Yup.object().shape({
     [Yup.ref("password"), null],
     "Passwords must match"
   ),
+});
+
+export const validationSchemaUserReportInfluencer = Yup.object().shape({
+  infName: Yup.string().required().min(4).label("Influencer Name"),
+  description: Yup.string().required().label("Description"),
 });

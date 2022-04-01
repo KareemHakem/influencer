@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-
 import { HomeAnimation } from "../../../components/HomeComponents/HomeAnimation";
 import HomeText from "../../../components/HomeComponents/HomeText";
 

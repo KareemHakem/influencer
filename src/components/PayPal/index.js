@@ -3,7 +3,7 @@ import { PayPalButton } from "react-paypal-button-v2";
 import SteppersMui from "../StepersMui";
 import "./style.css";
 
-export default function PayPal({price}) {
+export default function PayPal({ price}) {
   return (
     <div className="influencerPayPal">
       <SteppersMui activeStep={2} />
@@ -16,8 +16,8 @@ export default function PayPal({price}) {
           country_code="EGP"
           // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
           onSuccess={(details, data) => {
-            // paymentResult  = data
-            // isPaid = true
+            // paymentResult = data;
+            // isPaid = true;
             alert("Transaction completed by " + details.payer.name.given_name);
 
             // OPTIONAL: Call your server to save the transaction
@@ -29,7 +29,8 @@ export default function PayPal({price}) {
             // });
           }}
           options={{
-            clientId: "ARfIZ621vXdLFUkwaNIN1I-ybEcsznrQQHCo5mh5ASUtowvzdunuAyCfHLDce-UGVe3kZJCgdDXNMFwA"
+            clientId:
+              "ARfIZ621vXdLFUkwaNIN1I-ybEcsznrQQHCo5mh5ASUtowvzdunuAyCfHLDce-UGVe3kZJCgdDXNMFwA",
           }}
         />
       </div>

@@ -31,7 +31,6 @@ export default App;
 // TODO: pagination
 
 
-
 //  GET ------------------------------------------- POST _ PUT _ DELETE   PUT => edit  POST => creat new
 //  Parameter: Nothing/ID ---------------------------- Values(and/or)ID
 //  Return:    DATA ----------------------------------- Success/Data(login/register)
@@ -41,14 +40,12 @@ export default App;
 // handling3:  display DATA --------------------------- toast/notifaction
 
 
-
 // from top to button use rebase
 // after : from button to top use merge
 
 // const obj = {
 //   name: "Mohamed",
 //   age: 20,
-
 // };
 
 // const obj2 = {...obj, job:'developer'}

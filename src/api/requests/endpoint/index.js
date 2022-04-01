@@ -8,4 +8,5 @@ export const endpoint = {
   Register: "Register",
   create: "create",
   reports: "reports",
+  orders: "orders",
 };

@@ -29,7 +29,7 @@ export default function FromSelect({
           {...props}
         >
           {options.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
+            <MenuItem key={option.value} value={option.price}>
               {option.label}
             </MenuItem>
           ))}

@@ -61,9 +61,9 @@
 
 .influencer_card_detail-btn {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .influencer_request-btn {
@@ -93,6 +93,7 @@
   border: 1px solid white;
   padding: 10px;
   border-radius: 25px;
+  height: 50px !important;
   transition: all ease-in 0.2s;
   margin-left: 20px;
   font-weight: 500;
@@ -107,6 +108,34 @@
   background-color: #fff;
   color: #f294c0;
   border: 1px solid #f294c0;
+  padding: 10px;
+  border-radius: 25px;
+  transition: 0.75s;
+}
+
+.reportButton {
+  width: 150px;
+  background-color: #2168a6;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 25px;
+  height: 50px !important;
+  transition: all ease-in 0.2s;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.reportButton:hover {
+  background-color: #fff;
+  color: #F72118;
+  border: 1px solid #F72118;
   padding: 10px;
   border-radius: 25px;
   transition: 0.75s;

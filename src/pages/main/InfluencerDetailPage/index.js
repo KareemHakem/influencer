@@ -23,11 +23,12 @@ export default function InfluencerDetail() {
   const [openModal, setOpenModal] = useState(false);
   const [openImage, setOpenImage] = useState(false);
   const [select, setSelect] = useState("");
-  const { isAuthenticated } = useSelector((state) => state.auth);
+  const { isAuthenticated, currentUser } = useSelector((state) => state.auth);
 
   const { id } = useParams();
+  const userId = currentUser._id;
   const dispatch = useDispatch();
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
@@ -42,24 +43,27 @@ export default function InfluencerDetail() {
 
   const handleAddFavorite = () => {
     dispatch(addInfluencerFavorites(influencer));
-    Navigate("/favorite");
+    navigate("/favorite");
   };
 
   const handlePayNavigation = () => {
     if (isAuthenticated) {
-      Navigate(`/order/${influencer.name}/${id}`);
+      navigate(`/order/${influencer.name}/${id}`);
       toast.warn("Payment must be completed in 5 minutes");
     } else {
       setOpenModal(true);
     }
   };
 
-  const handToggleImage = () => setOpenImage(!openImage);
+  const handleAddReport = () => {
+    navigate(`/report-influencer/${userId}`);
+  };
 
+  const handToggleImage = () => setOpenImage(!openImage);
   const handToggleModal = () => setOpenModal(!openModal);
 
   const handleNavigate = (id) => {
-    Navigate(`/influencer/${id}`);
+    navigate(`/influencer/${id}`);
   };
 
   if (loading) return <Loading />;
@@ -76,6 +80,7 @@ export default function InfluencerDetail() {
         handleOpenImageFrame={handToggleImage}
         openImage={openImage}
         handleCloseImage={handToggleImage}
+        handleAddReport={handleAddReport}
       />
       <div className="influencerDetailPage">
         {otherInfluencer.map((influencer) => (

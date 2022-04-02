@@ -24,6 +24,7 @@ import AdminPanelPage from "../pages/admin/AdminPanelPage";
 import AdminInfinfluencerPage from "../pages/admin/AdminInfinfluencerPage";
 import AdminReportInfluencerPage from "../pages/admin/AdminReportInfluencerPage";
 import AdminEditInputUsersPage from "../pages/admin/AdminEditInputUsersPage";
+import UserCreteReport from "../pages/user/UserCreateReport";
 
 export default function Navigation() {
   const { currentUser } = useSelector((state) => state.auth);
@@ -68,6 +69,7 @@ export default function Navigation() {
           element={<AdminInfinfluencerPage />}
         />
         {/* Users */}
+        <Route path="/report-influencer/:id" element={<UserCreteReport />} />
         <Route
           path="/admin-manage-reports"
           element={<AdminReportInfluencerPage />}

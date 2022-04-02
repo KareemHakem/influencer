@@ -22,9 +22,10 @@ export default function InfluencerDetailCard({
   handleOpenImageFrame,
   openImage,
   handleCloseImage,
+  handleAddReport,
 }) {
   const { rates } = useSelector((state) => state.rates);
-  console.log('openImage', openImage)
+  console.log("openImage", openImage);
 
   return (
     <div className="influencerCardDetailPage">
@@ -66,6 +67,13 @@ export default function InfluencerDetailCard({
                 disabled={!select}
               />
               <Button
+                className="reportButton"
+                width={150}
+                title="REPORT"
+                Icon={<Icons.ReportIcon />}
+                onClick={handleAddReport}
+              />
+              <Button
                 className="influencer_Add-btn"
                 title="ADD TO"
                 Icon={<Icons.FavoriteBorderIcon />}
@@ -76,9 +84,11 @@ export default function InfluencerDetailCard({
         </div>
       </div>
       {openImage && (
-        <Lightbox mainSrc={influencer.image} onCloseRequest={handleCloseImage} />
+        <Lightbox
+          mainSrc={influencer.image}
+          onCloseRequest={handleCloseImage}
+        />
       )}
     </div>
   );
-
 }

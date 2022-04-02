@@ -23,10 +23,9 @@ export default function InfluencerDetail() {
   const [openModal, setOpenModal] = useState(false);
   const [openImage, setOpenImage] = useState(false);
   const [select, setSelect] = useState("");
-  const { isAuthenticated, currentUser } = useSelector((state) => state.auth);
+  const { isAuthenticated } = useSelector((state) => state.auth);
 
   const { id } = useParams();
-  const userId = currentUser._id;
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -56,7 +55,7 @@ export default function InfluencerDetail() {
   };
 
   const handleAddReport = () => {
-    navigate(`/report-influencer/${userId}`);
+    navigate(`/report-influencer/${id}`);
   };
 
   const handToggleImage = () => setOpenImage(!openImage);

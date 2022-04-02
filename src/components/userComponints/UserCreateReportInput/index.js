@@ -40,12 +40,12 @@ export default function UserCreateReportInput({
                 rows={3}
               />
               <Button
-                className="influencer_edit_form_btn"
+                disabled={!dirty || !isValid}
                 title="REPORT"
                 type="submit"
-                disabled={!dirty || !isValid}
                 loading={loading}
                 width={100}
+                style={{ marginLeft: 450, marginTop: 50 }}
               />
             </div>
           </Form>

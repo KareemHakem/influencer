@@ -41,8 +41,12 @@ export default function InfluencerDetail() {
   }, [id]);
 
   const handleAddFavorite = () => {
-    dispatch(addInfluencerFavorites(influencer));
-    navigate("/favorite");
+    if (isAuthenticated) {
+      dispatch(addInfluencerFavorites(influencer));
+      navigate("/favorite");
+    } else {
+      setOpenModal(true);
+    }
   };
 
   const handlePayNavigation = () => {
@@ -55,7 +59,11 @@ export default function InfluencerDetail() {
   };
 
   const handleAddReport = () => {
-    navigate(`/report-influencer/${id}`);
+    if (isAuthenticated) {
+      navigate(`/report-influencer/${id}`);
+    } else {
+      setOpenModal(true);
+    }
   };
 
   const handToggleImage = () => setOpenImage(!openImage);

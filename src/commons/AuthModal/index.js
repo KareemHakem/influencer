@@ -47,7 +47,7 @@ function AuthModal({ openModal, handleCloseModal }) {
             <Button
               className="ModalBtn"
               title="Login"
-              onClick={() => handleNavigate("/LoginPage")}
+              onClick={() => handleNavigate("/Login")}
               width={100}
               height={40}
               margin={5}
@@ -55,7 +55,7 @@ function AuthModal({ openModal, handleCloseModal }) {
             <Button
               className="ModalBtn"
               title="Register"
-              onClick={() => handleNavigate("/loginPage/RegisterPage")}
+              onClick={() => handleNavigate("/Register")}
               width={100}
               height={40}
               margin={5}

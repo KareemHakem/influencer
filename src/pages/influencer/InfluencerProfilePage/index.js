@@ -17,8 +17,7 @@ const InfluencerProfilePage = () => {
   );
   const { currentUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-  const Navigate = useNavigate();
- 
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getInfluencers());
@@ -30,15 +29,19 @@ const InfluencerProfilePage = () => {
   );
 
   const handleNavigate = () => {
-    Navigate(`/editprofile/${influencerDetail?._id}`);
+    navigate(`/editprofile/${influencerDetail?._id}`);
   };
 
   const handleProfileNavigate = () => {
-    Navigate(`/influencer/${influencerDetail._id}`);
+    navigate(`/influencer/${influencerDetail._id}`);
+  };
+
+  const handleOrdersNavigate = () => {
+    navigate(`/influencer-orders`);
   };
 
   const handleCreatProfileNavigation = () => {
-    Navigate("/create-profile");
+    navigate("/create-profile");
   };
 
   if (loading) return <Loading />;
@@ -51,6 +54,7 @@ const InfluencerProfilePage = () => {
           handleNavigate={handleNavigate}
           influencerDetail={influencerDetail}
           handleProfileNavigate={handleProfileNavigate}
+          handleOrdersNavigate={handleOrdersNavigate}
         />
       ) : (
         <div>

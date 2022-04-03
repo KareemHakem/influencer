@@ -31,7 +31,7 @@ export default function NavBarRightSide({
         <>
           <Link
             className="influencer_navBar_link-container-Link"
-            to="LoginPage"
+            to="Login"
           >
             LOGIN
           </Link>

@@ -9,7 +9,7 @@ export default function AdminMenu({ handleUserAuthLogout, handleClickAdmin }) {
         <ul className="dropdown_menu">
           <li className="dropdown_item-1">
             <Link onClick={handleClickAdmin} to="/manage-admin-panel">
-              Admin Panel{" "}
+              Admin Panel
             </Link>
           </li>
           <li onClick={handleUserAuthLogout} className="dropdown_item-1">

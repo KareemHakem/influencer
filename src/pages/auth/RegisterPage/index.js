@@ -25,7 +25,7 @@ export default function RegisterPage() {
     dispatch(authRegisterUserReducer(body));
   };
   const handleNavigationLoginForm = () => {
-    Navigate("/LoginPage");
+    Navigate("/Login");
   };
 
   return (

@@ -21,7 +21,9 @@ export default function AdminPanelPage() {
   }, [dispatch]);
 
   const handleAdminUserNavigate = () => {};
-  const handleAdminOrderNavigate = () => {};
+  const handleAdminOrderNavigate = () => {
+    Navigate(`/admin-orders`);
+  };
   const handleAdminDeleteUsers = (id) => dispatch(deleteUser(id));
   const handleEditInputUsersNavigate = (id) => Navigate(`/admin/users/${id}`);
   const handleAdminReportNavigate = () => Navigate("/admin-manage-reports");

@@ -10,7 +10,11 @@ import image from "../../../assets/images/login_img.png";
 
 import "./style.css";
 
-const LoginForm = ({ handleAuthLoginUserSubmit, loading }) => {
+const LoginForm = ({
+  handleNavigateRegister,
+  handleAuthLoginUserSubmit,
+  loading,
+}) => {
   return (
     <div className="auth_login_form-container">
       <img className="login_form_image" src={image} alt="login_image" />
@@ -54,7 +58,10 @@ const LoginForm = ({ handleAuthLoginUserSubmit, loading }) => {
         <div className="register_form_input_link-container">
           <p>
             You don't have account?
-            <Link className="register_form_link" to="RegisterPage">
+            <Link
+              className="register_form_link"
+             to="/register"
+            >
               Register
             </Link>
           </p>

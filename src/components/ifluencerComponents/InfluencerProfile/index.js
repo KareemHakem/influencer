@@ -41,12 +41,12 @@ export default function InfluencerProfile({
           title="Edit profile"
         />
         <SidebarPart
-          onClick={handleChatNavigate}
+          onClick={handleOrdersNavigate}
           Icon={ChatIcon}
           title="Orders"
         />
         <SidebarPart
-          onClick={handleOrdersNavigate}
+          onClick={handleChatNavigate}
           Icon={FormatListNumberedIcon}
           title="Chat"
         />

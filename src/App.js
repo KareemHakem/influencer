@@ -25,7 +25,7 @@ function App() {
 export default App;
 
 // TODO: Create order => orders/create
-// TODO: Create report => reports/create
+// TODO: Create report => reports/create 
 // TODO: get orders for (admin/influncer/user) => orders/
 // TODO: Reviews
 // TODO: pagination
@@ -36,8 +36,8 @@ export default App;
 //  Return:    DATA ----------------------------------- Success/Data(login/register)
 //  how?:      useEffect() ---------------------------- button submit/OnClick()
 //  handling1: <Loading /> ---------------------------- loading in Button
-// handling2:  <Error /> ------------------------------ toast/notifaction
-// handling3:  display DATA --------------------------- toast/notifaction
+//  handling2:  <Error /> ------------------------------ toast/notifaction
+//  handling3:  display DATA --------------------------- toast/notifaction
 
 
 // from top to button use rebase

@@ -3,8 +3,9 @@ import React from "react";
 import { types, userTypes } from "./types";
 
 import UserMenu from "./UserMenu";
-import InfluencerMenu from "./InfluencerMenu";
 import AdminMenu from "./AdminMenu";
+import InfluencerMenu from "./InfluencerMenu";
+import AdminInfluencerMenu from "./AdminInfluencerMenu";
 
 export default function NavbarMenus({
   currentUser,
@@ -28,7 +29,14 @@ export default function NavbarMenus({
         />
       );
     case types.AdminAndInfluencer:
-      return <div></div>;
+      return (
+        <AdminInfluencerMenu
+          currentUser={currentUser}
+          handleClickAdmin={handleClickToggle}
+          handleUserAuthLogout={handleUserAuthLogout}
+          handleClickInfluencer={handleClickToggle}
+        />
+      );
     case types.User:
       return (
         <UserMenu

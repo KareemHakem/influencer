@@ -11,16 +11,20 @@ import SteppersMui from "../../StepersMui";
 import { PackagesOptions } from "../../../assets/data/packagesOptions";
 import "./style.css";
 
-export default function InfluencerPayInput({ handlePaySubmit, loading }) {
+export default function InfluencerPayInput({
+  handlePaySubmit,
+  currentUser,
+  loading,
+}) {
   return (
     <>
       <SteppersMui activeStep={0} />
       <div>
         <Formik
           initialValues={{
-            email: "",
+            email: currentUser.email || "",
             phone: "",
-            businessName: "",
+            businessName: currentUser.name || "",
             website: "",
             instagram: "",
             package: "",

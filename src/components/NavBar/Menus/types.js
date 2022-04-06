@@ -6,10 +6,10 @@ export const types = {
 };
 
 export const userTypes = (currentUser) =>
-  currentUser?.isInfluencer
-    ? types.Influencer
-    : currentUser?.isInfluencer && currentUser?.isAdmin
+  currentUser?.isInfluencer && currentUser?.isAdmin
     ? types.AdminAndInfluencer
+    : currentUser?.isInfluencer
+    ? types.Influencer
     : currentUser?.isAdmin
     ? types.isAdmin
     : types.User;

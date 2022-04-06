@@ -11,7 +11,6 @@ import InfluencerDetailPage from "../pages/main/InfluencerDetailPage";
 import LoginPage from "../pages/auth/LoginPage";
 import RegisterPage from "../pages/auth/RegisterPage";
 import InfluencerProfilePage from "../pages/influencer/InfluencerProfilePage";
-import InfluencerOrders from "../pages/influencer/InfluencerOrders";
 import InfluencerEditProfile from "../pages/influencer/InfluencerEditProfile";
 import InfluencerCreateProfile from "../components/ifluencerComponents/InfluencerCreateProfile";
 import InfluencerPayPage from "../pages/influencer/InfluencerPayPage";
@@ -41,44 +40,39 @@ export default function Navigation() {
       <Routes>
         {/* MAIN */}
         <Route path="/" element={<HomePage />} />
-        <Route path="favorite" element={<FavoritePage />} />
         <Route path="login" element={<LoginPage />} />
+        <Route path="/Register" element={<RegisterPage />} />
+        <Route path="favorite" element={<FavoritePage />} />
         <Route path="influencer" element={<InfluencerPage />} />
         <Route path="influencer/:id" element={<InfluencerDetailPage />} />
 
+        {/* ///////////////////////////////////////////////////////////////////////////////////////////////// */}
+
         {/* Influncer */}
-        <Route path="/Register" element={<RegisterPage />} />
-        <Route
-          path="profile-influencer/:id"
-          element={<InfluencerProfilePage />}
-        />
-        <Route path="orders" element={<InfluencerOrders />} />
+        <Route path="profile-influencer/:id" element={<InfluencerProfilePage />} />
         <Route path="/editprofile/:id" element={<InfluencerEditProfile />} />
         <Route path="/create-profile" element={<InfluencerCreateProfile />} />
         <Route path="/order/:influencer/:id" element={<InfluencerPayPage />} />
-        <Route
-          path="/user/selectPayment"
-          element={<InfluencerSelectPayPage />}
-        />
+        <Route path="/user/selectPayment" element={<InfluencerSelectPayPage />} />
         <Route path="/influencer-orders" element={<InfluencerGetOrders />} />
-        {/* Admin */}
         <Route path="/placeOrder/PayPal" element={<InfluencerPayPalPage />} />
         <Route path="/placeOrder/Fawry" element={<InfluencerFawryPage />} />
-        <Route path="/user-profile/:id" element={<UserProfilePage />} />
-        <Route path="/user-orders" element={<UserGetOrders />} />
+
+        {/* /////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+        {/* Admin */}
         <Route path="/manage-admin-panel" element={<AdminPanelPage />} />
-        <Route
-          path="/admin-manage-influencer"
-          element={<AdminInfinfluencerPage />}
-        />
+        <Route path="/admin-manage-influencer" element={<AdminInfinfluencerPage />}  />
         <Route path="/admin-orders" element={<AdminGetOrders />} />
+        <Route path="/admin-manage-reports" element={<AdminReportInfluencerPage />} />
+
+        {/* /////////////////////////////////////////////////////////////////////////////////////////////// */}
+
         {/* Users */}
+        <Route path="/user-profile/:id" element={<UserProfilePage />} />
         <Route path="/report-influencer/:id" element={<UserCreteReport />} />
-        <Route
-          path="/admin-manage-reports"
-          element={<AdminReportInfluencerPage />}
-        />
         <Route path="/admin/users/:id" element={<AdminEditInputUsersPage />} />
+        <Route path="/user-orders" element={<UserGetOrders />} />
       </Routes>
     </>
   );

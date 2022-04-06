@@ -12,6 +12,7 @@ import { PackagesOptions } from "../../../assets/data/packagesOptions";
 export default function InfluencerPayPage() {
   const { currentUser } = useSelector((state) => state.auth);
   const { data } = useSelector((state) => state.createOrder);
+  
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -24,7 +25,6 @@ export default function InfluencerPayPage() {
     )?.price;
 
     const fee = (Number(price) * 10) / 100;
-
     const totalPrice = fee + Number(price);
 
     dispatch(
@@ -48,7 +48,10 @@ export default function InfluencerPayPage() {
 
   return (
     <div>
-      <InfluencerPayInput handlePaySubmit={handlePaySubmit} />
+      <InfluencerPayInput
+        currentUser={currentUser}
+        handlePaySubmit={handlePaySubmit}
+      />
     </div>
   );
 }

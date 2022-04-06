@@ -44,16 +44,27 @@ export default function Navigation() {
         <Route path="/Register" element={<RegisterPage />} />
         <Route path="favorite" element={<FavoritePage />} />
         <Route path="influencer" element={<InfluencerPage />} />
+        <Route
+          path="influencer-paginate/:pageNumber"
+          element={<InfluencerPage />}
+        />
+
         <Route path="influencer/:id" element={<InfluencerDetailPage />} />
 
         {/* ///////////////////////////////////////////////////////////////////////////////////////////////// */}
 
         {/* Influncer */}
-        <Route path="profile-influencer/:id" element={<InfluencerProfilePage />} />
+        <Route
+          path="profile-influencer/:id"
+          element={<InfluencerProfilePage />}
+        />
         <Route path="/editprofile/:id" element={<InfluencerEditProfile />} />
         <Route path="/create-profile" element={<InfluencerCreateProfile />} />
         <Route path="/order/:influencer/:id" element={<InfluencerPayPage />} />
-        <Route path="/user/selectPayment" element={<InfluencerSelectPayPage />} />
+        <Route
+          path="/user/selectPayment"
+          element={<InfluencerSelectPayPage />}
+        />
         <Route path="/influencer-orders" element={<InfluencerGetOrders />} />
         <Route path="/placeOrder/PayPal" element={<InfluencerPayPalPage />} />
         <Route path="/placeOrder/Fawry" element={<InfluencerFawryPage />} />
@@ -62,9 +73,15 @@ export default function Navigation() {
 
         {/* Admin */}
         <Route path="/manage-admin-panel" element={<AdminPanelPage />} />
-        <Route path="/admin-manage-influencer" element={<AdminInfinfluencerPage />}  />
+        <Route
+          path="/admin-manage-influencer"
+          element={<AdminInfinfluencerPage />}
+        />
         <Route path="/admin-orders" element={<AdminGetOrders />} />
-        <Route path="/admin-manage-reports" element={<AdminReportInfluencerPage />} />
+        <Route
+          path="/admin-manage-reports"
+          element={<AdminReportInfluencerPage />}
+        />
 
         {/* /////////////////////////////////////////////////////////////////////////////////////////////// */}
 

@@ -1,7 +1,7 @@
 import { type } from "./type";
 
 const initialState = {
-  influencer: [],
+  influencer: {},
   loading: false,
   error: null,
 };
@@ -22,7 +22,7 @@ const influencersReducer = (state = initialState, action) => {
       };
     case type.GET_INFLUENCERS_ERROR:
       return {
-        influencer: [],
+        influencer: {},
         loading: false,
         error: action.payload,
       };

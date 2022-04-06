@@ -11,7 +11,7 @@ import { PackagesOptions } from "../../../assets/data/packagesOptions";
 
 export default function InfluencerPayPage() {
   const { currentUser } = useSelector((state) => state.auth);
-  const { data } = useSelector((state) => state.createOrder);
+ 
   
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -33,17 +33,19 @@ export default function InfluencerPayPage() {
         influencer: id,
         user: currentUser._id,
         price: Number(price),
-        paymentResult: data,
         totalPrice,
         fee,
       })
     );
 
+    // Refresh Issue
+    // User finish the order
     setTimeout(() => {
       dispatch(cancelOrder());
       navigate(`/influencer/${id}`);
       toast.error("Order has been canceled");
     }, 10000);
+
   };
 
   return (

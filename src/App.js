@@ -3,6 +3,16 @@ import { ToastContainer } from "react-toastify";
 import Navigation from "./navigation";
 import "./App.css";
 
+// TODO: FIX DESIGN
+// TODO: Cancel order
+// TODO: SOLO_LEARN
+// TODO: improve UI portfolio
+// TODO: Telegram work for developers
+// TODO: search for intern --> facebook, telegram
+
+
+
+
 function App() {
   return (
     <div>
@@ -24,12 +34,6 @@ function App() {
 }
 
 export default App;
-
-// TODO: Create order => orders/create
-// TODO: Create report => reports/create
-// TODO: get orders for (admin/influncer/user) => orders/
-// TODO: Reviews
-// TODO: pagination
 
 //  GET ------------------------------------------- POST _ PUT _ DELETE   PUT => edit  POST => creat new
 //  Parameter: Nothing/ID ---------------------------- Values(and/or)ID

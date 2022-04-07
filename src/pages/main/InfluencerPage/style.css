@@ -48,3 +48,9 @@
   align-items: center;
   color: #fff;
 }
+
+.paginatePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,7 +1,12 @@
-import { axios } from "../api/axios";
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { Routes, Route, useNavigate, useParams } from "react-router-dom";
 
-import { Routes, Route } from "react-router-dom";
+import { axios } from "../api/axios";
+
+import { useSelector } from "react-redux";
+import { cancelOrder } from "../redux/order/action";
+
+import { toast } from "react-toastify";
 
 import NavBar from "../components/NavBar";
 import HomePage from "../pages/main/HomePage";
@@ -29,6 +34,22 @@ import InfluencerGetOrders from "../pages/orders/InfluencerGetOrders";
 
 export default function Navigation() {
   const { currentUser } = useSelector((state) => state.auth);
+  const { orderStartingTime, success } = useSelector((state) => state.order);
+
+  const navigate = useNavigate();
+  const newDate = Date.now();
+
+  useEffect(() => {
+    if (newDate === orderStartingTime + 60 * 2) {
+      if (success) {
+        toast.success("Your order is compleat");
+      } else {
+        cancelOrder();
+        navigate(`/influencer`);
+        toast.error("your order is cancel");
+      }
+    }
+  }, [orderStartingTime, newDate, success, navigate]);
 
   axios.defaults.headers.common[
     "Authorization"

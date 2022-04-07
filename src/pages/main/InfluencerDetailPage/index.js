@@ -52,7 +52,7 @@ export default function InfluencerDetail() {
   const handlePayNavigation = () => {
     if (isAuthenticated) {
       navigate(`/order/${influencer.name}/${id}`);
-      toast.warn("Payment must be completed in 5 minutes");
+      toast.warn("Payment must be completed in 10 minutes");
     } else {
       setOpenModal(true);
     }

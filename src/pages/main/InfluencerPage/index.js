@@ -69,7 +69,7 @@ export default function InfluencerPage() {
           ))}
         </div>
       </div>
-      <div style={{ display: "flex" }}>
+      <div className="paginatePage">
         <div
           className="paginateNextAndPreviousPage"
           onClick={() => navigateToPages(Number(pageNumber) - 1)}

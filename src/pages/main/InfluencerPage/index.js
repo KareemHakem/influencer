@@ -8,6 +8,7 @@ import SearchForInfluencer from "../../../components/SearchForInfluencer";
 import InfluencerCard from "../../../components/ifluencerComponents/InfluencerCard";
 import { Error } from "../../../commons/Error";
 import { Loading } from "../../../commons/Loading";
+import { Icons } from "../../../assets/Icons";
 
 import "./style.css";
 
@@ -19,7 +20,7 @@ export default function InfluencerPage() {
   const [clickToSearch, setClickToSearch] = useState(true);
   const [search, setSearch] = useState("");
 
-  const handleChange = (e) => { 
+  const handleChange = (e) => {
     setSearch(e.target.value);
   };
 
@@ -37,10 +38,13 @@ export default function InfluencerPage() {
   const handleToSearchClick = () => {
     setClickToSearch(false);
   };
+
   let pagesArray = [...Array(Number(influencer.pages))].map((_, i) => i + 1); // [1, 2,3,4]
 
   const navigateToPages = (pageNumber) => {
-    Navigate(`/influencer-paginate/${pageNumber}`);
+    pageNumber === 0
+      ? Navigate(`/influencer`)
+      : Navigate(`/influencer-paginate/${pageNumber}`);
   };
 
   if (loading) return <Loading />;
@@ -66,15 +70,27 @@ export default function InfluencerPage() {
         </div>
       </div>
       <div style={{ display: "flex" }}>
+        <div
+          className="paginateNextAndPreviousPage"
+          onClick={() => navigateToPages(Number(pageNumber) - 1)}
+        >
+          {<Icons.ArrowLeftIcon />}
+        </div>
         {pagesArray.map((i) => (
           <div
             onClick={() => navigateToPages(i)}
-            style={{ margin: 10, cursor: "pointer" }}
+            className="paginateNumberPage"
             key={i}
           >
             {i}
           </div>
         ))}
+        <div
+          className="paginateNextAndPreviousPage"
+          onClick={() => navigateToPages(Number(pageNumber) + 1)}
+        >
+          {<Icons.ArrowRightIcon />}
+        </div>
       </div>
     </div>
   );

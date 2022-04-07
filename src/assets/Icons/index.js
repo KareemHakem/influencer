@@ -16,6 +16,8 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 export const Icons = {
   EditIcon: ({ ...props }) => <EditIcon {...props} />,
@@ -38,4 +40,6 @@ export const Icons = {
   SearchIcon: ({ ...props }) => <SearchIcon {...props} />,
   AccountCircleIcon: ({ ...props }) => <AccountCircleIcon {...props} />,
   FavoriteIcon: ({ ...props }) => <FavoriteIcon {...props} />,
+  ArrowLeftIcon: ({ ...props }) => <ArrowLeftIcon {...props} />,
+  ArrowRightIcon: ({ ...props }) => <ArrowRightIcon {...props} />,
 };

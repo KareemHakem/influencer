@@ -8,23 +8,24 @@
 }
 
 .login_form_image {
-  height: 550px !important;
-  width: 470px !important;
+  height: 500px !important;
+  width: 450px !important;
+  margin-top: 50px !important;
   object-fit: cover;
-  transform: scaleX(-1);
   margin-right: 213px;
   background-color: #d5eafd;
 }
 
 .login_form_container {
-  height: 400px;
-  width: 600px;
+  height: 500px;
+  width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
   margin-top: 50px;
+  margin-right: 100px;
 }
 
 .form_Login_page {

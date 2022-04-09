@@ -1,17 +1,15 @@
 import React from "react";
 import Lottie from "react-lottie";
-import animation from "../../../assets/json/homeAnimation.json";
-import { Button } from "../../../commons/Button";
-import "./style.css";
+import animation from "../../../assets/json/RegisterAnimation.json";
 
-export const HomeAnimation = () => {
+export const RegisterAnimation = () => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
     animationData: animation,
   };
   return (
-    <div className="homePageAnimation">
+    <div className="loginAnimationPage">
       <Lottie options={defaultOptions} />
     </div>
   );

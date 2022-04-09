@@ -11,6 +11,7 @@ export default function NavbarMenus({
   currentUser,
   handleUserAuthLogout,
   handleClickToggle,
+  setDisplayMenu,
 }) {
   switch (userTypes(currentUser)) {
     case types.isAdmin:
@@ -18,6 +19,7 @@ export default function NavbarMenus({
         <AdminMenu
           handleClickAdmin={handleClickToggle}
           handleUserAuthLogout={handleUserAuthLogout}
+          setDisplayMenu={setDisplayMenu}
         />
       );
     case types.Influencer:

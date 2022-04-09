@@ -18,6 +18,8 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import MenuOpenIcon from "@mui/icons-material/MenuOpen";
+// import { AiOutlineClose } from "react-icons/ai";
 
 export const Icons = {
   EditIcon: ({ ...props }) => <EditIcon {...props} />,
@@ -42,4 +44,6 @@ export const Icons = {
   FavoriteIcon: ({ ...props }) => <FavoriteIcon {...props} />,
   ArrowLeftIcon: ({ ...props }) => <ArrowLeftIcon {...props} />,
   ArrowRightIcon: ({ ...props }) => <ArrowRightIcon {...props} />,
+  MenuOpenIcon: ({ ...props }) => <MenuOpenIcon {...props} />,
+  //   AiOutlineClose: ({ ...props }) => <AiOutlineClose {...props} />,
 };

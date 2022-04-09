@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Icons } from "react-toastify";
 import "./style.css";
 
 export default function InfluencerMenu({

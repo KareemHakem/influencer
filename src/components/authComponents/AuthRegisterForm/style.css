@@ -12,15 +12,16 @@
 }
 
 .auth_user_form_image {
-  height: 560px !important;
-  width: 45% !important;
-  object-fit: contain !important;
+  height: auto !important;
+  min-height: 550px !important;
+  width: 500px !important;
+  margin-top: 70px !important;
+  object-fit: cover;
   background-color: #d5eafd;
-  margin-top: 60px;
 }
 
 .register_form_input {
-  width: 100%;
+  width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;

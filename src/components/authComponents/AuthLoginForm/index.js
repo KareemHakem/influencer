@@ -9,6 +9,7 @@ import { Button } from "../../../commons/Button";
 import image from "../../../assets/images/login_img.png";
 
 import "./style.css";
+import { LoginAnimation } from "../LoginAnination";
 
 const LoginForm = ({
   handleNavigateRegister,
@@ -17,8 +18,9 @@ const LoginForm = ({
 }) => {
   return (
     <div className="auth_login_form-container">
-      <img className="login_form_image" src={image} alt="login_image" />
-
+      <div className="login_form_image">
+        <LoginAnimation  />
+      </div>
       <div className="login_form_container">
         <Formik
           initialValues={{ email: "", password: "" }}
@@ -58,10 +60,7 @@ const LoginForm = ({
         <div className="register_form_input_link-container">
           <p>
             You don't have account?
-            <Link
-              className="register_form_link"
-             to="/register"
-            >
+            <Link className="register_form_link" to="/register">
               Register
             </Link>
           </p>

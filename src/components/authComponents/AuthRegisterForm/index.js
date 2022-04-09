@@ -5,10 +5,11 @@ import { validationRegisterSchema as validationSchema } from "../../../utils/val
 
 import { FormInput } from "../../FormInput";
 import { Button } from "../../../commons/Button";
-import image from "../../../assets/images/register_image.png";
+
+import { RegisterAnimation } from "../RegisterAnimation";
 import { RegisterFormInput } from "./style";
+
 import "./style.css";
-import { Link } from "react-router-dom";
 
 const AuthRegisterForm = ({
   handleNavigationLoginForm,
@@ -41,7 +42,7 @@ const AuthRegisterForm = ({
                 placeholder="First Name"
                 label="Fist Name"
                 variant="standard"
-                width={600}
+                width={700}
               />
               <FormInput
                 style={RegisterFormInput}
@@ -49,7 +50,7 @@ const AuthRegisterForm = ({
                 placeholder="Second Name"
                 label="Second Name"
                 variant="standard"
-                width={600}
+                width={700}
               />
               <FormInput
                 style={RegisterFormInput}
@@ -57,7 +58,7 @@ const AuthRegisterForm = ({
                 placeholder="Email"
                 label="Email"
                 variant="standard"
-                width={600}
+                width={700}
               />
               <FormInput
                 style={RegisterFormInput}
@@ -66,7 +67,7 @@ const AuthRegisterForm = ({
                 label="Password"
                 type="Password"
                 variant="standard"
-                width={600}
+                width={700}
               />
               <FormInput
                 name="confirmPassword"
@@ -75,7 +76,7 @@ const AuthRegisterForm = ({
                 label="Confirm Password"
                 type="Password"
                 variant="standard"
-                width={600}
+                width={700}
               />
 
               <Button
@@ -100,11 +101,9 @@ const AuthRegisterForm = ({
           </div>
         </div>
       </div>
-      <img
-        className="auth_user_form_image"
-        src={image}
-        alt="register_image_form"
-      />
+      <div className="auth_user_form_image">
+        <RegisterAnimation />
+      </div>
     </div>
   );
 };

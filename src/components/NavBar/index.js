@@ -55,7 +55,7 @@ export default function NavBar() {
             handleUserClickMenu={handleToggle}
             isAuthenticated={isAuthenticated}
             currentUser={currentUser}
-            displayMenu={displayMenu}
+            displayMenu={setDisplayMenu}
           />
         </div>
       </div>
@@ -65,6 +65,7 @@ export default function NavBar() {
             handleUserAuthLogout={handleUserAuthLogout}
             currentUser={currentUser}
             handleClickToggle={handleClickToggle}
+            setDisplayMenu={setDisplayMenu}
           />
         )}
       </div>

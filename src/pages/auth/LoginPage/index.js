@@ -6,7 +6,6 @@ import { authLoginUserReducer } from "../../../redux/auth/action";
 import { UserNavigation } from "../../../hooks/UserNavigation";
 import AuthLoginForm from "../../../components/authComponents/AuthLoginForm";
 
-
 export default function LoginPage() {
   const { loading } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -20,9 +19,11 @@ export default function LoginPage() {
   };
 
   return (
-    <AuthLoginForm
-      handleAuthLoginUserSubmit={handleAuthLoginUserSubmit}
-      loading={loading}
-    />
+    <>
+      <AuthLoginForm
+        handleAuthLoginUserSubmit={handleAuthLoginUserSubmit}
+        loading={loading}
+      />
+    </>
   );
 }

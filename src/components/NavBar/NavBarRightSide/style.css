@@ -1,0 +1,106 @@
+.menu_nave_screen {
+  display: none;
+}
+
+.influencer_navBar_link-container-Link_login {
+  text-decoration: none !important;
+  font-family: "Fira Sans", sans-serif;
+  padding: 20px 50px 20px;
+  font-size: 19px;
+  font-weight: 500;
+  color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+  .influencer_navBar-user-menu {
+    margin-left: 100px;
+  }
+
+  .influencer_navBar_link-container-Link_login {
+    margin-left: 100px;
+    padding: 15px 30px 15px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .influencer_navBar-user-menu {
+    margin-left: 60px;
+  }
+
+  .influencer_navBar_link-container-Link_login {
+    margin-left: 100px;
+    padding: 15px 30px 15px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .influencer_navBar-user-menu {
+    margin-left: 40px;
+  }
+
+  .influencer_navBar_link-container-Link_login {
+    margin-left: 70px;
+    padding: 15px 30px 15px;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  .influencer_navBar-user-menu {
+    display: none;
+  }
+
+  .influencer_navBar_link-container-Link_login {
+    margin-left: 60px;
+    padding: 12px 20px 12px;
+  }
+
+  .menu_nave_screen {
+    display: flex;
+  }
+}
+@media screen and (max-width: 574px) {
+  .influencer_navBar-user-menu {
+    display: none;
+  }
+
+  .influencer_navBar_link-container-Link_login {
+    margin-right: 30px;
+    padding: 15px 30px 15px;
+  }
+
+  .menu_nave_screen {
+    display: flex;
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .influencer_navBar-user-menu {
+    display: none;
+  }
+  .influencer_navBar_link-container-Link_login {
+    margin-left: 40px;
+    padding: 15px 30px 15px;
+  }
+  .menu_nave_screen {
+    display: flex;
+    margin-left: 90px;
+    font-size: x-large;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .influencer_navBar-user-menu {
+    display: none;
+  }
+  .influencer_navBar_link-container-Link_login {
+    margin-left: 50px;
+    padding: 15px 30px 15px;
+    font-size: 15px;
+  }
+  .menu_nave_screen {
+    display: flex;
+    margin-left: 160px;
+    font-size: x-large;
+  }
+}

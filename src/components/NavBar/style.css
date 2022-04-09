@@ -44,3 +44,57 @@
   position: fixed;
   margin-left: 86%;
 }
+
+@media screen and (max-width: 700px) {
+  .influencer_navBar-container {
+    height: 60px;
+    width: 100%;
+    color: #fff;
+    background-color: #2168a6;
+    top: 0px;
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .influencer_navBar-container-flex {
+    height: 100%;
+    width: 70%;
+    margin-left: 2%;
+  }
+
+  .influencer_navBar_link-container-Link {
+    font-size: 15px;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .influencer_navBar_link-container-Link {
+    padding: 15px 30px 15px;
+    font-size: 15px;
+  }
+}
+
+
+@media screen and (max-width: 574px) {
+  .influencer_navBar_link-container-Link {
+    padding: 15px 20px 15px;
+    font-size: 17px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .influencer_navBar_link-container-Link {
+    padding: 20px 50px 20px;
+    font-size: 20px;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .influencer_navBar_link-container-Link {
+    padding: 10px 20px 10px;
+    font-size: 15px;
+  }
+}

@@ -19,3 +19,38 @@
   background-color: transparent;
   flex: 1;
 }
+
+@media screen and (max-width: 650px) {
+  .custom_input {
+    width: 400px !important;
+    height: 20px;
+  }
+
+  .custom_input__input {
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .custom_input {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .custom_input {
+    margin-left: 70px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .custom_input {
+    margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .custom_input {
+    margin-left: 180px;
+  }
+}

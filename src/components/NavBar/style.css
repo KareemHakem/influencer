@@ -67,14 +67,12 @@
   }
 }
 
-
 @media screen and (max-width: 700px) {
   .influencer_navBar_link-container-Link {
     padding: 15px 30px 15px;
     font-size: 15px;
   }
 }
-
 
 @media screen and (max-width: 574px) {
   .influencer_navBar_link-container-Link {
@@ -83,18 +81,30 @@
   }
 }
 
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .influencer_navBar_link-container-Link {
-    padding: 20px 50px 20px;
-    font-size: 20px;
+    padding: 16px 40px 16px;
+    font-size: 14px;
   }
 }
 
+@media screen and (max-width: 500px) {
+  .influencer_navBar_link-container-Link {
+    padding: 15px 40px 15px;
+    font-size: 14px;
+  }
+}
 
 @media screen and (max-width: 450px) {
   .influencer_navBar_link-container-Link {
-    padding: 10px 20px 10px;
+    padding: 10px 30px 10px;
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .influencer_navBar_link-container-Link {
+    padding: 10px 20px 10px;
+    font-size: 12px;
   }
 }

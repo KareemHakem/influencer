@@ -94,7 +94,7 @@ const AuthRegisterForm = ({
         <div className="login_form_input_link-container">
           <p>You don't have account?</p>
           <div
-            className="register_form_link"
+            className="login_form_link"
             onClick={handleNavigationLoginForm}
           >
             login

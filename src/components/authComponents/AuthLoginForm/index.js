@@ -6,20 +6,15 @@ import { validationLoginSchema as validationSchema } from "../../../utils/valida
 
 import { FormInput } from "../../FormInput";
 import { Button } from "../../../commons/Button";
-import image from "../../../assets/images/login_img.png";
-
-import "./style.css";
 import { LoginAnimation } from "../LoginAnination";
 
-const LoginForm = ({
-  handleNavigateRegister,
-  handleAuthLoginUserSubmit,
-  loading,
-}) => {
+import "./style.css";
+
+const LoginForm = ({ handleAuthLoginUserSubmit, loading }) => {
   return (
     <div className="auth_login_form-container">
       <div className="login_form_image">
-        <LoginAnimation  />
+        <LoginAnimation />
       </div>
       <div className="login_form_container">
         <Formik
@@ -30,13 +25,15 @@ const LoginForm = ({
           {({ dirty, isValid, isSubmitting }) => (
             <Form className="form_Login_page">
               <h2> Welcome to Website Name</h2>
-              <FormInput
-                label="Email"
-                name="email"
-                placeholder="Email"
-                variant="standard"
-                width={500}
-              />
+              <div className="loginFormInput" >
+                <FormInput
+                  label="Email"
+                  name="email"
+                  placeholder="Email"
+                  variant="standard"
+                  width={500}
+                />
+              </div>
               <FormInput
                 label="Password"
                 name="password"

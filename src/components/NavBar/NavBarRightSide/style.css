@@ -13,7 +13,7 @@
 
 @media screen and (max-width: 700px) {
   .influencer_navBar-user-menu {
-    margin-left: 100px;
+    margin-left: 200px;
   }
 
   .influencer_navBar_link-container-Link_login {
@@ -58,6 +58,7 @@
     display: flex;
   }
 }
+
 @media screen and (max-width: 574px) {
   .influencer_navBar-user-menu {
     display: none;
@@ -70,7 +71,19 @@
 
   .menu_nave_screen {
     display: flex;
-    margin-left: 100px;
+    margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .menu_nave_screen {
+    margin-left: 50px;
+    font-size: 15px;
+  }
+  .influencer_navBar_link-container-Link_login {
+    margin-left: 40px;
+    padding: 15px 30px 15px;
+    font-size: 14px;
   }
 }
 
@@ -82,10 +95,10 @@
     margin-left: 40px;
     padding: 15px 30px 15px;
   }
+
   .menu_nave_screen {
     display: flex;
-    margin-left: 90px;
-    font-size: x-large;
+    margin-left: 100px;
   }
 }
 
@@ -100,7 +113,23 @@
   }
   .menu_nave_screen {
     display: flex;
-    margin-left: 160px;
-    font-size: x-large;
+    margin-left: 80px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .menu_nave_screen {
+    display: flex;
+    margin-left: 150px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu_nave_screen {
+    display: flex;
+    margin-left: 150px !important;
+    font-size: 10px;
   }
 }

@@ -3,14 +3,14 @@ import { ToastContainer } from "react-toastify";
 import Navigation from "./navigation";
 import "./App.css";
 
+
 // TODO: FIX DESIGN
-// TODO: Cancel order
-// TODO: SOLO_LEARN
+// TODO: Cancel order ///
+// TODO: SOLO_LEARN ///
 // TODO: improve UI portfolio
+
 // TODO: Telegram work for developers
 // TODO: search for intern --> facebook, telegram
-
-
 
 
 function App() {

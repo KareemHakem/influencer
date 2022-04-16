@@ -13,3 +13,9 @@
   background-color: #eaeaea;
   height: 100%;
 }
+
+@media screen and (max-width: 600px) {
+  .favoritePage_container {
+   height: 100% !important;
+  }
+}

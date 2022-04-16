@@ -16,16 +16,16 @@ export default function InfluencerPage() {
   const { influencer, loading, error } = useSelector(
     (state) => state.influencers
   );
-  const { pageNumber } = useParams();
   const [clickToSearch, setClickToSearch] = useState(true);
   const [search, setSearch] = useState("");
+
+  const { pageNumber } = useParams();
+  const Navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
-
-  const Navigate = useNavigate();
-  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getInfluencers(search.trim(), pageNumber));

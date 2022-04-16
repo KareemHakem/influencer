@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Alerts } from "../../../commons/Alert";
-import { removeFavoritesInfluencer } from "../../../redux/Influencer/action";
 import InfluencerFavoriteCard from "../../../components/ifluencerComponents/InfluencerFavoriteCard";
 import "./style.css";
 

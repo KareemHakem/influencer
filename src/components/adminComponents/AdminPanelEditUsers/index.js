@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Button, ButtonGroup } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -25,15 +26,25 @@ export default function AdminPanelEditUsers({
       <div className="AdminsUsersEditInfoTableContainer">
         <div className="AdminsUsersEditInfoTable">
           <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <Table  aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell>ID</TableCell>
-                  <TableCell align="right">NAME</TableCell>
-                  <TableCell align="right">EMAIL</TableCell>
-                  <TableCell align="right">ADMIN</TableCell>
-                  <TableCell align="right">INFLUENCER</TableCell>
-                  <TableCell align="right">ACTIONS</TableCell>
+                  <TableCell className="tableID">ID</TableCell>
+                  <TableCell className="tableName" align="right">
+                    NAME
+                  </TableCell>
+                  <TableCell className="tableEmail" align="right">
+                    EMAIL
+                  </TableCell>
+                  <TableCell className="tableAdmin" align="right">
+                    ADMIN
+                  </TableCell>
+                  <TableCell className="tableInfluencer" align="right">
+                    INFLUENCER
+                  </TableCell>
+                  <TableCell className="tableActions" align="right">
+                    ACTIONS
+                  </TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -42,12 +53,16 @@ export default function AdminPanelEditUsers({
                     key={user._id}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
-                    <TableCell component="th" scope="row">
+                    <TableCell className="tableID" component="th" scope="row">
                       {user._id}
                     </TableCell>
-                    <TableCell align="right">{user.name}</TableCell>
-                    <TableCell align="right">{user.email}</TableCell>
-                    <TableCell align="right">
+                    <TableCell className="tableName" align="right">
+                      {user.name}
+                    </TableCell>
+                    <TableCell className="tableEmail" align="right">
+                      {user.email}
+                    </TableCell>
+                    <TableCell className="tableAdmin" align="right">
                       {user.isAdmin ? (
                         <CheckCircleIcon
                           fontSize="large"
@@ -57,7 +72,7 @@ export default function AdminPanelEditUsers({
                         <CancelIcon fontSize="large" style={{ color: "red" }} />
                       )}
                     </TableCell>
-                    <TableCell align="right">
+                    <TableCell className="tableInfluencer" align="right">
                       {user.isInfluencer ? (
                         <CheckCircleIcon
                           fontSize="large"
@@ -67,7 +82,7 @@ export default function AdminPanelEditUsers({
                         <CancelIcon fontSize="large" style={{ color: "red" }} />
                       )}
                     </TableCell>
-                    <TableCell align="right">
+                    <TableCell className="tableActions" align="right">
                       <ButtonGroup
                         style={{ backgroundColor: "gray" }}
                         variant="contained"

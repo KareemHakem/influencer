@@ -74,14 +74,14 @@
   }
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 986px) {
   .ml12 {
-    width: 300px;
-    font-size: medium;
+    font-size: 15px !important;
+    margin-top: 100px;
   }
 
   .home_text-btn Button {
-    margin-top: 220px !important;
+    margin-top: 150px !important;
     margin-right: 40px;
     display: flex;
     justify-content: center;
@@ -90,99 +90,142 @@
 }
 
 @media screen and (max-width: 650px) {
-  .ml12 {
-    width: 400px !important;
-    height: 400px !important;
-    margin-left: 60px;
-  }
-
-  .home_text-btn Button {
-    margin-top: 10px !important;
-    margin-left: 150px !important;
-    width: 200px !important;
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .ml12 {
-    width: 370px !important;
-    height: 370px !important;
-    margin-left: 50px;
-  }
-
-  .home_text-btn Button {
-    margin-left: 130px !important;
-    width: 200px !important;
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .ml12 {
-    width: 325px !important;
-    height: 325px !important;
-    margin-left: 40px;
-    margin-bottom: 100px;
-  }
-
-  .home_text-btn Button {
-    margin-left: 100px !important;
-    width: 200px !important;
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 500px) {
   .text-container {
-    margin-right: 100px !important;
+    margin-left: 130px;
+    margin-top: 150px;
+    width: 200px;
   }
 
   .ml12 {
-    width: 450px !important;
-    height: 300px !important;
-    margin-right: 150px !important;
+    width: 350px !important;
+    height: 200px !important;
   }
 
   .home_text-btn Button {
-    margin-left: 150px !important;
-    width: 200px !important;
+    margin-left: 70px !important;
+    margin-bottom: 200px;
     font-size: 12px;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 591px) {
+  .text-container {
+    width: 200px;
+  }
+
   .ml12 {
-    width: 310px !important;
-    height: 210px !important;
-    font-size: 13px !important;
-    margin-right: 100px !important;
-    margin-top: 200px !important;
+    width: 320px !important;
+    height: 190px !important;
+    font-size: 12px;
   }
 
   .home_text-btn Button {
-    margin-left: 90px !important;
-    margin-bottom: 120px !important;
-    width: 200px !important;
+    margin-left: 60px !important;
+    width: 190px !important;
+    height: 50px !important;
     font-size: 12px;
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 560px) {
+  .text-container {
+    margin-left: 90px;
+    margin-top: 120px;
+    width: 200px;
+  }
+
   .ml12 {
-    width: 310px !important;
-    height: 210px !important;
-    font-size: 13px !important;
-    margin-right: 100px !important;
-    margin-top: 200px !important;
+    font-size: 14px !important;
   }
 
   .home_text-btn Button {
-    margin-left: 90px !important;
-    margin-bottom: 120px !important;
-    width: 200px !important;
+    margin-left: 60px !important;
+    margin-bottom: 200px;
     font-size: 12px;
   }
 }
 
+@media screen and (max-width: 560px) {
+  .text-container {
+    margin-left: 60px;
+    margin-top: 100px;
+    width: 200px;
+  }
 
+  .ml12 {
+    font-size: 12px !important;
+  }
+
+  .home_text-btn Button {
+    margin-left: 70px !important;
+    margin-bottom: 200px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 461px) {
+  .text-container {
+    margin-left: 50px;
+    margin-top: 100px;
+    width: 200px;
+  }
+
+  .ml12 {
+    width: 300px !important;
+    height: 180px !important;
+    font-size: 10px !important;
+  }
+
+  .home_text-btn Button {
+    margin-left: 60px !important;
+    margin-bottom: 200px;
+    width: 170px !important;
+    height: 45px !important;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .text-container {
+    margin-top: 100px;
+    width: 300px;
+    margin-right: 50px !important;
+  }
+
+  .ml12 {
+    width: 260px !important;
+    height: 180px !important;
+    font-size: 10px !important;
+  }
+
+  .home_text-btn Button {
+    width: 170px !important;
+    height: 45px !important;
+    margin-left: 50px !important;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 396px) {
+  .text-container {
+    margin-top: 100px;
+    width: 200px;
+  }
+
+  .ml12 {
+    width: 200px !important;
+    height: 150px !important;
+    font-size: 10px !important;
+  }
+
+  .home_text-btn Button {
+    width: 150px !important;
+    height: 40px !important;
+    margin-left: 27px !important;
+    font-size: 10px;
+  }
+
+  .iconTextAnimationBtn {
+    font-size: 16px !important;
+  }
+}

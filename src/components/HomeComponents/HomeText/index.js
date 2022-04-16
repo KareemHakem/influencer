@@ -28,7 +28,7 @@ export default function HomeText({ handleUserInfluencerNavigate }) {
           width="230px"
           onClick={handleUserInfluencerNavigate}
           height={60}
-          Icon={<Icons.ArrowForwardIcon />}
+          Icon={<Icons.ArrowForwardIcon className="iconTextAnimationBtn" />}
         />
       </div>
     </div>

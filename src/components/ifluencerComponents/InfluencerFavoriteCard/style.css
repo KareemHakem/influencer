@@ -78,6 +78,7 @@
   align-items: center;
   color: #ffffff;
   font-size: 17px;
+  transition: 0.75s;
 }
 
 .MassageButton {
@@ -91,4 +92,150 @@
   align-items: center;
   color: #ffffff;
   font-size: 17px;
+}
+
+@media screen and (max-width: 1080px) {
+  .influencer_favorite_card-container {
+    height: 320px;
+    width: 510px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .influencer_favorite_card-container {
+    height: 300px;
+    width: 470px;
+    margin-bottom: 10px;
+  }
+
+  .influencer_card-image img {
+    height: 200px;
+    width: 190px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .deleteButton {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .deleteButton:hover {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .MassageButton {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .iconFavoriteBtn {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .influencer_favorite_card-container {
+    height: 240px;
+    width: 350px !important;
+    margin-bottom: 10px;
+  }
+
+  .influencer_card-image img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .deleteButton {
+    height: 35px;
+    width: 120px !important;
+    font-size: 11px;
+  }
+
+  .deleteButton:hover {
+    height: 35px;
+    width: 120px !important;
+    font-size: 11px;
+  }
+
+  .MassageButton {
+    height: 35px;
+    width: 120px !important;
+    font-size: 11px;
+  }
+
+  .iconFavoriteBtn {
+    font-size: 13px !important;
+  }
+
+  .influencer_favorite_card-text-container {
+    width: 170px;
+  }
+
+  .influencer_favorite_card-text {
+    display: flex;
+    justify-content: space-between;
+
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    font-family: "Fira Sans", sans-serif;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .influencer_favorite_card-container {
+    height: 220px;
+    width: 300px !important;
+    margin-bottom: 10px;
+  }
+
+  .influencer_card-image img {
+    height: 130px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .deleteButton {
+    height: 30px;
+    width: 100px !important;
+    font-size: 10px;
+  }
+
+  .deleteButton:hover {
+    height: 30px;
+    width: 100px !important;
+    font-size: 10px;
+  }
+
+  .MassageButton {
+    height: 30px;
+    width: 100px !important;
+    font-size: 10px;
+  }
+
+  .iconFavoriteBtn {
+    font-size: 13px !important;
+  }
+
+  .influencer_favorite_card-text-container {
+    width: 155px;
+  }
+
+  .influencer_favorite_card-text {
+    display: flex;
+    justify-content: space-between;
+
+    text-align: center;
+    font-size: 9px;
+    font-weight: 400;
+    font-family: "Fira Sans", sans-serif;
+    margin-top: 5px;
+  }
 }

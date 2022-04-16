@@ -1,14 +1,11 @@
 import React from "react";
 import { Icons } from "../../../assets/Icons";
 import { useDispatch } from "react-redux";
-import {removeFavoritesInfluencer} from "../../../redux/Influencer/action"
+import { removeFavoritesInfluencer } from "../../../redux/Influencer/action";
 import { Button } from "../../../commons/Button";
 import "./style.css";
 
-export default function InfluencerFavoriteCard({
-  influencer,
-  
-}) {
+export default function InfluencerFavoriteCard({ influencer }) {
   const dispatch = useDispatch();
   return (
     <div className="influencer_favorite_card-container">
@@ -36,11 +33,11 @@ export default function InfluencerFavoriteCard({
             className="MassageButton"
             width={"100%"}
             title="Send Massage"
-            Icon={<Icons.ChatIcon />}
+            Icon={<Icons.ChatIcon className="iconFavoriteBtn" />}
           />
           <Button
             className="deleteButton"
-            Icon={<Icons.DeleteIcon />}
+            Icon={<Icons.DeleteIcon className="iconFavoriteBtn" />}
             width={"100%"}
             onClick={() => dispatch(removeFavoritesInfluencer(influencer))}
             title="Remove"

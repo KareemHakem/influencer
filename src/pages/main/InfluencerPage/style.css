@@ -50,9 +50,9 @@
 }
 
 .paginatePage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 @media screen and (max-width: 1940px) {
@@ -76,9 +76,27 @@
   }
 }
 
+@media screen and (max-width: 936px) {
+  .paginatePage {
+    margin-right: 30px !important ;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .influencer-card_container {
     margin-left: 35px;
+  }
+}
+
+@media screen and (max-width: 447px) {
+  .influencer-card_container {
+    margin-left: 70px;
+  }
+}
+
+@media screen and (max-width: 402px) {
+  .influencer-card_container {
+    margin-left: 110px;
   }
 }
 

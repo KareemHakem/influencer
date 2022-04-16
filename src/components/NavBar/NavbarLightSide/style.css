@@ -32,3 +32,48 @@
   box-shadow: rgba(0, 0, 0, 0.197) 0px 5px 15px;
   border-radius: 50px;
 }
+
+@media screen and (max-width: 767px) {
+  .icon_container {
+    height: 30px;
+    width: 30px;
+  }
+  .sidebar_row_text {
+    font-size: 13px !important;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .icon_container {
+    height: 25px;
+    width: 25px;
+  }
+
+  .sideBarIcon {
+    font-size: 10px !important;
+  }
+  .sidebar_row_text {
+    font-size: 10px !important;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .sidebar_main {
+    width: 11%;
+  }
+  .icon_container {
+    height: 20px;
+    width: 20px;
+    box-shadow: none;
+  }
+
+  .sideBarIcon {
+    font-size: 8px !important;
+  }
+  .sidebar_row_text {
+    font-size: 8px !important;
+    color: white;
+  }
+}

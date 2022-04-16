@@ -38,13 +38,13 @@ export default function NavBar() {
               LOGO
             </Link>
             <Link
-              className="influencer_navBar_link-container-Link"
+              className="influencer_navBar_link-container-Link influencerSmallScreenMenuNav"
               to="influencer"
             >
               INFLUENCER
             </Link>
             <Link
-              className="influencer_navBar_link-container-Link"
+              className="influencer_navBar_link-container-Link influencerSmallScreenMenuNav"
               to="favorite"
             >
               FAVORITE

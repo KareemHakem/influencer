@@ -13,7 +13,6 @@ export default function AdminInfinfluencerPage() {
     (state) => state.influencers
   );
 
-  const Navigate = useNavigate();
   const dispatch = useDispatch();
   const { pageNumber } = useParams();
 
@@ -27,14 +26,6 @@ export default function AdminInfinfluencerPage() {
     console.log("data influencer =>", deleteInfluencer());
   };
 
-  let pagesArray = [...Array(Number(influencer.pages))].map((_, i) => i + 1); // [1, 2,3,4]
-
-  const navigateToPages = (pageNumber) => {
-    pageNumber === 0
-      ? Navigate(`/admin-manage-influencer`)
-      : Navigate(`/admin-manage-influencer/${pageNumber}`);
-  };
-
   if (loading) return <Loading />;
   if (error) return <Error />;
 
@@ -44,30 +35,6 @@ export default function AdminInfinfluencerPage() {
         influencer={influencer}
         handleDeleteInfluencer={handleDeleteInfluencer}
       />
-
-      <div className="paginatePage">
-        <div
-          className="paginateNextAndPreviousPage"
-          onClick={() => navigateToPages(Number(pageNumber) - 1)}
-        >
-          {<Icons.ArrowLeftIcon />}
-        </div>
-        {pagesArray.map((i) => (
-          <div
-            onClick={() => navigateToPages(i)}
-            className="paginateNumberPage"
-            key={i}
-          >
-            {i}
-          </div>
-        ))}
-        <div
-          className="paginateNextAndPreviousPage"
-          onClick={() => navigateToPages(Number(pageNumber) + 1)}
-        >
-          {<Icons.ArrowRightIcon />}
-        </div>
-      </div>
     </div>
   );
 }

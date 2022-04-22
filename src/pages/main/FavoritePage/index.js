@@ -11,7 +11,9 @@ export default function FavoritePage() {
 
   if (favorite.length === 0) {
     return (
-      <Alerts alertText="You haven't added influencer to your favorites" />
+      <div className="alertCardFavoritePage" >
+        <Alerts alertText="You haven't added influencer to your favorites" />
+      </div>
     );
   } else {
     return (

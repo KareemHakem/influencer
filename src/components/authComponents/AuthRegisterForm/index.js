@@ -35,14 +35,13 @@ const AuthRegisterForm = ({
               <div>
                 <h2 className="register_page_title">Welcome to Website Name</h2>
               </div>
-
+             
               <FormInput
                 style={RegisterFormInput}
                 name="firstName"
                 placeholder="First Name"
                 label="Fist Name"
                 variant="standard"
-                width={700}
               />
               <FormInput
                 style={RegisterFormInput}
@@ -50,7 +49,6 @@ const AuthRegisterForm = ({
                 placeholder="Second Name"
                 label="Second Name"
                 variant="standard"
-                width={700}
               />
               <FormInput
                 style={RegisterFormInput}
@@ -58,7 +56,6 @@ const AuthRegisterForm = ({
                 placeholder="Email"
                 label="Email"
                 variant="standard"
-                width={700}
               />
               <FormInput
                 style={RegisterFormInput}
@@ -67,7 +64,6 @@ const AuthRegisterForm = ({
                 label="Password"
                 type="Password"
                 variant="standard"
-                width={700}
               />
               <FormInput
                 name="confirmPassword"
@@ -76,7 +72,6 @@ const AuthRegisterForm = ({
                 label="Confirm Password"
                 type="Password"
                 variant="standard"
-                width={700}
               />
 
               <Button
@@ -85,18 +80,13 @@ const AuthRegisterForm = ({
                 type="submit"
                 disabled={!dirty || !isValid}
                 loading={loading}
-                width={300}
-                height={50}
               />
             </Form>
           )}
         </Formik>
         <div className="login_form_input_link-container">
           <p>You don't have account?</p>
-          <div
-            className="login_form_link"
-            onClick={handleNavigationLoginForm}
-          >
+          <div className="login_form_link" onClick={handleNavigationLoginForm}>
             login
           </div>
         </div>

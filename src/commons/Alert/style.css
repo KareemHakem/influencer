@@ -1,12 +1,53 @@
 .alertStyle {
-  width: 40%;
-  margin-left: 30%;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin-top: 130px;
   box-shadow: rgba(99, 99, 99, 0.374) 0px 2px 8px 0px;
   border-radius: 5px;
 }
 
 .alertStyleText {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   color: #1ab1f5 !important;
   font-size: 15px !important;
+}
+
+@media screen and (max-width: 555px) {
+  .alertStyle {
+    width: 400px !important;
+  }
+
+  .alertStyleText {
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .alertStyle {
+    width: 350px !important;
+  }
+
+  .alertStyleText {
+    width: 350px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media screen and (max-width: 440px) {
+  .alertStyle {
+    width: 300px !important;
+  }
+
+  .alertStyleText {
+    width: 300px !important;
+    font-size: 12px !important;
+  }
 }

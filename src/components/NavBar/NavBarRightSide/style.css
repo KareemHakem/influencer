@@ -19,6 +19,7 @@
   .influencer_navBar_link-container-Link_login {
     margin-left: 100px;
     padding: 15px 30px 15px;
+    font-size: 16px;
   }
 }
 
@@ -39,8 +40,19 @@
   }
 
   .influencer_navBar_link-container-Link_login {
-    margin-left: 380px;
+    margin-left: 350px;
     padding: 15px 30px 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .influencer_navBar-user-menu {
+    margin-left: 300px !important;
+  }
+
+  .influencer_navBar_link-container-Link_login {
+    margin-left: 310px;
+    padding: 15px 20px 15px;
   }
 }
 
@@ -48,17 +60,32 @@
   .influencer_navBar-user-menu {
     margin-left: 260px !important;
   }
+
+  .influencer_navBar_link-container-Link_login {
+    margin-left: 220px;
+    padding: 15px 30px 15px;
+  }
 }
 
 @media screen and (max-width: 440px) {
   .influencer_navBar-user-menu {
     margin-left: 200px !important;
   }
+
+  .influencer_navBar_link-container-Link_login {
+    margin-left: 150px;
+    padding: 15px 30px 15px;
+  }
 }
 
 @media screen and (max-width: 380px) {
   .influencer_navBar-user-menu {
     margin-left: 160px !important;
+  }
+
+  .influencer_navBar_link-container-Link_login {
+    margin-left: 110px;
+    padding: 15px 30px 15px;
   }
 }
 
@@ -67,4 +94,3 @@
     margin-left: 120px !important;
   }
 }
-

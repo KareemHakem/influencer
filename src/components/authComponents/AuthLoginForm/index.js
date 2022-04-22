@@ -25,13 +25,12 @@ const LoginForm = ({ handleAuthLoginUserSubmit, loading }) => {
           {({ dirty, isValid, isSubmitting }) => (
             <Form className="form_Login_page">
               <h2> Welcome to Website Name</h2>
-              <div className="loginFormInput" >
+              <div className="loginFormInput">
                 <FormInput
                   label="Email"
                   name="email"
                   placeholder="Email"
                   variant="standard"
-                  width={500}
                 />
               </div>
               <FormInput
@@ -40,7 +39,6 @@ const LoginForm = ({ handleAuthLoginUserSubmit, loading }) => {
                 type="password"
                 placeholder="Password"
                 variant="standard"
-                width={500}
               />
               <Button
                 className="btn_login_form"
@@ -48,8 +46,6 @@ const LoginForm = ({ handleAuthLoginUserSubmit, loading }) => {
                 type="submit"
                 disabled={!dirty || !isValid}
                 loading={loading}
-                width={400}
-                height={50}
               />
             </Form>
           )}

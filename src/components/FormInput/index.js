@@ -15,8 +15,9 @@ export const FormInput = ({
 }) => {
   const [field, meta] = useField(props);
   return (
-    <FormControl className="input_form " error={meta.touched && !!meta.error}>
+    <FormControl error={meta.touched && !!meta.error}>
       <Input
+        className="input_form"
         rows={rows}
         multiline={multiline}
         width={width}

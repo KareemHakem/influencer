@@ -2,36 +2,29 @@
   display: flex;
   justify-content: space-between;
   height: auto;
-  min-height: 600px;
+  min-height: 120vh;
   width: 100%;
 }
 
-.auth_register_page-formik {
-  height: 300px;
-  width: 35%;
-}
-
 .auth_user_form_image {
-  height: auto !important;
-  width: 450px !important;
+  width: 40% !important;
   margin-top: 70px !important;
   object-fit: cover;
   background-color: #d5eafd;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: end;
 }
 
 .register_form_input {
-  width: 500px;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
-  margin-left: 80px;
-  margin-top: 76px;
+  margin-left: 150px;
+  margin-top: 100px;
 }
 
 .register_page_title {
@@ -63,10 +56,44 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 300px;
+  height: 50px;
 }
 
 .login_form_input_link-container {
   display: flex;
   margin-left: 215px;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 890px) {
+  .auth_user_form_image {
+    width: 50% !important;
+  }
+
+  .register_form_input {
+    width: 50% !important;
+    margin-left: 100px !important;
+  }
+
+  .login_form_input_link-container {
+    margin-left: 110px;
+  }
+}
+
+@media screen and (max-width: 726px) {
+  .auth_user_form_image {
+    display: none;
+  }
+
+  .register_form_input {
+    width: 100% !important;
+    margin-left: 40px !important;
+  }
+
+  .btn_register_form {
+    width: 150px;
+    height: 40px;
+    font-size: 17px;
+  }
 }

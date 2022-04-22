@@ -6,7 +6,9 @@ import "./style.css";
 export function Alerts({ alertText }) {
   return (
     <Stack className="alertStyle" spacing={2}>
-      <Alert className="alertStyleText" severity="info">{alertText}</Alert>
+      <Alert className="alertStyleText" severity="info">
+        {alertText}
+      </Alert>
     </Stack>
   );
 }

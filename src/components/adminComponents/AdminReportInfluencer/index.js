@@ -16,14 +16,24 @@ export default function AdminReportInfluencer({ reports }) {
       <div className="adminsReportInfluencerTableContainer">
         <div className="adminsReportInfluencerTable">
           <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <Table aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell align="right">USER_NAME</TableCell>
-                  <TableCell align="right">USER_ID</TableCell>
-                  <TableCell align="right">INFLUENCER_NAME</TableCell>
-                  <TableCell align="right">INFLUENCER_ID</TableCell>
-                  <TableCell align="right">DESCRIPTION(REPORT)</TableCell>
+                  <TableCell className="TableUserName" align="right">
+                    USER_NAME
+                  </TableCell>
+                  <TableCell className="TableUserId" align="right">
+                    USER_ID
+                  </TableCell>
+                  <TableCell className="tableUserInfluencerName" align="right">
+                    INFLUENCER_NAME
+                  </TableCell>
+                  <TableCell className="tableUserInfluencerId" align="right">
+                    INFLUENCER_ID
+                  </TableCell>
+                  <TableCell className="tableUserDesc" align="right">
+                    DESCRIPTION(REPORT)
+                  </TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -32,13 +42,28 @@ export default function AdminReportInfluencer({ reports }) {
                     key={report._id}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
-                    <TableCell component="th" scope="row">
+                    <TableCell
+                      className="TableUserName"
+                      component="th"
+                      scope="row"
+                    >
                       {report.name}
                     </TableCell>
-                    <TableCell align="right">{report._id}</TableCell>
-                    <TableCell align="right">{report.infName}</TableCell>
-                    <TableCell align="right">{report.influencer}</TableCell>
-                    <TableCell align="right">{report.description}</TableCell>
+                    <TableCell className="TableUserId" align="right">
+                      {report._id}
+                    </TableCell>
+                    <TableCell
+                      className="tableUserInfluencerName"
+                      align="right"
+                    >
+                      {report.infName}
+                    </TableCell>
+                    <TableCell className="tableUserInfluencerId" align="right">
+                      {report.influencer}
+                    </TableCell>
+                    <TableCell className="tableUserDesc" align="right">
+                      {report.description}
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>

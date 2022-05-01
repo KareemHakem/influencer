@@ -8,10 +8,18 @@
 }
 
 .Influencer-bio-text p {
+  width: 90% !important;
   margin-top: 10px;
   color: gray;
 }
 
 .Influencer-bio-interests {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 650px) {
+  .Influencer-bio-container {
+    justify-content: center;
+    text-align: start;
+  }
 }

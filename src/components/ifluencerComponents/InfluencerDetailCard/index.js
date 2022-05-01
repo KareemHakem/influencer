@@ -68,7 +68,6 @@ export default function InfluencerDetailCard({
               />
               <Button
                 className="reportButton"
-                width={150}
                 title="REPORT"
                 Icon={<Icons.ReportIcon />}
                 onClick={handleAddReport}

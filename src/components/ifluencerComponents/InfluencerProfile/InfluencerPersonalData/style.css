@@ -22,3 +22,11 @@
   color: #2168a6;
   font-family: "Fira Sans", sans-serif !important;
 }
+
+@media screen and (max-width: 410px) {
+  .influencer_profile_detail-personal-data-container {
+    width: 200px;
+    height: auto;
+    margin-top: 100px;
+  }
+}

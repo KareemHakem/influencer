@@ -5,8 +5,7 @@ import AdminInfluencerComponent from "../../../components/adminComponents/AdminI
 import { getInfluencers } from "../../../redux/influencers/action";
 import { Loading } from "../../../commons/Loading";
 import { Error } from "../../../commons/Error";
-import { useNavigate, useParams } from "react-router-dom";
-import { Icons } from "../../../assets/Icons";
+import { useParams } from "react-router-dom";
 
 export default function AdminInfinfluencerPage() {
   const { influencer, loading, error } = useSelector(

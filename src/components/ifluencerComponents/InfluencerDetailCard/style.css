@@ -4,7 +4,8 @@
 }
 
 .influencer_card_detail-container {
-  height: 600px;
+  min-height: 600px;
+  height: auto;
   width: 92.5%;
   margin-left: 3.75%;
   margin-top: 120px;
@@ -21,8 +22,8 @@
   width: 360px;
   border-radius: 20px;
   object-fit: cover;
-  margin-right: 60px;
-  margin-top: 100px;
+  margin-left: 100px;
+  margin-top: 80px;
 }
 
 .influencer_card_detail {
@@ -30,6 +31,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  margin-left: 50px !important;
+  margin-bottom: 20px;
 }
 
 .influencer_card_detail-name {
@@ -134,9 +137,93 @@
 
 .reportButton:hover {
   background-color: #fff;
-  color: #F72118;
-  border: 1px solid #F72118;
+  color: #f72118;
+  border: 1px solid #f72118;
   padding: 10px;
   border-radius: 25px;
   transition: 0.75s;
+}
+
+/* @media screens */
+
+@media screen and (max-width: 1170px) {
+  .influencer_card_detail_image-container img {
+    height: 400px;
+    width: 320px;
+    margin-left: 30px;
+    margin-top: 80px;
+  }
+
+  .influencer_card_detail {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .influencer_card_detail-container {
+    flex-direction: column;
+  }
+  .influencer_card_detail {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .influencer_card_detail-container {
+    flex-direction: column;
+  }
+
+  .influencer_card_detail {
+    margin-left: 0px;
+  }
+
+  .influencer_card_detail_image-container img {
+    height: 430px;
+    width: 360px;
+    margin-left: 0px;
+    margin-top: 80px;
+  }
+
+  .influencer_Add-btn {
+    width: 120px;
+    font-size: 12px !important;
+  }
+
+  .reportButton {
+    width: 120px;
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .influencer_card_detail-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .influencer_card_detail-btn {
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .influencer_Add-btn {
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  .reportButton {
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .influencer_card_detail_image-container img {
+    height: 330px;
+    width: 260px;
+  }
 }

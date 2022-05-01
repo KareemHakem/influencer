@@ -59,3 +59,15 @@
   padding: 0px 0px 0px 10px;
   margin-left: 10px !important;
 }
+
+@media screen and (max-width: 650px) {
+  .influencer_followers-container {
+    align-items: flex-start;
+    flex-direction: column;
+  
+  }
+
+  .Vertical_Line_user_Info {
+    display: none;
+  }
+}

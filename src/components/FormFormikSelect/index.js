@@ -22,11 +22,13 @@ export default function FromSelect({
   return (
     <Box className="influencer_SelectorInput-container">
       <FormControl
+        className="selectInput"
         style={{ width, margin }}
         error={meta.touched && !!meta.error}
       >
         <InputLabel id="demo-simple-select-label">{holderName}</InputLabel>
         <Select
+          className="selectInput"
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={value}

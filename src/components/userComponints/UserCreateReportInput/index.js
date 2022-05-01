@@ -39,14 +39,16 @@ export default function UserCreateReportInput({
                 multiline
                 rows={3}
               />
-              <Button
-                disabled={!dirty || !isValid}
-                title="REPORT"
-                type="submit"
-                loading={loading}
-                width={100}
-                style={{ marginLeft: 450, marginTop: 50 }}
-              />
+              <div className="btn-influencerReportStyle">
+                <Button
+                  disabled={!dirty || !isValid}
+                  title="REPORT"
+                  type="submit"
+                  loading={loading}
+                  width={100}
+                  style={{ marginLeft: 50, marginTop: 50 }}
+                />
+              </div>
             </div>
           </Form>
         )}

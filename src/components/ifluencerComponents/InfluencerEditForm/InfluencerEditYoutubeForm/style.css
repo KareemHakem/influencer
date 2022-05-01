@@ -14,3 +14,25 @@
   margin-right: 500px;
   margin-top: 10px;
 }
+
+@media screen and (max-width: 915px) {
+  .influencer_edit_form-social_media-container h2 {
+    margin-right: 0px !important;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .influencer_edit_form-social_media {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .influencer_edit_form-social_media-container h2 {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+  }
+}

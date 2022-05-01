@@ -9,7 +9,7 @@ export default function InfluencerCreatePersonalForm() {
   return (
     <div className="influencer_edit_form-personal-container">
       <h2> Insert Some Personal data (All Fields are required) </h2>
-      <div>
+      <div className="influencer_edit_form-personal" >
         <FormInput
           name="name"
           label="Name"

@@ -6,7 +6,7 @@ export default function InfluencerCreateYoutubeForm() {
   return (
     <div className="influencer_edit_form-social_media-container">
       <h2> Tell us about your fee </h2>
-      <div>
+      <div className="influencer_edit_form-social_media">
         <FormInput
           name="youtubeAccount"
           label="Youtube Channel"

@@ -8,3 +8,17 @@
 .input_form {
   margin-top: 20px !important;
 }
+
+@media screen and (max-width: 840px) {
+  .selectInput {
+    width: 300px;
+    margin-left: 10px !important;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .selectInput {
+    width: 200px !important;
+    margin-left: 5px !important;
+  }
+}

@@ -6,7 +6,7 @@ export default function InfluencerEditSocialMediaForm() {
   return (
     <div className="influencer_edit_form-social_media-container">
       <h2> Tell us about your fee </h2>
-      <div>
+      <div className="influencer_edit_form-social_media">
         <FormInput
           name="fbAccount"
           label="Facebook Account"
@@ -24,7 +24,7 @@ export default function InfluencerEditSocialMediaForm() {
           variant="outlined"
         />
       </div>
-      <div>
+      <div className="influencer_edit_form-social_media">
         <FormInput
           name="instAccount"
           label="Instagram Account"

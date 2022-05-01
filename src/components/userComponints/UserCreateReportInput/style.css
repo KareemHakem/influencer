@@ -20,3 +20,25 @@
   margin-left: 100px;
   margin-top: 110px;
 }
+
+@media screen and (max-width: 840px) {
+  .userInputReportCard {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+  }
+
+  .userInputReportCardContainer {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 45vh !important;
+    width: 95%;
+    margin-left: 2.5% !important;
+  }
+
+  .btn-influencerReportStyle {
+    margin-right: 50px !important;
+  }
+}

@@ -9,3 +9,16 @@
   margin-right: 540px;
   margin-top: 10px;
 }
+
+@media screen and (max-width: 915px) {
+  .influencer_edit_form-fee-container h2 {
+    margin-right: 0px !important;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .influencer_edit_form-fee-container h2 {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+  }
+}

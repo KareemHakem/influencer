@@ -7,7 +7,7 @@
   font-weight: bold;
   font-family: "Fira Sans", sans-serif !important;
   height: auto !important;
-  min-height: 270vh;
+  min-height: 250vh !important;
 }
 
 .influencer_edit_hed_page h1 {
@@ -28,7 +28,8 @@
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.371),
     0px 1px 1px 0px rgba(0, 0, 0, 0.333), 0px 1px 3px 0px rgba(0, 0, 0, 0.338);
   margin-top: 10px;
-  min-height: 240vh;
+  min-height: 160vh !important;
+  height: auto !important;
 }
 
 .influencer_edit_form_youtube h2 {
@@ -56,7 +57,7 @@
   border-radius: 4px;
   letter-spacing: 0.03857em;
   text-transform: uppercase;
-  margin-top: 35px;
+  margin-top: 20px;
   margin-left: 650px;
 }
 
@@ -90,4 +91,58 @@
   display: block;
   justify-content: baseline;
   align-items: baseline;
+}
+
+@media screen and (max-width: 950px) {
+  .influencer_edit_form_btn {
+    margin-left: 0px !important;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .influencer_edit_image_profile h2 {
+    margin-right: 0px !important;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .influencer_edit_form_card-container {
+    min-height: 160vh !important;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .influencer_edit_form_card-container {
+    min-height: 190vh !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .influencer_edit_hed_page {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+  }
+  .influencer_edit_form_card-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .influencer_edit_image_profile h2 {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .influencer_edit_hed_page h1 {
+    font-size: 1.5rem !important;
+    font-weight: 500 !important;
+  }
 }

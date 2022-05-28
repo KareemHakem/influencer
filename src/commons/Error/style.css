@@ -1,0 +1,21 @@
+.influencer_error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 60px;
+  margin-right: 70px;
+}
+
+.influencer_error-image-container img {
+  height: 450px;
+  width: 800px;
+  object-fit: contain;
+}
+
+.influencer_error-text-container h1 {
+  color: red;
+  font-family: "Abril Fatface", cursive;
+  /* font-family: "Fira Sans", sans-serif; */
+}

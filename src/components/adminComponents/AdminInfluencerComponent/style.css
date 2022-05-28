@@ -1,0 +1,45 @@
+.AdminUsersInfluencerInfoTableContainer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  font-family: "Fira Sans", sans-serif !important;
+  height: auto !important;
+  min-height: 100vh;
+}
+
+.AdminUsersInfluencerInfoTable {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: auto !important;
+  min-width: 55%;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.371),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.333), 0px 1px 3px 0px rgba(0, 0, 0, 0.338);
+  height: auto !important;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 720px) {
+  .tableId {
+    display: none !important;
+  }
+  .tableRate {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .tableFollowers {
+    display: none !important;
+  }
+
+  .AdminUsersInfluencerInfoTable {
+    margin-left: 5px;
+  }
+  
+}

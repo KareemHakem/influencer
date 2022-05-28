@@ -1,0 +1,25 @@
+.homePageAnimation {
+  width: 450px !important;
+  height: 450px !important;
+  margin-right: 65px;
+}
+
+@media screen and (max-width: 930px) {
+  .homePageAnimation {
+    width: 350px !important;
+    height: 350px !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .homePageAnimation {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .homePageAnimation {
+    display: none;
+  }
+}

@@ -1,0 +1,100 @@
+import React from "react";
+
+import { Formik, Form } from "formik";
+import { validationRegisterSchema as validationSchema } from "../../../utils/validationSchema";
+
+import { FormInput } from "../../FormInput";
+import { Button } from "../../../commons/Button";
+
+import { RegisterAnimation } from "../RegisterAnimation";
+import { RegisterFormInput } from "./style";
+
+import "./style.css";
+
+const AuthRegisterForm = ({
+  handleNavigationLoginForm,
+  handleAuthRegisterUserSubmit,
+  loading,
+}) => {
+  return (
+    <div className="auth_register_page-container">
+      <div className="auth_register_page-formik">
+        <Formik
+          initialValues={{
+            firstName: "",
+            secondName: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
+          }}
+          validationSchema={validationSchema}
+          onSubmit={handleAuthRegisterUserSubmit}
+        >
+          {({ dirty, isValid }) => (
+            <Form className="register_form_input">
+              <div>
+                <h2 className="register_page_title">Welcome to Website Name</h2>
+              </div>
+             
+              <FormInput
+                style={RegisterFormInput}
+                name="firstName"
+                placeholder="First Name"
+                label="Fist Name"
+                variant="standard"
+              />
+              <FormInput
+                style={RegisterFormInput}
+                name="secondName"
+                placeholder="Second Name"
+                label="Second Name"
+                variant="standard"
+              />
+              <FormInput
+                style={RegisterFormInput}
+                name="email"
+                placeholder="Email"
+                label="Email"
+                variant="standard"
+              />
+              <FormInput
+                style={RegisterFormInput}
+                name="password"
+                placeholder="Password"
+                label="Password"
+                type="Password"
+                variant="standard"
+              />
+              <FormInput
+                name="confirmPassword"
+                style={RegisterFormInput}
+                placeholder="Confirm Password"
+                label="Confirm Password"
+                type="Password"
+                variant="standard"
+              />
+
+              <Button
+                className="btn_register_form"
+                title="Register"
+                type="submit"
+                disabled={!dirty || !isValid}
+                loading={loading}
+              />
+            </Form>
+          )}
+        </Formik>
+        <div className="login_form_input_link-container">
+          <p>You don't have account?</p>
+          <div className="login_form_link" onClick={handleNavigationLoginForm}>
+            login
+          </div>
+        </div>
+      </div>
+      <div className="auth_user_form_image">
+        <RegisterAnimation />
+      </div>
+    </div>
+  );
+};
+export default AuthRegisterForm;

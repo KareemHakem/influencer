@@ -1,0 +1,73 @@
+/* .product_Card_ingredient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 25px;
+  font-family: "Playfair Display", serif;
+  margin-top: 40px;
+  color: #000;
+}
+
+.product_Card_ingredient-item {
+  margin: 15px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: "Playfair Display", serif;
+  height: 25px;
+  width: 85px;
+  cursor: pointer;
+  color: white !important;
+  background-color: #000;
+  border: 1px solid #000;
+} */
+
+.influencer_followers-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.influencer_followers-container-inst {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.influencer_followers-container-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.influencer_followers_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #707070;
+  margin-left: 5px;
+}
+
+.Vertical_Line_user_Info {
+  border-left: 2px solid #707070;
+  height: 15px;
+  padding: 0px 0px 0px 10px;
+  margin-left: 10px !important;
+}
+
+@media screen and (max-width: 650px) {
+  .influencer_followers-container {
+    align-items: flex-start;
+    flex-direction: column;
+  
+  }
+
+  .Vertical_Line_user_Info {
+    display: none;
+  }
+}

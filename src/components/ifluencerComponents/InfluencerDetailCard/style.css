@@ -1,0 +1,229 @@
+.influencerCardDetailPage {
+  height: auto;
+  min-height: 130vh;
+}
+
+.influencer_card_detail-container {
+  min-height: 600px;
+  height: auto;
+  width: 92.5%;
+  margin-left: 3.75%;
+  margin-top: 120px;
+  box-shadow: 5px 5px 40px 5px rgb(112 111 111 / 21%);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.influencer_card_detail_image-container img {
+  height: 430px;
+  width: 360px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-left: 100px;
+  margin-top: 80px;
+}
+
+.influencer_card_detail {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 50px !important;
+  margin-bottom: 20px;
+}
+
+.influencer_card_detail-name {
+  color: #2168a6;
+  margin-top: 50px;
+}
+
+.influencer_card_detail-text {
+  color: #707070;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.influencer_card_detail-rating {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.influencer_card_detail-btn-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.influencer_card_detail-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.influencer_request-btn {
+  background-color: #2e81ca;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid white;
+  padding: 14px;
+  border-radius: 25px;
+  font-size: 17px;
+}
+
+.influencer_request-btn:hover {
+  background-color: #fff;
+  color: #2e81ca;
+  text-transform: uppercase;
+  border: 1px solid #2e81ca;
+  border-radius: 25px;
+  transition: 0.75s;
+}
+
+.influencer_Add-btn {
+  width: 150px;
+  background-color: #f294c0;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 25px;
+  height: 50px !important;
+  transition: all ease-in 0.2s;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.influencer_Add-btn:hover {
+  background-color: #fff;
+  color: #f294c0;
+  border: 1px solid #f294c0;
+  padding: 10px;
+  border-radius: 25px;
+  transition: 0.75s;
+}
+
+.reportButton {
+  width: 150px;
+  background-color: #2168a6;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 25px;
+  height: 50px !important;
+  transition: all ease-in 0.2s;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.reportButton:hover {
+  background-color: #fff;
+  color: #f72118;
+  border: 1px solid #f72118;
+  padding: 10px;
+  border-radius: 25px;
+  transition: 0.75s;
+}
+
+/* @media screens */
+
+@media screen and (max-width: 1170px) {
+  .influencer_card_detail_image-container img {
+    height: 400px;
+    width: 320px;
+    margin-left: 30px;
+    margin-top: 80px;
+  }
+
+  .influencer_card_detail {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .influencer_card_detail-container {
+    flex-direction: column;
+  }
+  .influencer_card_detail {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .influencer_card_detail-container {
+    flex-direction: column;
+  }
+
+  .influencer_card_detail {
+    margin-left: 0px;
+  }
+
+  .influencer_card_detail_image-container img {
+    height: 430px;
+    width: 360px;
+    margin-left: 0px;
+    margin-top: 80px;
+  }
+
+  .influencer_Add-btn {
+    width: 120px;
+    font-size: 12px !important;
+  }
+
+  .reportButton {
+    width: 120px;
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .influencer_card_detail-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .influencer_card_detail-btn {
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .influencer_Add-btn {
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  .reportButton {
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .influencer_card_detail_image-container img {
+    height: 330px;
+    width: 260px;
+  }
+}

@@ -1,0 +1,28 @@
+.favoritePage_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 70px !important ;
+  background-color: #eaeaea;
+  min-height: 100vh;
+  height: auto !important;
+  flex-wrap: wrap;
+}
+
+.emptyFavoritePage_container {
+  background-color: #eaeaea;
+  height: 100%;
+}
+
+.alertCardFavoritePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .favoritePage_container {
+    height: 100% !important;
+  }
+}

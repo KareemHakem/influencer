@@ -1,0 +1,48 @@
+.influencer_edit_form-personal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.influencer_edit_form-personal-container h2 {
+  color: #2168a6;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-right: 295px;
+  margin-top: 10px;
+}
+
+.influencer_edit_form-personal-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 915px) {
+  .influencer_edit_form-personal-container h2 {
+    margin-right: 0px !important;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .influencer_edit_form-personal,
+  .influencer_edit_form-personal-selector {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .influencer_edit_form-personal-container h2 {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    
+  }
+}

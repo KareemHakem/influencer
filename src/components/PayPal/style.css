@@ -1,0 +1,31 @@
+.influencerPayPal {
+  min-height: 80vh;
+}
+
+.paypal-influencer-pay {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 80%;
+  height: 300px;
+  margin-left: 10.5%;
+  border-radius: 20px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.238),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.183), 0px 1px 3px 0px rgba(0, 0, 0, 0.483);
+}
+
+.payPalText {
+  color: #2168a6;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "pp-sans-small-regular", Helvetica Neue, Arial, sans-serif !important;
+  font-weight: 700;
+}
+
+.paypalText-color {
+  color: #009ddf;
+}

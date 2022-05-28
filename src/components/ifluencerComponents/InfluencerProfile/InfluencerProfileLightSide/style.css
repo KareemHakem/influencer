@@ -1,0 +1,64 @@
+.influencer_profile_light_side-image img {
+  height: 450px;
+  margin-top: 90px !important ;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 30px;
+  margin-left: 200px !important;
+}
+
+.influencer_profile_light_side-description {
+  margin-top: 30px;
+  margin-left: 200px !important;
+}
+
+.influencer_profile_light_side-description h3 {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  font-size: 1.17em;
+  margin-bottom: 5px;
+}
+
+.influencer_profile_light_side-description p {
+  font-family: "Fira Sans", sans-serif;
+  color: rgba(0, 0, 0, 0.292);
+  width: 100%;
+}
+
+@media screen and (max-width: 1090px) {
+  .influencer_profile_light_side-image img {
+    margin-left: 150px !important;
+  }
+
+  .influencer_profile_light_side-description {
+    margin-left: 150px !important;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .influencer_profile_light_side-image img {
+    margin-left: 70px !important;
+  }
+
+  .influencer_profile_light_side-description {
+    margin-left: 70px !important;
+  }
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .influencer_profile_light_side-image img {
+    height: 350px;
+    width: 250px;
+  }
+}
+
+
+@media screen and (max-width: 325px) {
+  .influencer_profile_light_side-image img {
+    height: 250px;
+    width: 150px;
+  }
+}

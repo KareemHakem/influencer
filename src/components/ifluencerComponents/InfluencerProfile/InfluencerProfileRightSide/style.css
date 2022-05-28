@@ -1,0 +1,43 @@
+.influencer_profile_detail-category {
+  margin-right: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.influencer_profile_detail-had {
+  color: #2168a6;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Fira Sans", sans-serif !important;
+}
+
+.product_Card_categorys-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.product_Card_categorys-container h3 {
+  margin-bottom: 10px;
+}
+
+.product_Card_categorys {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.product_Card_category {
+  display: flex;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.306);
+}
+
+@media screen and (max-width: 370px) {
+  .product_Card_category {
+    padding: 4px;
+  }
+}

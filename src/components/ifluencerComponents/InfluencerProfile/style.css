@@ -1,0 +1,29 @@
+.influencer_profile-container {
+  height: auto;
+  margin-top: 70px;
+  background-color: #dbeeff;
+  min-height: 300vh;
+}
+
+.influencer_profile-sides-container {
+  margin-top: 70px;
+  min-height: 600px;
+  display: flex;
+  justify-content: space-around !important;
+  align-items: center !important;
+  width: 100%;  
+}
+
+
+.influencer_profile-right-side {
+  width: 50%;
+  margin-top: 30px;
+}
+
+ @media screen and (max-width: 1090px) {
+  .influencer_profile-sides-container {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+} 

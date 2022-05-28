@@ -1,0 +1,16 @@
+.influencerCreateProfile {
+  margin-top: 21% !important;
+  margin-left: 43.5% !important;
+  background-color: #2e81ca !important;
+  color: #fff !important;
+  padding: 12px 24px !important;
+  border-radius: 25px !important;
+  border: 1px solid #2e81ca !important;
+}
+
+.influencerCreateProfile:hover {
+  background-color: #fff !important;
+  color: #2e81ca !important;
+  border: 1px solid #2e81ca !important;
+  padding: 12px 24px !important;
+}

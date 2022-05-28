@@ -1,0 +1,116 @@
+.homePage {
+  height: auto;
+}
+
+.home-page-Animation {
+  /* flex: 1; */
+  height: 90vh;
+  width: 98%;
+  margin-left: 1%;
+  margin-top: 60px;
+  border-radius: 0px 0px 250px 250px;
+  background-color: #dbeeff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.home-page-Animation_container {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  justify-content: space-between;
+  align-items: center !important;
+  text-align: center;
+}
+
+.home-page-animation-arrow {
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -200px;
+  margin-left: 50px;
+}
+
+.home-page-Animation-info_part {
+  height: 100vh;
+  width: 98%;
+  margin-left: 1%;
+  border-radius: 50px 50px 50px 50px;
+  background-color: #dbeeff;
+  margin-top: -130px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.animation {
+  margin-bottom: 350px !important;
+  height: 450px !important;
+  width: 550px !important;
+}
+
+.descriptionTextAnimation {
+  color: #2168a6;
+}
+
+.descriptionTextAnimation h1 {
+  font-size: 40px;
+}
+
+.descriptionTextAnimation p {
+ margin-top: 10px;
+ font-size: 20px;
+}
+
+@media screen and (max-width: 986px) {
+  .home-page-Animation {
+    width: 95% !important;
+    height: 110vh !important;
+    margin-left: 2.5%;
+    border-radius: 0px 0px 200px 200px;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .home-page-Animation {
+    width: 95% !important;
+    height: 95vh !important;
+    margin-top: 60px;
+    margin-left: 2.5%;
+    border-radius: 0px 0px 200px 200px;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home-page-Animation {
+    width: 95% !important;
+    height: 95vh !important;
+    margin-top: 60px;
+    margin-left: 2.5%;
+    border-radius: 0px 0px 200px 200px;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .home-page-Animation {
+    width: 90% !important;
+    height: 95vh !important;
+    margin-left: 5%;
+    border-radius: 0px 0px 120px 120px;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .home-page-Animation {
+    width: 90% !important;
+    height: 95vh !important;
+    margin-left: 5%;
+    border-radius: 0px 0px 120px 120px;
+    margin-top: 60px;
+  }
+}

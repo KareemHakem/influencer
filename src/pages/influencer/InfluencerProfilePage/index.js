@@ -24,7 +24,7 @@ const InfluencerProfilePage = () => {
     (id) => id.user === currentUser._id
   );
 
-  console.log(influencerDetail," kareem mohamed");
+
 
   if (loading) return <Loading />;
   if (error) return <Error />;
